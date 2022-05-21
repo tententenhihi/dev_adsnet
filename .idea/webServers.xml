@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c5cca49e-b56a-421a-a8a1-69769408731f" name="viraads.com(172.96.161.179)">
+        <fileTransfer accessType="SFTP" host="172.96.161.179" port="2408" sshConfigId="a5a9be7e-8c0f-4d49-b473-b0fd9ee10800" sshConfig="root@172.96.161.179:2408 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="85afd38c-2cd7-48af-883a-aadd0f925f36" name="dev_adsnet">
+        <fileTransfer accessType="SFTP" host="103.138.91.3" port="2308" sshConfigId="29393f41-7fae-45ac-b2f3-bc7ab171bb80" sshConfig="root@103.138.91.3:2308 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="cb9b84c2-0bf3-4469-8bbb-b0c1b19e05be" name="wataads.com(103.138.91.6)">
+        <fileTransfer accessType="SFTP" host="103.138.91.6" port="22" sshConfigId="b5007e7e-8c36-44cf-8e87-310e657a39c8" sshConfig="root@103.138.91.6:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

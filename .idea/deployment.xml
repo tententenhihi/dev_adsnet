@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="dev_adsnet" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="cloudone.vn">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cpm-sociads">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="dev_adsnet">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/app" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="viraads.com(172.96.161.179)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/app" local="$PROJECT_DIR$/backup_210522" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="wataads.com(103.138.91.6)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/app" local="$PROJECT_DIR$/../dev_adsnet/backup_dev_adsnet_210522" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
