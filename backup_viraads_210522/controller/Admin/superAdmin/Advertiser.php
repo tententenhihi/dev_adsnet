@@ -29,7 +29,7 @@ class Advertiser extends Controller
             $this->data->ads->{$item->status} = $item->cnt;
             $this->data->ads->All += $item->cnt;
         }
-        
+
         /* sum advertiser */
         $this->data->adv = $db->countUserBalanceSumByDeposit();
         

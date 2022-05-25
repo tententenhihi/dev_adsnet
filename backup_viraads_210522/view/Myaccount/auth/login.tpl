@@ -3,7 +3,7 @@
 <head>
     <meta name="csrf-token" content="<?=$this->csrf()?>" />
     <title><?=SITE_NAME?></title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <link rel="apple-touch-icon" href="<?=$this->asset2('app-assets/images/ico/apple-icon-120.png')?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?=$this->asset2('app-assets/images/ico/favicon.ico')?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -34,7 +34,14 @@
     <script src="<?=$this->asset2('app-assets/vendors/js/vendors.min.js')?>"></script>
     <!-- BEGIN Vendor JS-->
     <script src="<?=$this->asset2('assets/js/scripts.js')?>"></script>
-
+    <style>
+        btn-primary{
+            background-color:#8b08bb;
+        }
+        a{
+            color:#8b08bb;
+        }
+    </style>
 </head>
 <!-- END: Head-->
 <body class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="2-column">
@@ -50,11 +57,14 @@
                     <div class="col-xl-8 col-11 d-flex justify-content-center">
                         <div class="card bg-authentication rounded-0 mb-0">
                             <div class="row m-0">
-                                <div class="col-lg-6 d-lg-blocks text-center align-self-center px-1 py-0">
-                                    <img src="<?=$this->asset2('app-assets/images/pages/login.png')?>" alt="branding logo">
-                                </div>
+                            <div class="col-lg-6 d-lg-block d-none text-center align-self-center px-1 py-0">
+                                             <img src="<?=$this->asset2('app-assets/images/pages/login2.png')?>" alt="branding logo" width="100%">
+                                        </div>
                                 <div class="col-lg-6 col-12 p-0">
-                                    <div class="card rounded-0 mb-0 px-2">
+                                    <div class="card rounded-0 mb-0 px-2 h-100 justify-content-center">
+                                         <div class="card-logo d-flex justify-content-center mb-2 d-xl-none d-lg-none" style="">
+                                        <img src="<?=$this->asset2('app-assets/images/logo/logo-viraads.png')?>" alt="logo" id="logo1" width="70%" style="margin-top: 20px;">
+                                    </div>
                                         <div class="card-header pb-1">
                                             <div class="card-title">
                                                 <h4 class="mb-0">Login</h4>
@@ -72,7 +82,7 @@
                                                         <label for="user-name">Email</label>
                                                     </fieldset>
 
-                                                    <fieldset class="form-label-group position-relative has-icon-left">
+                                                    <fieldset class="form-label-group  position-relative has-icon-left">
                                                         <input type="password" class="form-control" id="password" placeholder="Password" required>
                                                         <div class="form-control-position">
                                                             <i class="feather icon-lock"></i>

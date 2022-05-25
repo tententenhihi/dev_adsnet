@@ -124,12 +124,6 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Deposit</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
                     <input id="id" type="hidden" value="">
                     <div class="form-group">
@@ -155,9 +149,11 @@
                         </select>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="submit">Submit</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" id="submit">
+                        <i class="feather icon-check"></i> Submit</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="feather icon-x"></i> Close</button>
                 </div>
             </div>
         </div>

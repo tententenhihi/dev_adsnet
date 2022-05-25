@@ -22,7 +22,7 @@
                         Filter by:
                         <button class="btn border-0 dropdown-toggle px-50 waves-effect waves-light" type="button"
                                 id="dropdownItem3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <?=$this->data->status?>
+                            <?=$this->data->type?>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownItem3"
                              x-placement="bottom-end"
@@ -128,12 +128,6 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Receipt</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="label">User Id</label>
@@ -156,9 +150,11 @@
                         <textarea class="form-control" id="description" placeholder="Your API Description"></textarea>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="submit" data-id="0">Submit</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" id="submit" data-id="0">
+                        <i class="feather icon-check"></i> Submit</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="feather icon-x"></i> Close</button>
                 </div>
             </div>
         </div>

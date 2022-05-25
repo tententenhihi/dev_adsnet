@@ -73,7 +73,7 @@ class Verification
 
     private function getHtml($url)
     {
-        $htmlUrl = 'https://verify.wataads.com/verify.php?url='.$url;
+        $htmlUrl = 'https://verify.viraads.com/verify.php?url='.$url;
         try {
             $html = @file_get_contents($htmlUrl);
             if(!$html) return null;

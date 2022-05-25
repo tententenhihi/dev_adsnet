@@ -1,7 +1,7 @@
 <style>
 .media-content .title {
     margin-bottom: 0 !important;
-    
+
 }
 .has-text-muted {
     color: #b5b5c3 !important;
@@ -151,7 +151,7 @@ hr {
                             <div class="media-left"></div>
                             <div class="media-content">
                                 <h2 class="title is-5">
-                                    <a href="http://admin.ads.com/advertiser/ad-detail/<?=$item->ad_id?>" target="_blank"><span class="item-name text-<?php if($item->value > $this->data->average_bidding): ?>success<?php else: ?>danger<?php endif; ?>">Ad - <?=$item->ad_id?></span></a>
+                                    <a href="https://admin.viraads.com/advertiser/ad-detail/<?=$item->ad_id?>" target="_blank"><span class="item-name text-<?php if($item->value > $this->data->average_bidding): ?>success<?php else: ?>danger<?php endif; ?>">Ad - <?=$item->ad_id?></span></a>
                                 </h2>
                             </div>
 

@@ -25,11 +25,11 @@
     color: #006ed6;
 }
 .button.is-selected {
-    background-color: #006ed6;
+    background-color: #880d88;
     color: #fff;
 }
 .button.is-selected:focus {
-    border-color: #006ed6;
+    border-color: #880d88;
     box-shadow: none;
 }
 .button.is-default:focus {
@@ -97,6 +97,99 @@
     cursor: pointer;
     border-radius: 33px;
     padding: 12px 15px 10px 15px;
+}
+.tag:not(body).is-rounded {
+    border-radius: 290486px;
+}
+.tag:not(body).is-success {
+    background-color: #48c774;
+    color: #fff;
+}
+.tags-input .tag {
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+.tag:not(body) {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    /*color: #4a4a4a;*/
+    display: inline-flex;
+    font-size: .75rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
+
+.tag:not(body) .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+}
+.is-small.delete, .is-small.modal-close {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+}
+.delete, .modal-close {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba(10,10,10,.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+}
+.delete::before, .modal-close::before {
+    height: 2px;
+    width: 50%;
+}
+.delete::after, .delete::before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+}
+.delete::after, .modal-close::after {
+    height: 50%;
+    width: 2px;
+}
+.delete::after, .delete::before{
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
 }
 </style>
 <div class="content-body">
@@ -412,7 +505,7 @@
                 <div class="card-content data-step" id="step-0">
                     <div class="card-body card-dashboard">
                         <div class="buttons text-center pt-1">
-                            <button class="btn btn-success mb-1" id="enterAction">
+                            <button type="button" class="btn btn-success mb-1" id="enterAction">
                                 <i class="feather icon-check"></i>
                                 <span>Save</span>
                             </button>
@@ -620,7 +713,7 @@ function buildSettingPOP() {
     	searchOn: 'text',
     	selectable: false,
     	source: undefined,
-    	tagClass: 'is-rounded is-success',
+        tagClass: 'is-rounded btn-success',
     	trim: true
     });
     if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class.join(','));
@@ -1127,7 +1220,7 @@ function buildSettingDIALOG() {
     	searchOn: 'text',
     	selectable: false,
     	source: undefined,
-    	tagClass: 'is-rounded is-success',
+    	tagClass: 'btn-rounded btn-success',
     	trim: true
     });
     if(dia_method == 'class') document.getElementById('dia_class').BulmaTagsInput().add(dia_class.join(','));

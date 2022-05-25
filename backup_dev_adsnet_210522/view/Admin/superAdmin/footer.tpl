@@ -50,6 +50,18 @@
     // });
     $('.menu-content li.active').parent().parent().addClass('open')
 
+
+    $('.language').click(function(){
+        var language = $(this).attr('data-language');
+        $.post('/language', {csrf_token: __tajs.csrf, language: language}, function(res){
+            if(res === 'Success') {
+                console.log('Success');
+                window.location.reload();
+            }else {
+                console.log('Error');
+            }
+        });
+    });
 </script>
 </body>
 <!-- END: Body-->

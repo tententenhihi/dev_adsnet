@@ -25,7 +25,12 @@ class Referral extends \System\Db
     
     public function listReferral($user_id, $init, $limit)
     {
-        $stmt = $this->pdo->prepare('SELECT b.name, b.email, b.created_at, a.id, a.status, a.description, SUM(c.amount) AS amount, COUNT(c.id) AS payment FROM user_referral a JOIN user b ON a.ref_user_id = b.id LEFT JOIN user_referral_payment c ON a.id = c.referral_id WHERE a.user_id = :user_id ORDER BY a.id DESC LIMIT :init, :limit');
+        $stmt = $this->pdo->prepare('SELECT b.name, b.email, b.created_at, a.id, a.status, a.description, SUM(c.amount) AS amount, COUNT(c.id) AS payment 
+                                    FROM user_referral a JOIN user b ON a.ref_user_id = b.id 
+                                    LEFT JOIN user_referral_payment c ON a.id = c.referral_id 
+                                    WHERE a.user_id = :user_id 
+                                    GROUP BY a.id 
+                                    ORDER BY a.id DESC LIMIT :init, :limit');
         $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
         $stmt->bindValue(':init', (int) $init, \PDO::PARAM_INT);
         $stmt->bindValue(':limit', (int) $limit, \PDO::PARAM_INT);
@@ -133,5 +138,32 @@ class Referral extends \System\Db
         $stmt->execute();
         
         return $stmt->fetch();
+    }
+
+    public function getTotalEarned($user_id)
+    {
+        $stmt = $this->pdo->prepare("SELECT sum(amount) as total_earned FROM user_referral_payment WHERE user_id = :user_id");
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch()->total_earned ?? 0;
+    }
+
+    public function getActiveReferrals($user_id)
+    {
+        $stmt = $this->pdo->prepare("SELECT COUNT(ref_user_id) as cnt FROM user_referral WHERE user_id = :user_id AND status = 'Active'");
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch()->cnt ?? 0;
+    }
+
+    public function getPendingReferrals($user_id)
+    {
+        $stmt = $this->pdo->prepare("SELECT COUNT(ref_user_id) as cnt FROM user_referral WHERE user_id = :user_id AND status = 'Pending'");
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch()->cnt ?? 0;
     }
 }

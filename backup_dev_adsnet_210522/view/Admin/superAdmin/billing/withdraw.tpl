@@ -90,12 +90,12 @@
                                         <?php endif; ?>
                                     </td>
                                     <?php if($item->status == 'Pending'): ?>
-                                    <td><a class="btn-pay" data-id="<?=$item->id?>" data-amount="<?=$item->amount?>" data-user="<?=$item->user_id?>" data-paygate="<?=$item->paygate_id?>" data-method="<?=$item->method?>">#<?=$item->id?></a></td>
+                                    <td><a class="btn-pay text-primary" data-id="<?=$item->id?>" data-amount="<?=$item->amount?>" data-user="<?=$item->user_id?>" data-paygate="<?=$item->paygate_id?>" data-method="<?=$item->method?>">#<?=$item->id?></a></td>
                                     <?php else: ?>
                                     <td>#<?=$item->id?></td>
                                     <?php endif; ?>
 
-                                    <td><a class="badge badge-link" href="/user?id=<?=$item->user_id?>">#<?=$item->user_id?> - <?=$item->user_name?></a></td>
+                                    <td><a class="badge badge-primary" href="/user?id=<?=$item->user_id?>">#<?=$item->user_id?> - <?=$item->user_name?></a></td>
                                     <td><span class="badge badge-info"><?=$item->method?:'Internal'?></span></td>
                                     <td><?=$this->helper->currencyFormat($item->amount)?></td>
                                     <td><?=$item->transaction?:'Not Available'?></td>

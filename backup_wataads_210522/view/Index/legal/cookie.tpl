@@ -64,24 +64,24 @@
                         <div class="documentation__cnts">
                             <div class="documentation__cnt follow-block init in-sight anim-end">
                                 <h3>Cookies</h3>
-                                <p>We use cookies and other similar technologies ("Cookies") to enhance User’s experience using the WataAds Services. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, and to deliver a better and more personalized service.</p>
+                                <p>We use cookies and other similar technologies ("Cookies") to enhance User’s experience using the ViraAds Services. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, and to deliver a better and more personalized service.</p>
                                 <p>Cookies may be either "persistent" Cookies or "session" Cookies. A persistent cookie consists of a text file sent by a web server to a web browser, which will be stored by the browser and will remain valid until its set expiry date (unless deleted by the user before the expiry date). A session cookie, on the other hand, will expire at the end of the user session, when the web browser is closed.</p>
                                 <p>We use the following Cookies:</p>
                                 <ul>
                                     <li>Strictly necessary Cookies. These are Cookies that are required for the operation of the Website.</li>
-                                    <li>Analytical/performance Cookies. They allow us to recognize and count the number of Users and to see how Users move around the Website when they are using it. This helps us to improve the way the Website works. We use Google Analytics which is a web analytics tool that helps us understand how Users engage with the Website. This information is used to compile reports and to help us improve WataAds Website. The reports disclose Website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit WataAds Website.</li>
-                                    <li>Functionality Cookies. These are used to recognize you when you return to the Website. This enables us to personalize WataAds content for Users (for example, User’s choice of language).</li>
+                                    <li>Analytical/performance Cookies. They allow us to recognize and count the number of Users and to see how Users move around the Website when they are using it. This helps us to improve the way the Website works. We use Google Analytics which is a web analytics tool that helps us understand how Users engage with the Website. This information is used to compile reports and to help us improve ViraAds Website. The reports disclose Website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit ViraAds Website.</li>
+                                    <li>Functionality Cookies. These are used to recognize you when you return to the Website. This enables us to personalize ViraAds content for Users (for example, User’s choice of language).</li>
                                 </ul>
                                 <h3>Children</h3>
                                 <p>We do not knowingly collect personal information from children under the age of 18. If we learn that we have collected the personal information of a child under the age of 18, we will take steps to delete the information as soon as possible.</p>
                                 <h3>Retention</h3>
-                                <p>WataAds retains personal information you provide to create your account for as long as you maintain an account with us. Personal information used to provide the services to you will be kept long enough to provide you with the service, including in archives and logs used to maintain and develop the service. Specifically, we delete data used for logging and error tracking after 90 days, we reset cookies on our website after 14 days. We also delete other personal data used to provide WataAds or to communicate with you within 30 days after your account is deleted. We may retain some usage statistics (including IP addresses) for as long as we have a business purpose in order to improve WataAds’s services, but these statistics are no longer linked to the deleted account.</p>
+                                <p>ViraAds retains personal information you provide to create your account for as long as you maintain an account with us. Personal information used to provide the services to you will be kept long enough to provide you with the service, including in archives and logs used to maintain and develop the service. Specifically, we delete data used for logging and error tracking after 90 days, we reset cookies on our website after 14 days. We also delete other personal data used to provide ViraAds or to communicate with you within 30 days after your account is deleted. We may retain some usage statistics (including IP addresses) for as long as we have a business purpose in order to improve ViraAds’s services, but these statistics are no longer linked to the deleted account.</p>
                                 <h3>External Links</h3>
-                                <p>WataAds Website may contain links to external websites not owned by or officially affiliated with WataAds in any way. WataAds is not responsible for the privacy practices or content of such websites. We advise you to review the privacy policy of external sites before providing any personal information.</p>
+                                <p>ViraAds Website may contain links to external websites not owned by or officially affiliated with ViraAds in any way. ViraAds is not responsible for the privacy practices or content of such websites. We advise you to review the privacy policy of external sites before providing any personal information.</p>
                                 <h3>Changes to this Privacy Policy</h3>
-                                <p>WataAds has the discretion to update this Privacy Policy at any time. When we do, we will post a notification on the main page of our website, revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about protection all the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
+                                <p>ViraAds has the discretion to update this Privacy Policy at any time. When we do, we will post a notification on the main page of our website, revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about protection all the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
                                 <h3>Contacts</h3>
-                                <p>If you have any questions about our privacy policy or wish to obtain more details in relation to the personal data, we process about you or wish to exercise any of your rights set out in this Privacy Policy please contact us via email at: <a href="mailto:support@wataads.com" title="Our email" target="_blank">contact@wataads.com</a></p>
+                                <p>If you have any questions about our privacy policy or wish to obtain more details in relation to the personal data, we process about you or wish to exercise any of your rights set out in this Privacy Policy please contact us via email at: <a href="mailto:support@viraads.com" title="Our email" target="_blank">contact@viraads.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -110,8 +110,8 @@
                             <div class="col-md-4">
                                 <h6 class="footer-list-title text-warning mb-3">Customers</h6>
                                 <ul class="list-unstyled sub-menu">
-                                    <li><a href="https://adv.wataads.com/">Advertisers</a></li>
-                                    <li><a href="https://pub.wataads.com/">Publishers</a></li>
+                                    <li><a href="https://adv.viraads.com/">Advertisers</a></li>
+                                    <li><a href="https://pub.viraads.com/">Publishers</a></li>
                                     <li><a href="/legal/agency">Agency</a></li>
                                     <li><a href="legal/ad-network">Ad Network</a></li>
                                 </ul>
@@ -119,7 +119,7 @@
                             <div class="col-md-4">
                                 <h6 class="footer-list-title text-warning mb-3">Resources</h6>
                                 <ul class="list-unstyled sub-menu">
-                                    <li><a href="https://api.wataads.com/">API Documentation</a></li>
+                                    <li><a href="https://api.viraads.com/">API Documentation</a></li>
                                     <li><a href="/blog">Blog</a></li>
                                 </ul>
                             </div>
@@ -132,7 +132,7 @@
                                                 <path fill="currentColor" d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
                                             </svg>
                                         </span>
-                                        <span>@wataads</span>
+                                        <span>@viraads</span>
                                     </a></li>
                                     <li><a href="skype:live:.cid.3a7b22ac71aa01f4?chat">
                                         <span class="icon">
@@ -140,7 +140,7 @@
                                                 <path fill="currentColor" d="M18,6C20.07,8.04 20.85,10.89 20.36,13.55C20.77,14.27 21,15.11 21,16A5,5 0 0,1 16,21C15.11,21 14.27,20.77 13.55,20.36C10.89,20.85 8.04,20.07 6,18C3.93,15.96 3.15,13.11 3.64,10.45C3.23,9.73 3,8.89 3,8A5,5 0 0,1 8,3C8.89,3 9.73,3.23 10.45,3.64C13.11,3.15 15.96,3.93 18,6M12.04,17.16C14.91,17.16 16.34,15.78 16.34,13.92C16.34,12.73 15.78,11.46 13.61,10.97L11.62,10.53C10.86,10.36 10,10.13 10,9.42C10,8.7 10.6,8.2 11.7,8.2C13.93,8.2 13.72,9.73 14.83,9.73C15.41,9.73 15.91,9.39 15.91,8.8C15.91,7.43 13.72,6.4 11.86,6.4C9.85,6.4 7.7,7.26 7.7,9.54C7.7,10.64 8.09,11.81 10.25,12.35L12.94,13.03C13.75,13.23 13.95,13.68 13.95,14.1C13.95,14.78 13.27,15.45 12.04,15.45C9.63,15.45 9.96,13.6 8.67,13.6C8.09,13.6 7.67,14 7.67,14.57C7.67,15.68 9,17.16 12.04,17.16Z" />
                                             </svg>
                                         </span>
-                                        <span>wataads.com</span>
+                                        <span>viraads.com</span>
                                     </a></li>
                                     <li><a href="mailto:contact@gome.io">
                                         <span class="icon">
@@ -148,7 +148,7 @@
                                                 <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
                                             </svg>
                                         </span>
-                                        <span>contact@wataads.com</span>
+                                        <span>contact@viraads.com</span>
                                     </a></li>
                                 </ul>
                                 <ul class="list-unstyled footer-social-list">

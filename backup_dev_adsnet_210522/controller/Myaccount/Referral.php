@@ -12,13 +12,16 @@ class Referral extends Controller
         $user_id = $this->getSession('id');
         $db = new \Model\Myaccount\Referral;
         $this->data->referral_code = (new \Module\HashIds)->encode($user_id);
-        $this->data->referral_url = MYACCOUNT_URL.'/?ref='.(new \Module\HashIds)->encode($user_id);
+        $this->data->referral_url = REGISTER_URL.'/?ref='.(new \Module\HashIds)->encode($user_id);
         $this->data->referral_sum = $db->sumUserReferral($user_id);
-        
+        $this->data->total_earned = $db->getTotalEarned($user_id);
+        $this->data->active_referrals = $db->getActiveReferrals($user_id);
+        $this->data->pending_referrals = $db->getPendingReferrals($user_id);
+
         $this->data->key = $this->getRequest('q');
-        $this->data->statuses = ['All', 'Pending', 'Earning', 'Cancelled'];
+        $this->data->statuses = ['All', 'Pending', 'Active', 'Cancelled'];
         $status = ucwords($this->uri[1]);
-        
+
         if($status && in_array($status, $this->data->statuses)) {
             $this->data->status = $status;
         } else {
@@ -60,7 +63,6 @@ class Referral extends Controller
             $this->data->pagination = '';
             $this->data->data = [];
         }
-        
         $this->helper = new \Module\Helper;
         $this->title = 'My Referrals - '.SITE_NAME;
         $this->view = 'Myaccount/referral/index';

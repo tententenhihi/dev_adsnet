@@ -147,9 +147,9 @@
                                         </div>
                                         <div class="col-12 d-flex flex-sm-row flex-column justify-content-center">
                                             <button id="enterAction" class="btn btn-primary mr-sm-1 mb-1 mb-sm-0">
-                                                Save changes</button>
+                                                <i class="feather icon-check"></i> Save changes</button>
                                             <button type="reset" class="btn btn-secondary">
-                                                Cancel
+                                                <i class="feather icon-x"></i> Cancel
                                             </button>
                                         </div>
 
@@ -330,7 +330,7 @@ $(document).ready(function() {
             }
             else {
                 location.reload();
-                $this.html('<span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" /></svg></span><span>Saved</span>');
+                $this.html('<span class="icon"><i class="feather icon-check"></i></span><span> Saved</span>');
             }
         });
     });
@@ -376,7 +376,7 @@ $(document).ready(function() {
         //$this.prop('disabled', false);
         if (res.success) {
             $('#qrcode').attr('src', res.qrcode);
-            console.log('#'+target+'-submit');
+            // console.log('#'+target+'-submit');
             $('#'+target+'-submit').addClass('is-active');
             $('#'+target).removeClass('is-active');
         }

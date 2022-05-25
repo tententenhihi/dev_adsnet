@@ -85,7 +85,7 @@
                                         <span class="badge badge-success">Active</span>
                                         <?php endif; ?>
                                     </td>
-                                    <td><a class="text-muted" href="https://<?=$item->name?>"
+                                    <td><a href="https://<?=$item->name?>"
                                            target="_blank"><?=$item->
                                             name?></a></td>
                                     <td>
@@ -97,39 +97,24 @@
                                     </td>
                                     <td>
                                         <div>
-                                            <button class="btn btn-danger btn-delete btn-sm mb-1" data-id="<?=$item->id?>">
-                                                <span class="icon">
-                                                    <svg viewBox="0 0 24 24">
-                                                         <path fill="currentColor"
-                                                               d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"/>
-                                                    </svg>
-                                                </span>
+                                            <button class="btn btn-danger btn-delete mb-1" data-id="<?=$item->id?>">
+                                                <i class="feather icon-trash-2"></i>
                                                 <span>Delete</span>
                                             </button>
                                             <?php if($item->status=='Pending'): ?>
-                                            <a class="btn btn-success btn-sm mb-1" href="/domain/verify/<?=$item->id?>">
-                                                <span class="icon">
-                                                    <svg viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                              d="M19 18H6C3.79 18 2 16.21 2 14S3.79 10 6 10H6.71C7.37 7.69 9.5 6 12 6C15.04 6 17.5 8.46 17.5 11.5V12H19C20.66 12 22 13.34 22 15S20.66 18 19 18M19.35 10.03C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.03C2.34 8.36 0 10.9 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.03M10 17L6.5 13.5L7.91 12.08L10 14.17L14.59 9.59L16 11"/>
-                                                    </svg>
-                                                </span>
+                                            <a class="btn btn-success mb-1" href="/domain/verify/<?=$item->id?>">
+                                                <i class="feather icon-check-circle"></i>
                                                 <span>Verify</span>
                                             </a>
                                             <?php elseif(!$item->is_default): ?>
-                                            <button class="btn btn-success btn-default btn-sm mb-1" data-id="<?=$item->id?>">
-                                                <span class="icon">
-                                                    <svg viewBox="0 0 24 24">
-                                                         <path fill="currentColor"
-                                                               d="M5.5,7A1.5,1.5 0 0,1 4,5.5A1.5,1.5 0 0,1 5.5,4A1.5,1.5 0 0,1 7,5.5A1.5,1.5 0 0,1 5.5,7M21.41,11.58L12.41,2.58C12.05,2.22 11.55,2 11,2H4C2.89,2 2,2.89 2,4V11C2,11.55 2.22,12.05 2.59,12.41L11.58,21.41C11.95,21.77 12.45,22 13,22C13.55,22 14.05,21.77 14.41,21.41L21.41,14.41C21.78,14.05 22,13.55 22,13C22,12.44 21.77,11.94 21.41,11.58Z"/>
-                                                    </svg>
-                                                </span>
+                                            <button class="btn btn-success btn-default mb-1" data-id="<?=$item->id?>">
+                                                <i class="feather icon-tag"></i>
                                                 <span>Make Default</span>
                                             </button>
                                             <?php endif; ?>
                                         </div>
                                     </td>
-                                    <td><span class="text-muted is-pulled-right"><?=$item->created_at?></span></td>
+                                    <td><span><?=$item->created_at?></span></td>
                                 </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -159,12 +144,6 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Add Domain</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
 
                     <label>Domain Name: </label>
@@ -173,10 +152,11 @@
                     </div>
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="add_domain">Save</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">
-                        Close
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success" id="add_domain">
+                        <i class="feather icon-check"></i> Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="feather icon-x"></i> Close
                     </button>
                 </div>
             </div>

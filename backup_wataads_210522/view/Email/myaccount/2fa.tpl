@@ -129,7 +129,7 @@
                           </tbody>
                         </table>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                        	Thank you very much and do not forget to contact us if you have any questions or face any difficulties, our staff is available 24/7 on <a href="https://t.me/wataads" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Telegram</a>, <a href="skype:live:.cid.3a7b22ac71aa01f4?chat" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Skype</a> and <a href="{{MYACCOUNT_URL}}/support" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Support System</a>
+                        	Thank you very much and do not forget to contact us if you have any questions or face any difficulties, our staff is available 24/7 on <a href="https://t.me/viraadsnet" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Telegram</a>, <a href="skype:live:.cid.3a7b22ac71aa01f4?chat" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Skype</a> and <a href="{{MYACCOUNT_URL}}/support" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none">Support System</a>
 						            </p>
                       </td>
                     </tr>
@@ -151,7 +151,7 @@
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #9da9bb; text-align: center;">
                     <span style="margin:0">
-                      <a href="{{FRONTEND_URL}}" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> WataAds </a> | <a href="{{FRONTEND_URL}}/legal/faqs" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Support </a> | <a href="{{FRONTEND_URL}}/legal/terms" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Terms and Conditions </a> | <a href="{{FRONTEND_URL}}/legal/privacy" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Privacy Policy </a>
+                      <a href="{{FRONTEND_URL}}" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> ViraAds </a> | <a href="{{FRONTEND_URL}}/legal/faqs" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Support </a> | <a href="{{FRONTEND_URL}}/legal/terms" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Terms and Conditions </a> | <a href="{{FRONTEND_URL}}/legal/privacy" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Privacy Policy </a>
                     </span>
                     <br> <span class="apple-link" style="color: #9da9bb; font-size: 12px; text-align: center;">{{SITE_NAME}}. Thank you for reading our email</span>
                     <br> Don't like these emails? <a href="{{MYACCOUNT_URL}}/profile" style="text-decoration: underline; color: #9da9bb; font-size: 12px; text-align: center;">Unsubscribe</a>.

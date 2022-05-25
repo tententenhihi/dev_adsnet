@@ -7,8 +7,8 @@ class Galaksion
     protected $baseUrl = 'https://ssp2-api.galaksion.com/api/v1/';
     protected $apiToken = null;
     protected $timezone = 'UTC';
-    protected $username = 'info.wataads@gmail.com';
-    protected $password = '13579Pl,mn';
+    protected $username = 'taroads.com@gmail.com';
+    protected $password = 'Beba@9089';
     protected $lastRevenue = 0;
     protected $client;
     protected $zone_id;
@@ -136,7 +136,6 @@ class Galaksion
     
     private function call($date1, $date2)
     {
-        //file_put_contents('/home/Exchange.log',"START CALL DATA GALAKSON".PHP_EOL, FILE_APPEND);
         if(!$this->apiToken) return null;
         try {
             $res = $this->client->request('GET', 'publisher/statistics', [
@@ -153,13 +152,10 @@ class Galaksion
                     'Content-Type'  => 'application/json'
                 ]
             ]);
-            //file_put_contents('/home/Exchange.log',$res->getBody().PHP_EOL, FILE_APPEND);
             $res = json_decode((string) $res->getBody());
             if(!isset($res->rows)) return null;
-
             return $res->rows;
         } catch(\Exception $e) {
-            //file_put_contents('/home/Exchange.log', $e.getMessage().PHP_EOL.PHP_EOL.PHP_EOL, FILE_APPEND);
             return null;
         }
     }

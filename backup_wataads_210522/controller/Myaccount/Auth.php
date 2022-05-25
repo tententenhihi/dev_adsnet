@@ -76,7 +76,7 @@ class Auth extends Controller
         try {
             $user_id = $db->createUser($name, $email, $this->createPassword($password));
             if(isset($_COOKIE['referral'])){
-                $user_ref = $db->createUserRef((new \Module\HashIds)->decode($_COOKIE['referral']), $user_id, 'Active');
+                $user_ref = $db->createUserReferral((new \Module\HashIds)->decode($_COOKIE['referral']), $user_id, 'Inactive');
             }
             $db->createUserBalance($user_id);
             $db->createPublisherAccount($user_id);
@@ -152,6 +152,7 @@ class Auth extends Controller
         $country = $this->getCountry();
         $ip_address = $this->getIpAddress();
         $db->updateUser($token->user_id, $address, $country_id, $phone, $chat_account, $birthday, $timezone, $language, $is_subscribed, 'Active');
+        $db->updateUserReferral($token->user_id, 'Active');
         $db->removeResetToken($token->id);
         $db->logActivity($token->user_id, 'Account', 'Verified account and completed the registration from '.$browser.' ('.$country.')', $ip_address);
         $user = $db->getUserById($token->user_id);

@@ -1,219 +1,219 @@
 <style>
-    .help-modal {
-        /*margin-bottom: -1.7rem;*/
-        margin-bottom: -20px;
-        text-align: right;
-    }
-    .help-modal .icon {
-        cursor: pointer;
-    }
-    .help-modal .icon:hover {
-        color: #8b08bb;
-    }
-    .message-header .icon{transition: 0.5s ease-in-out;}
-    .message-header .spin180 {transform:rotate(180deg);}
-    .native_type, .pop_method, .dia_method {
-        margin-left:0.1rem;
-        margin-right:0.1rem;
-        cursor: pointer;
-        border-radius: 33px;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    .flatbox.is-selected {
-        border: 2px solid #8b08bb !important;
-        color: #8b08bb !important;
-    }
+.help-modal {
+    /*margin-bottom: -1.7rem;*/
+    margin-bottom: -20px;
+    text-align: right;
+}
+.help-modal .icon {
+    cursor: pointer;
+}
+.help-modal .icon:hover {
+    color: #8b08bb;
+}
+.message-header .icon{transition: 0.5s ease-in-out;}
+.message-header .spin180 {transform:rotate(180deg);}
+.native_type, .pop_method, .dia_method {
+    margin-left:0.1rem;
+    margin-right:0.1rem;
+    cursor: pointer;
+    border-radius: 33px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.flatbox.is-selected {
+    border: 2px solid #8b08bb !important;
+    color: #8b08bb !important;
+}
 
-    .button.is-selected {
-        background-color: #8b08bb;
-        color: #fff;
-    }
-    .button.is-selected:focus {
-        border-color: #8b08bb;
-        box-shadow: none;
-    }
-    .button.is-default:focus {
-        border-color: #dbdbdb;
-        box-shadow: none;
-    }
-    .zone-preview-wrap {
-        min-height: 300px;
-        border: 2px solid #e1e4eb;
-        border-radius: 8px;
-    }
-    .columns.is-gaplessly {
-        margin: 0 0 .85rem 0 !important;
-    }
-    .columns.is-gaplessly>.column {
-        margin: 0;
-        padding: 0!important;
-    }
-    .message.is-orange {
-        background-color: transparent;
-        border-bottom: 1px solid #8b08bb;
-        border-left: 1px solid #8b08bb;
-        border-right: 1px solid #8b08bb;
-    }
-    .message.is-orange .message-header {
-        background-color: #8b08bb;
-        color: #fff;
-        cursor: pointer;
-    }
-    .message.is-orange .message-body {
-        padding: 1.25em .25em;
-    }
+.button.is-selected {
+    background-color: #8b08bb;
+    color: #fff;
+}
+.button.is-selected:focus {
+    border-color: #8b08bb;
+    box-shadow: none;
+}
+.button.is-default:focus {
+    border-color: #dbdbdb;
+    box-shadow: none;
+}
+.zone-preview-wrap {
+    min-height: 300px;
+    border: 2px solid #e1e4eb;
+    border-radius: 8px;
+}
+.columns.is-gaplessly {
+    margin: 0 0 .85rem 0 !important;
+}
+.columns.is-gaplessly>.column {
+    margin: 0;
+    padding: 0!important;
+}
+.message.is-orange {
+    background-color: transparent;
+    border-bottom: 1px solid #8b08bb;
+    border-left: 1px solid #8b08bb;
+    border-right: 1px solid #8b08bb;
+}
+.message.is-orange .message-header {
+    background-color: #8b08bb;
+    color: #fff;
+    cursor: pointer;
+}
+.message.is-orange .message-body {
+    padding: 1.25em .25em;
+}
 
 
 
-    .collapse:not(.show) {
-        display: inline;
-    }
-    .ipp_label, .ipp_position, .preview-device{
-        border: 1px solid rgba(128, 128, 128, 0.21);
-        padding: 7px;
-    }
-    .native_type, .pop_method, .dia_method{
-        box-shadow: 0 0 16px 3px rgb(128 128 128 / 13%);
-        margin-left: 0.1rem;
-        margin-right: 0.1rem;
-        cursor: pointer;
-        border-radius: 33px;
-        padding: 15px 15px 1px 15px;
-    }
-    .message-header{
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        border-bottom: 1px solid;
-    }
-    .native-align, .desktop-text, .desktop-spacing, .mobile-text, .mobile-spacing{
-        border: 1px solid rgba(128, 128, 128, 0.21);
-        padding: 7px;
-    }
-    .desktop-image, .mobile-image{
-        box-shadow: 0 0 16px 3px rgb(128 128 128 / 13%);
-        margin-left: 0.1rem;
-        margin-right: 0.1rem;
-        cursor: pointer;
-        border-radius: 33px;
-        padding: 12px 15px 10px 15px;
-    }
+.collapse:not(.show) {
+    display: inline;
+}
+.ipp_label, .ipp_position, .preview-device{
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    padding: 7px;
+}
+.native_type, .pop_method, .dia_method{
+    box-shadow: 0 0 16px 3px rgb(128 128 128 / 13%);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+    border-radius: 33px;
+    padding: 15px 15px 1px 15px;
+}
+.message-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid;
+}
+.native-align, .desktop-text, .desktop-spacing, .mobile-text, .mobile-spacing{
+    border: 1px solid rgba(128, 128, 128, 0.21);
+    padding: 7px;
+}
+.desktop-image, .mobile-image{
+    box-shadow: 0 0 16px 3px rgb(128 128 128 / 13%);
+    margin-left: 0.1rem;
+    margin-right: 0.1rem;
+    cursor: pointer;
+    border-radius: 33px;
+    padding: 12px 15px 10px 15px;
+}
 
-    .tag:not(body).is-rounded {
-        border-radius: 290486px;
-    }
-    .tag:not(body).is-success {
-        background-color: #48c774;
-        color: #fff;
-    }
-    .tags-input .tag {
-        font-size: 1rem;
-        margin: 0.1rem;
-    }
-    .tag:not(body) {
-        align-items: center;
-        background-color: #f5f5f5;
-        border-radius: 4px;
-        /*color: #4a4a4a;*/
-        display: inline-flex;
-        font-size: .75rem;
-        height: 2em;
-        justify-content: center;
-        line-height: 1.5;
-        padding-left: 0.75em;
-        padding-right: 0.75em;
-        white-space: nowrap;
-    }
+.tag:not(body).is-rounded {
+    border-radius: 290486px;
+}
+.tag:not(body).is-success {
+    background-color: #48c774;
+    color: #fff;
+}
+.tags-input .tag {
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+.tag:not(body) {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    /*color: #4a4a4a;*/
+    display: inline-flex;
+    font-size: .75rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
 
-    .tag:not(body) .delete {
-        margin-left: 0.25rem;
-        margin-right: -0.375rem;
-    }
-    .is-small.delete, .is-small.modal-close {
-        height: 16px;
-        max-height: 16px;
-        max-width: 16px;
-        min-height: 16px;
-        min-width: 16px;
-        width: 16px;
-    }
-    .delete, .modal-close {
-        -webkit-touch-callout: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        background-color: rgba(10,10,10,.2);
-        border: none;
-        border-radius: 290486px;
-        cursor: pointer;
-        pointer-events: auto;
-        display: inline-block;
-        flex-grow: 0;
-        flex-shrink: 0;
-        font-size: 0;
-        height: 20px;
-        max-height: 20px;
-        max-width: 20px;
-        min-height: 20px;
-        min-width: 20px;
-        outline: 0;
-        position: relative;
-        vertical-align: top;
-        width: 20px;
-    }
-    .delete::before, .modal-close::before {
-        height: 2px;
-        width: 50%;
-    }
-    .delete::after, .delete::before {
-        background-color: #fff;
-        content: "";
-        display: block;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        transform-origin: center center;
-    }
-    .delete::after, .modal-close::after {
-        height: 50%;
-        width: 2px;
-    }
-    .delete::after, .delete::before{
-        background-color: #fff;
-        content: "";
-        display: block;
-        left: 50%;
-        position: absolute;
-        top: 50%;
-        transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        transform-origin: center center;
-    }
-    .include-toggle {
-        border-top-left-radius: 13px !important;
-        border-bottom-left-radius: 13px !important;
-    }
-    .exclude-toggle {
-        border-top-right-radius: 13px !important;
-        border-bottom-right-radius: 13px !important;
-    }
-    .button.is-selected{
-        background-color:#8b08bb;
-        border-color:transparent;
-        color:#fff;
-    }
-    .country-toggle, .platform-toggle, .browser-toggle, .os-toggle, .time-toggle, .zone-toggle, .website-toggle, .audience-toggle{
-        border: none;
-        padding: 3px 10px 3px 10px;
-    }
-    .is-selected {
-        border: 2px solid #8b08bb;
-        color: #8b08bb;
-    }
+.tag:not(body) .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+}
+.is-small.delete, .is-small.modal-close {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+}
+.delete, .modal-close {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba(10,10,10,.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+}
+.delete::before, .modal-close::before {
+    height: 2px;
+    width: 50%;
+}
+.delete::after, .delete::before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+}
+.delete::after, .modal-close::after {
+    height: 50%;
+    width: 2px;
+}
+.delete::after, .delete::before{
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+}
+.include-toggle {
+    border-top-left-radius: 13px !important;
+    border-bottom-left-radius: 13px !important;
+}
+.exclude-toggle {
+    border-top-right-radius: 13px !important;
+    border-bottom-right-radius: 13px !important;
+}
+.button.is-selected{
+    background-color:#8b08bb;
+    border-color:transparent;
+    color:#fff;
+}
+.country-toggle, .platform-toggle, .browser-toggle, .os-toggle, .time-toggle, .zone-toggle, .website-toggle, .audience-toggle{
+    border: none;
+    padding: 3px 10px 3px 10px;
+}
+.is-selected {
+    border: 2px solid #8b08bb;
+    color: #8b08bb;
+}
 </style>
 <link rel="stylesheet" type="text/css" href="<?=$this->asset2('app-assets/vendors/css/ui/bootstrap-tagsinput.css')?>">
 <link rel="stylesheet" type="text/css" href="<?=$this->asset2('css/bulma-tagsinput.css')?>">
@@ -651,18 +651,18 @@
 </div>
 <script src="<?=$this->asset('js/tagsinput.min.js')?>"></script>
 <script>
-    /* global $, __tajs */
-    var ad_format = <?=$this->data->ad_format?>;
-    var setting = <?=$this->data->setting??'{}'?>;
-    var desktop_preview = 1;
+/* global $, __tajs */
+var ad_format = <?=$this->data->ad_format?>;
+var setting = <?=$this->data->setting??'{}'?>;
+var desktop_preview = 1;
 
-    var platforms = <?=json_encode($this->data->platforms)?>;
-    var oses = <?=json_encode($this->data->oses)?>;
-    var browsers = <?=json_encode($this->data->browsers)?>;
-    var mapPlatformOs = <?=json_encode($this->data->mapPlatformOs)?>;
-    var mapOsBrowser = <?=json_encode($this->data->mapOsBrowser)?>;
+var platforms = <?=json_encode($this->data->platforms)?>;
+var oses = <?=json_encode($this->data->oses)?>;
+var browsers = <?=json_encode($this->data->browsers)?>;
+var mapPlatformOs = <?=json_encode($this->data->mapPlatformOs)?>;
+var mapOsBrowser = <?=json_encode($this->data->mapOsBrowser)?>;
 
-    BulmaTagsInput.attach('[data-type="tags"]', {
+BulmaTagsInput.attach('[data-type="tags"]', {
         allowDuplicates: false,
         caseSensitive: false,
         clearSelectionOnTyping: false,
@@ -686,925 +686,925 @@
         tagClass: 'is-rounded btn-success',
         trim: true
     });
-    var platform_tags = document.getElementById('platform').BulmaTagsInput(),
-        os_tags = document.getElementById('os').BulmaTagsInput(),
-        browser_tags = document.getElementById('browser').BulmaTagsInput();
+var platform_tags = document.getElementById('platform').BulmaTagsInput(),
+    os_tags = document.getElementById('os').BulmaTagsInput(),
+    browser_tags = document.getElementById('browser').BulmaTagsInput();
 
-    platform_tags.on('after.add', function(data) {
-        buildOsSelection();
-    });
-    platform_tags.on('after.remove', function(data) {
-        buildOsSelection();
-    });
-    os_tags.on('after.add', function(data) {
-        buildBrowserSelection();
-    });
-    os_tags.on('after.remove', function(data) {
-        buildBrowserSelection();
-    });
+platform_tags.on('after.add', function(data) {
+    buildOsSelection();
+});
+platform_tags.on('after.remove', function(data) {
+    buildOsSelection();
+});
+os_tags.on('after.add', function(data) {
+    buildBrowserSelection();
+});
+os_tags.on('after.remove', function(data) {
+    buildBrowserSelection();
+});
 
-    function buildSetting() {
-        $('#bid').val(<?=$this->data->floor_cpm?:''?>);
-        if(setting.fallback) $('#fallback').val(setting.fallback);
-        if(setting.frequency) {
-            var t = setting.frequency.split(':');
-            if(t.length == 2) {
-                $('#frequency_number').val(t[0]==0?'':t[0]);
-                $('#frequency_time').val(_parseInt(t[1]));
-                if(t[1].indexOf('h') != -1) {
-                    $('#frequency_timetype').val('h');
-                } else {
-                    $('#frequency_timetype').val('m');
-                }
+function buildSetting() {
+    $('#bid').val(<?=$this->data->floor_cpm?:''?>);
+    if(setting.fallback) $('#fallback').val(setting.fallback);
+    if(setting.frequency) {
+        var t = setting.frequency.split(':');
+        if(t.length == 2) {
+            $('#frequency_number').val(t[0]==0?'':t[0]);
+            $('#frequency_time').val(_parseInt(t[1]));
+            if(t[1].indexOf('h') != -1) {
+                $('#frequency_timetype').val('h');
+            } else {
+                $('#frequency_timetype').val('m');
             }
         }
-        if(setting.excluded_types && setting.excluded_types.length) {
-            for(var i=0;i<setting.excluded_types.length;i++) {
-                $('.exclude-ad[data-value="'+setting.excluded_types[i]+'"]').addClass('btn-danger');
-            }
-        }
-        var selected, arr;
-        $('.platform-toggle').removeClass('is-selected');
-        if(setting.platform_include !== undefined) {
-            $('.platform-toggle.include-toggle').addClass('is-selected');
-            selected = setting.platform_include;
-        } else {
-            $('.platform-toggle.exclude-toggle').addClass('is-selected');
-            selected = setting.platform_exclude || [];
-        }
-        if(selected.length) {
-            arr = [];
-            for(var i = 0;i<selected.length;i++) {
-                arr.push({text: $('#platform option[value="'+selected[i]+'"]').text(), value: selected[i]});
-            }
-            if(arr.length) platform_tags.add(arr);
-        }
-
-        $('.os-toggle').removeClass('is-selected');
-        if(setting.os_include !== undefined) {
-            $('.os-toggle.include-toggle').addClass('is-selected');
-            selected = setting.os_include;
-        } else {
-            $('.os-toggle.exclude-toggle').addClass('is-selected');
-            selected = setting.os_exclude || [];
-        }
-        if(selected.length) {
-            arr = [];
-            for(var i = 0;i<selected.length;i++) {
-                arr.push({text: selected[i], value: selected[i]});
-            }
-            if(arr.length) os_tags.add(arr);
-        }
-
-        $('.browser-toggle').removeClass('is-selected');
-        if(setting.browser_include !== undefined) {
-            $('.browser-toggle.include-toggle').addClass('is-selected');
-            selected = setting.browser_include;
-        } else {
-            $('.browser-toggle.exclude-toggle').addClass('is-selected');
-            selected = setting.browser_exclude || [];
-        }
-        if(selected.length) {
-            arr = [];
-            for(var i = 0;i<selected.length;i++) {
-                arr.push({text: $('#browser option[value="'+selected[i]+'"]').text(), value: selected[i]});
-            }
-            if(arr.length) browser_tags.add(arr);
-        }
-        // console.log(setting)
-        if(ad_format == 1) return buildSettingIPP();
-        if(ad_format == 2) return buildSettingPOP();
-        if(ad_format == 3) return buildSettingVAST();
-        if(ad_format == 4) return buildSettingNATIVE();
-        if(ad_format == 5) return buildSettingDIRECT();
-        if(ad_format == 6) return buildSettingDIALOG();
-
-        $('#zone-build-setting').html('');
-        // $('#zone-preview').html('');
-        return false;
     }
-    function buildSettingIPP() {
-        var html ='',
-            ipp_start = setting.ipp_start || 0,
-            ipp_total = setting.ipp_total || 3,
-            ipp_delay = setting.ipp_delay || 10,
-            ipp_label = typeof setting.ipp_label !== 'undefined' ? setting.ipp_label : false;
+    if(setting.excluded_types && setting.excluded_types.length) {
+        for(var i=0;i<setting.excluded_types.length;i++) {
+            $('.exclude-ad[data-value="'+setting.excluded_types[i]+'"]').addClass('btn-danger');
+        }
+    }
+    var selected, arr;
+    $('.platform-toggle').removeClass('is-selected');
+    if(setting.platform_include !== undefined) {
+        $('.platform-toggle.include-toggle').addClass('is-selected');
+        selected = setting.platform_include;
+    } else {
+        $('.platform-toggle.exclude-toggle').addClass('is-selected');
+        selected = setting.platform_exclude || [];
+    }
+    if(selected.length) {
+        arr = [];
+        for(var i = 0;i<selected.length;i++) {
+            arr.push({text: $('#platform option[value="'+selected[i]+'"]').text(), value: selected[i]});
+        }
+        if(arr.length) platform_tags.add(arr);
+    }
+
+    $('.os-toggle').removeClass('is-selected');
+    if(setting.os_include !== undefined) {
+        $('.os-toggle.include-toggle').addClass('is-selected');
+        selected = setting.os_include;
+    } else {
+        $('.os-toggle.exclude-toggle').addClass('is-selected');
+        selected = setting.os_exclude || [];
+    }
+    if(selected.length) {
+        arr = [];
+        for(var i = 0;i<selected.length;i++) {
+            arr.push({text: selected[i], value: selected[i]});
+        }
+        if(arr.length) os_tags.add(arr);
+    }
+
+    $('.browser-toggle').removeClass('is-selected');
+    if(setting.browser_include !== undefined) {
+        $('.browser-toggle.include-toggle').addClass('is-selected');
+        selected = setting.browser_include;
+    } else {
+        $('.browser-toggle.exclude-toggle').addClass('is-selected');
+        selected = setting.browser_exclude || [];
+    }
+    if(selected.length) {
+        arr = [];
+        for(var i = 0;i<selected.length;i++) {
+            arr.push({text: $('#browser option[value="'+selected[i]+'"]').text(), value: selected[i]});
+        }
+        if(arr.length) browser_tags.add(arr);
+    }
+    // console.log(setting)
+    if(ad_format == 1) return buildSettingIPP();
+    if(ad_format == 2) return buildSettingPOP();
+    if(ad_format == 3) return buildSettingVAST();
+    if(ad_format == 4) return buildSettingNATIVE();
+    if(ad_format == 5) return buildSettingDIRECT();
+    if(ad_format == 6) return buildSettingDIALOG();
+
+    $('#zone-build-setting').html('');
+    // $('#zone-preview').html('');
+    return false;
+}
+function buildSettingIPP() {
+    var html ='',
+        ipp_start = setting.ipp_start || 0,
+        ipp_total = setting.ipp_total || 3,
+        ipp_delay = setting.ipp_delay || 10,
+        ipp_label = typeof setting.ipp_label !== 'undefined' ? setting.ipp_label : false;
         ipp_position = setting.ipp_position || 'top-right';
-        html += '<div class="form-group">';
-        html += '<label class="label">Start Delay</label>';
-        html += '<div class="input-group">';
-        html += '<input class="input form-control" id="ipp_start" type="number" value="'+ipp_start+'">';
-        html += '<div class="input-group-append">';
-        html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+    html += '<div class="form-group">';
+    html += '<label class="label">Start Delay</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="ipp_start" type="number" value="'+ipp_start+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">Number of Notifications</label>';
-        html += '<input class="input form-control" id="ipp_total" type="number" value="'+ipp_total+'">';
-        html += '</div>';
+    html += '<div class="form-group">';
+    html += '<label class="label">Number of Notifications</label>';
+    html += '<input class="input form-control" id="ipp_total" type="number" value="'+ipp_total+'">';
+    html += '</div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">Delay Between Notifications</label>';
-        html += '<div class="input-group">';
-        html += '<input class="input form-control" id="ipp_delay" type="number" value="'+ipp_delay+'">';
-        html += '<div class="input-group-append">';
-        html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+    html += '<div class="form-group">';
+    html += '<label class="label">Delay Between Notifications</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="ipp_delay" type="number" value="'+ipp_delay+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">AD Label</label>';
-        html += '<div class="buttons are-small has-addons">';
-        html += '<button class="button ipp_label mb-1';
-        if(ipp_label) html += ' is-selected';
-        html += '" data-value="show">Show AD label</button>';
-        html += '<button class="button ipp_label mb-1';
-        if(!ipp_label) html += ' is-selected';
-        html += '" data-value="hide">Hide AD label</button>';
-        html += '</div></div>';
+    html += '<div class="form-group">';
+    html += '<label class="label">AD Label</label>';
+    html += '<div class="buttons are-small has-addons">';
+    html += '<button class="button ipp_label mb-1';
+    if(ipp_label) html += ' is-selected';
+    html += '" data-value="show">Show AD label</button>';
+    html += '<button class="button ipp_label mb-1';
+    if(!ipp_label) html += ' is-selected';
+    html += '" data-value="hide">Hide AD label</button>';
+    html += '</div></div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">AD Position</label>';
-        html += '<div class="buttons are-small has-addons">';
-        html += '<button class="button ipp_position mb-1';
-        if(ipp_position == 'top-right') html += ' is-selected';
-        html += '" data-value="top-right">Top-Right</button>';
-        html += '<button class="button ipp_position mb-1';
-        if(ipp_position == 'top-left') html += ' is-selected';
-        html += '" data-value="top-left">Top-Left</button>';
-        html += '<button class="button ipp_position mb-1';
-        if(ipp_position == 'bottom-right') html += ' is-selected';
-        html += '" data-value="bottom-right">Bottom-Right</button>';
-        html += '<button class="button ipp_position mb-1';
-        if(ipp_position == 'bottom-left') html += ' is-selected';
-        html += '" data-value="bottom-left">Bottom-Left</button>';
-        html += '</div></div>';
-        $('#zone-build-setting').html(html);
+    html += '<div class="form-group">';
+    html += '<label class="label">AD Position</label>';
+    html += '<div class="buttons are-small has-addons">';
+    html += '<button class="button ipp_position mb-1';
+    if(ipp_position == 'top-right') html += ' is-selected';
+    html += '" data-value="top-right">Top-Right</button>';
+    html += '<button class="button ipp_position mb-1';
+    if(ipp_position == 'top-left') html += ' is-selected';
+    html += '" data-value="top-left">Top-Left</button>';
+    html += '<button class="button ipp_position mb-1';
+    if(ipp_position == 'bottom-right') html += ' is-selected';
+    html += '" data-value="bottom-right">Bottom-Right</button>';
+    html += '<button class="button ipp_position mb-1';
+    if(ipp_position == 'bottom-left') html += ' is-selected';
+    html += '" data-value="bottom-left">Bottom-Left</button>';
+    html += '</div></div>';
+    $('#zone-build-setting').html(html);
+}
+function buildSettingPOP() {
+    var html = '',
+        pop_method = setting.pop_method || 'any',
+        pop_class = setting.pop_class || [],
+        pop_delay = setting.pop_delay || 0;
+
+    html += '<div class="form-group" style="padding-bottom:1rem">';
+    html += '<label class="label">Trigger Method</label>';
+    html += '<div class="control">';
+    html += '<div class="row is-multiline d-flex" id="pop_method">';
+    html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
+    if(pop_method == 'any') html += ' is-selected';
+    html += '" data-value="any"><p>Clicking anywhere on your page</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
+    if(pop_method == 'a') html += ' is-selected';
+    html += '" data-value="a"><p>Clicking on links on your page</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
+    if(pop_method == 'class') html += ' is-selected';
+    html += '" data-value="class"><p>Clicking on specific class(es)</p></div></div>';
+    html += '</div></div></div>';
+    html += '<div class="form-group';
+    if(pop_method != 'class') html += ' hidden';
+    html += '" id="pop_class_wrap">';
+    html += '<label class="label">Trigger Class(es)</label>';
+    html += '<div class="control">';
+    html += '<input id="pop_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
+    html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
+
+    html += '<div class="form-group">';
+    html += '<label class="label">Delay</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="pop_delay" type="number" value="'+pop_delay+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
+    $('#zone-build-setting').html(html);
+    /*
+    $('#pop_class').tagsinput({
+        allowDuplicates:false,
+        freeInput: true,
+        tagClass: 'badge badge-rounded badge-success',
+        maxTags: undefined,
+    	maxChars: undefined,
+        minChars: 1,
+    });*/
+    
+    new BulmaTagsInput(document.getElementById('pop_class'), {
+        allowDuplicates: true,
+    	caseSensitive: false,
+    	clearSelectionOnTyping: false,
+    	closeDropdownOnItemSelect: true,
+    	delimiter: ',',
+    	freeInput: true,
+    	highlightDuplicate: true,
+    	highlightMatchesString: true,
+    	itemValue: undefined,
+      	itemText: undefined,
+    	maxTags: undefined,
+    	maxChars: undefined,
+    	minChars: 1,
+    	noResultsLabel: 'No results found',
+    	placeholder: '',
+    	removable: true,
+    	searchMinChars: 2,
+    	searchOn: 'text',
+    	selectable: false,
+    	source: undefined,
+    	tagClass: 'is-rounded is-success',
+    	trim: true
+    });
+    
+    //if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class.join(','));
+    if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class);
+}
+function buildSettingVAST() {
+   var html ='';
+    vast_skip = setting.vast_skip || 10,
+    vast_impr = setting.vast_impr || '',
+    vast_click = setting.vast_click || '';
+
+    html += '<div class="form-group">';
+    html += '<label class="label">Skippable after (seconds)</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="vast_skip" type="number" value="'+vast_skip+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
+    html += '<div class="form-group">';
+    html += '<label class="label">Impression Tracking</label>';
+    html += '<div class="control has-icons-left">';
+    html += '<input class="input form-control" id="vast_impr" type="text" value="'+vast_impr+'" placeholder="Empty to not set">';
+    html += '</div></div>';
+    html += '<div class="form-group">';
+    html += '<label class="label">Click Tracking</label>';
+    html += '<div class="control has-icons-left">';
+    html += '<input class="input form-control" id="vast_click" type="text" value="'+vast_click+'" placeholder="Empty to not set">';
+    html += '</div></div>';
+    $('#zone-build-setting').html(html);
+
+}
+function buildSettingNATIVE() {
+    var html = '', native_type = setting.native_type || 'classic';
+    var desktop_size = setting.desktop_size || '728x90';
+    var mobile_size = setting.mobile_size || '300x250';
+    var desktop_col = setting.desktop_col || 4;
+    var desktop_row = setting.desktop_row || 1;
+    var desktop_text_title = setting.desktop_text_title || 1;
+    var desktop_text_description = setting.desktop_text_description || 1;
+    var desktop_text_position = setting.desktop_text_position || 'bottom';
+    var desktop_spacing = setting.desktop_spacing || '10px';
+    var desktop_image = setting.desktop_image || '16:9';
+    var mobile_breaking = setting.mobile_breaking || '450px';
+    var mobile_col = setting.mobile_col || 1;
+    var mobile_row = setting.mobile_row || 2;
+    var mobile_text_title = setting.mobile_text_title || 1;
+    var mobile_text_description = setting.mobile_text_description || 1;
+    var mobile_text_position = setting.mobile_text_position || 'right';
+    var mobile_spacing = setting.mobile_spacing || '6px';
+    var mobile_image = setting.mobile_image || '16:9';
+    var native_css = setting.native_css || '';
+    var native_font = setting.native_font || 'arial';
+    var native_align = setting.native_align || 'left';
+    
+    var desktop_image_w = 200, desktop_image_h = 200;
+    if(desktop_image.indexOf(':') == -1) {
+        desktop_image = desktop_image.split('-');
+        desktop_image_w = desktop_image[0].replace('px', '');
+        desktop_image_h = desktop_image[1].replace('px', '');
+        desktop_image = 'fixed';
     }
-    function buildSettingPOP() {
-        var html = '',
-            pop_method = setting.pop_method || 'any',
-            pop_class = setting.pop_class || [],
-            pop_delay = setting.pop_delay || 0;
-
-        html += '<div class="form-group" style="padding-bottom:1rem">';
-        html += '<label class="label">Trigger Method</label>';
-        html += '<div class="control">';
-        html += '<div class="row is-multiline d-flex" id="pop_method">';
-        html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
-        if(pop_method == 'any') html += ' is-selected';
-        html += '" data-value="any"><p>Clicking anywhere on your page</p></div></div>';
-        html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
-        if(pop_method == 'a') html += ' is-selected';
-        html += '" data-value="a"><p>Clicking on links on your page</p></div></div>';
-        html += '<div class="col-12 mt-1"><div class="flatbox pop_method';
-        if(pop_method == 'class') html += ' is-selected';
-        html += '" data-value="class"><p>Clicking on specific class(es)</p></div></div>';
-        html += '</div></div></div>';
-        html += '<div class="form-group';
-        if(pop_method != 'class') html += ' hidden';
-        html += '" id="pop_class_wrap">';
-        html += '<label class="label">Trigger Class(es)</label>';
-        html += '<div class="control">';
-        html += '<input id="pop_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
-        html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
-
-        html += '<div class="form-group">';
-        html += '<label class="label">Delay</label>';
-        html += '<div class="input-group">';
-        html += '<input class="input form-control" id="pop_delay" type="number" value="'+pop_delay+'">';
-        html += '<div class="input-group-append">';
-        html += '<span class="input-group-text">Seconds</span>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-
-        $('#zone-build-setting').html(html);
-        /*
-        $('#pop_class').tagsinput({
-            allowDuplicates:false,
-            freeInput: true,
-            tagClass: 'badge badge-rounded badge-success',
-            maxTags: undefined,
-            maxChars: undefined,
-            minChars: 1,
-        });*/
-
-        new BulmaTagsInput(document.getElementById('pop_class'), {
-            allowDuplicates: true,
-            caseSensitive: false,
-            clearSelectionOnTyping: false,
-            closeDropdownOnItemSelect: true,
-            delimiter: ',',
-            freeInput: true,
-            highlightDuplicate: true,
-            highlightMatchesString: true,
-            itemValue: undefined,
-            itemText: undefined,
-            maxTags: undefined,
-            maxChars: undefined,
-            minChars: 1,
-            noResultsLabel: 'No results found',
-            placeholder: '',
-            removable: true,
-            searchMinChars: 2,
-            searchOn: 'text',
-            selectable: false,
-            source: undefined,
-            tagClass: 'is-rounded is-success',
-            trim: true
-        });
-
-        //if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class.join(','));
-        if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class);
+    var desktop_spacing_w = _parseInt(desktop_spacing), desktop_spacing_h = desktop_spacing.replace(desktop_spacing_w, '');
+    var mobile_image_w = 200, mobile_image_h = 200;
+    if(mobile_image.indexOf(':') == -1) {
+        mobile_image = mobile_image.split('-');
+        mobile_image_w = mobile_image[0].replace('px', '');
+        mobile_image_h = mobile_image[1].replace('px', '');
+        mobile_image = 'fixed';
     }
-    function buildSettingVAST() {
-        var html ='';
-        vast_skip = setting.vast_skip || 10,
-            vast_impr = setting.vast_impr || '',
-            vast_click = setting.vast_click || '';
+    var mobile_spacing_w = _parseInt(mobile_spacing), mobile_spacing_h = mobile_spacing.replace(mobile_spacing_w, '');
+        
+    html += '<div class="form-group">';
+    html += '<label class="label">Banner Type</label>';
+    html += '<div class="control mt-1">';
+    html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
+    html += '<div class="col-6">';
+    html += '<div class="flatbox native_type';
+    if(native_type == 'classic') html += ' is-selected';
+    html += '" data-value="classic"><p>Classic</p></div></div>';
+    html += '<div class="col-6"><div class="flatbox native_type';
+    if(native_type == 'native') html += ' is-selected';
+    html += '" data-value="native"><p>Native</p></div></div>';
+    html += '</div></div></div>';
+    html += '<div id="banner-classic" class="banner-setting-wrap';
+    if(native_type != 'classic') html += ' hidden';
+    html += '"><div class="form-group"><label class="label">Desktop Size</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_size" class="form-control">';
+    html += '<option value="728x90"';
+    if(desktop_size == '728x90') html += ' selected';
+    html += '>Leaderboard 728x90</option>';
+    html += '<option value="300x250"';
+    if(desktop_size == '300x250') html += ' selected';
+    html += '>Rectangle 300x250</option>';
+    html += '<option value="300x100"';
+    if(desktop_size == '300x100') html += ' selected';
+    html += '>Rectangle 300x100</option>';
+    html += '<option value="160x600"';
+    if(desktop_size == '160x600') html += ' selected';
+    html += '>Vertical Skyscraper 160x600</option>';
+    html += '<option value="900x250"';
+    if(desktop_size == '900x250') html += ' selected';
+    html += '>Banner 900x250</option>';
+    html += '</select></div></div></div>';
+    html += '<div class="form-group"><label class="label">Mobile Size</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_size" class="form-control">';
+    html += '<option value="300x250"';
+    if(mobile_size == '300x250') html += ' selected';
+    html += '>Rectangle 300x250</option>';
+    html += '<option value="300x100"';
+    if(mobile_size == '300x100') html += ' selected';
+    html += '>Rectangle 300x100</option>';
+    html += '<option value="0"';
+    if(mobile_size == '0') html += ' selected';
+    html += '>Same as Desktop</option>';
+    html += '</select></div></div></div></div>';
+    html += '<div id="banner-native" class="banner-setting-wrap';
+    if(native_type != 'native') html += ' hidden';
+    html += '"><article class="message is-orange">';
+    html += '<div class="message-header"><p>Desktop</p>';
+    html += '<span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
+    html += '</div><div class="message-body">';
+    html += '<div class="row is-mobile is-gaplessly">';
+    html += '<div class="col-6">';
+    html += '<div class="form-group"><label class="label">Columns</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_col" class="form-control">';
+    html += '<option value="1"';
+    if(desktop_col == 1) html += ' selected';
+    html += '>1</option>';
+    html += '<option value="2"';
+    if(desktop_col == 2) html += ' selected';
+    html += '>2</option>';
+    html += '<option value="3"';
+    if(desktop_col == 3) html += ' selected';
+    html += '>3</option>';
+    html += '<option value="4"';
+    if(desktop_col == 4) html += ' selected';
+    html += '>4</option>';
+    html += '<option value="5"';
+    if(desktop_col == 5) html += ' selected';
+    html += '>5</option>';
+    html += '<option value="6"';
+    if(desktop_col == 6) html += ' selected';
+    html += '>6</option>';
+    html += '</select></div></div></div>';
+    html += '</div><div class="col-6">';
+    html += '<div class="form-group"><label class="label">Rows</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_row" class="form-control">';
+    html += '<option value="1"';
+    if(desktop_row == 1) html += ' selected';
+    html += '>1</option>';
+    html += '<option value="2"';
+    if(desktop_row == 2) html += ' selected';
+    html += '>2</option>';
+    html += '<option value="3"';
+    if(desktop_row == 3) html += ' selected';
+    html += '>3</option>';
+    html += '</select></div></div></div>';
+    html += '</div></div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">Skippable after (seconds)</label>';
-        html += '<div class="input-group">';
-        html += '<input class="input form-control" id="vast_skip" type="number" value="'+vast_skip+'">';
-        html += '<div class="input-group-append">';
-        html += '<span class="input-group-text" id="basic-addon2">Seconds</span>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+    html += '<div class="form-group" style="margin-bottom:.5em;">';
+    html += '<label class="label">Text</label></div>';
+    html += '<div class="form-group has-addons input-group">';
+    html += '<div class="input-group-append">';
+    html += '<div class="button desktop-text';
+    if(desktop_text_title == 1) html += ' is-selected';
+    html += '" data-value="title">Title</div>';
+    html += '<div class="button desktop-text';
+    if(desktop_text_description == 1) html += ' is-selected';
+    html += '" data-value="description" style="border-left: 1px solid #dbdbdb;">Description</div>';
+    html += '</div>';
+    html += '<select id="desktop-text" class="form-control">';
+    html += '<option value="bottom"';
+    if(desktop_text_position == 'bottom') html += ' selected';
+    html += '>Position: Bottom</option>';
+    html += '<option value="right"';
+    if(desktop_text_position == 'right') html += ' selected';
+    html += '>Position: Right</option>';
+    html += '</select></div>';
 
-        html += '<div class="form-group">';
-        html += '<label class="label">Impression Tracking</label>';
-        html += '<div class="control has-icons-left">';
-        html += '<input class="input form-control" id="vast_impr" type="text" value="'+vast_impr+'" placeholder="Empty to not set">';
-        html += '</div></div>';
-        html += '<div class="form-group">';
-        html += '<label class="label">Click Tracking</label>';
-        html += '<div class="control has-icons-left">';
-        html += '<input class="input form-control" id="vast_click" type="text" value="'+vast_click+'" placeholder="Empty to not set">';
-        html += '</div></div>';
-        $('#zone-build-setting').html(html);
+    html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
+    html += '<label class="label">Spacing</label></div>';
+    html += '<div class="form-group has-addons input-group">';
+    html += '<input class="input form-control" type="number" id="desktop-spacing" placeholder="Spacing" value="'+desktop_spacing_w+'">';
+    html += '<div class="input-group-append">';
+    html += '<button class="button desktop-spacing';
+    if(desktop_spacing_h == 'px') html += ' is-selected';
+    html += '" data-value="px">Px</button>';
+    html += '<button class="button desktop-spacing';
+    if(desktop_spacing_h == 'em') html += ' is-selected';
+    html += '" data-value="em" style="border-left: 1px solid #dbdbdb;">Em</button>';
+    html += '<button class="button desktop-spacing';
+    if(desktop_spacing_h == 'rem') html += ' is-selected';
+    html += '" data-value="rem" style="border-left: 1px solid #dbdbdb;">Rem</button>';
+    html += '</div></div>';
 
+    html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
+    html += '<label class="label">Image</label></div>';
+    html += '<div class="control">';
+    html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
+    html += '<div class="col-6">';
+    html += '<div class="flatbox desktop-image';
+    if(desktop_image != 'fixed') html += ' is-selected';
+    html += '" data-value="ratio">Ratio</div>';
+    html += '</div>';
+    html += '<div class="col-6">';
+    html += '<div class="flatbox desktop-image';
+    if(desktop_image == 'fixed') html += ' is-selected';
+    html += '" data-value="fixed">Fixed</div>';
+    html += '</div>';
+    html += '<div class="col-12 mt-1">';
+    html += '<div class="form-group control is-expanded img-ratio';
+    if(desktop_image == 'fixed') html += ' hidden';
+    html += '"><div class="select is-fullwidth"><select id="desktop-image" class="form-control">';
+    html += '<option value="1:1"';
+    if(desktop_image == '1:1') html += ' selected';
+    html += '>1:1</option>';
+    html += '<option value="3:2"';
+    if(desktop_image == '3:2') html += ' selected';
+    html += '>3:2</option>';
+    html += '<option value="4:3"';
+    if(desktop_image == '4:3') html += ' selected';
+    html += '>4:3</option>';
+    html += '<option value="16:9"';
+    if(desktop_image == '16:9') html += ' selected';
+    html += '>16:9</option>';
+    html += '</select></div>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="col-12">';
+    html += '<div class="row">';
+    html += '<div class="col-6">';
+    html += '<div class="form-group control img-fixed';
+    if(desktop_image != 'fixed') html += ' hidden';
+    html += '"><label class="label">W</label>';
+    html += '<input class="input form-control" type="number" id="desktop-image-width" placeholder="Width px" value="'+desktop_image_w+'">';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="col-6">';
+    html += '<div class="form-group control img-fixed';
+    if(desktop_image != 'fixed') html += ' hidden';
+    html += '"><div class="label">H</div>';
+    html += '<input class="input form-control" type="number" id="desktop-image-height" placeholder="Height px" value="'+desktop_image_h+'">';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div></div></div>';
+
+    html += '</article>';
+
+
+    html += '<article class="message is-orange">';
+    html += '<div class="message-header"><p>Mobile</p>';
+    html += '<span class="icon spin180"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
+    html += '</div><div class="message-body hidden">';
+    html += '<div class="form-group"><label class="label">Breaking Point</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_breaking" class="form-control">';
+    html += '<option value="450px"';
+    if(mobile_breaking == '450px') html += ' selected';
+    html += '>Small 450px</option>';
+    html += '<option value="800px"';
+    if(mobile_breaking == '800px') html += ' selected';
+    html += '>Medium 800px</option>';
+    html += '<option value="0"';
+    if(mobile_breaking == '0') html += ' selected';
+    html += '>Desktop Style Only</option>';
+    html += '</select></div></div></div>';
+    html += '<div class="row is-mobile is-gaplessly">';
+    html += '<div class="col-6">';
+    html += '<div class="form-group"><label class="label">Columns</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_col" class="form-control">';
+    html += '<option value="1"';
+    if(mobile_col == 1) html += ' selected';
+    html += '>1</option>';
+    html += '<option value="2"';
+    if(mobile_col == 2) html += ' selected';
+    html += '>2</option>';
+    html += '</select></div></div></div>';
+    html += '</div><div class="col-6">';
+    html += '<div class="form-group"><label class="label">Rows</label>';
+    html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_row" class="form-control">';
+    html += '<option value="1"';
+    if(mobile_row == 1) html += ' selected';
+    html += '>1</option>';
+    html += '<option value="2"';
+    if(mobile_row == 2) html += ' selected';
+    html += '>2</option>';
+    html += '<option value="3"';
+    if(mobile_row == 3) html += ' selected';
+    html += '>3</option>';
+    html += '<option value="4"';
+    if(mobile_row == 4) html += ' selected';
+    html += '>4</option>';
+    html += '<option value="5"';
+    if(mobile_row == 5) html += ' selected';
+    html += '>5</option>';
+    html += '<option value="6"';
+    if(mobile_row == 6) html += ' selected';
+    html += '>6</option>';
+    html += '</select></div></div></div>';
+    html += '</div></div>';
+
+    html += '<div class="form-group" style="margin-bottom:.5em;">';
+    html += '<label class="label">Text</label></div>';
+    html += '<div class="form-group has-addons input-group">';
+    html += '<div class="input-group-append">';
+    html += '<div class="button mobile-text';
+    if(mobile_text_title == 1) html += ' is-selected';
+    html += '" data-value="title">Title</div>';
+    html += '<div class="button mobile-text';
+    if(mobile_text_description == 1) html += ' is-selected';
+    html += '" data-value="description" style="border-left: 1px solid #dbdbdb;">Description</div>';
+    html += '</div>';
+    html += '<select id="mobile-text" class="form-control">';
+    html += '<option value="bottom"';
+    if(mobile_text_position == 'bottom') html += ' selected';
+    html += '>Position: Bottom</option>';
+    html += '<option value="right"';
+    if(mobile_text_position == 'right') html += ' selected';
+    html += '>Position: Right</option>';
+    html += '</select></div>';
+
+    html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
+    html += '<label class="label">Spacing</label></div>';
+    html += '<div class="form-group has-addons input-group">';
+    html += '<input class="input form-control" type="number" id="mobile-spacing" placeholder="Spacing" value="'+mobile_spacing_w+'">';
+    html += '<div class="input-group-append">';
+    html += '<button class="button mobile-spacing';
+    if(mobile_spacing_h == 'px') html += ' is-selected';
+    html += '" data-value="px">Px</button>';
+    html += '<button class="button mobile-spacing';
+    if(mobile_spacing_h == 'em') html += ' is-selected';
+    html += '" data-value="em" style="border-left: 1px solid #dbdbdb;">Em</button>';
+    html += '<button class="button mobile-spacing';
+    if(mobile_spacing_h == 'rem') html += ' is-selected';
+    html += '" data-value="rem" style="border-left: 1px solid #dbdbdb;">Rem</button>';
+    html += '</div></div>';
+
+    html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
+    html += '<label class="label">Image</label></div>';
+    html += '<div class="control">';
+    html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
+    html += '<div class="col-6">';
+    html += '<div class="flatbox mobile-image';
+    if(mobile_image != 'fixed') html += ' is-selected';
+    html += '" data-value="ratio">Ratio</div>';
+    html += '</div>';
+    html += '<div class="col-6">';
+    html += '<div class="flatbox mobile-image';
+    if(mobile_image == 'fixed') html += ' is-selected';
+    html += '" data-value="fixed">Fixed</div>';
+    html += '</div>';
+    html += '<div class="col-12 mt-1">';
+    html += '<div class="form-group control is-expanded mobile-img-ratio';
+    if(mobile_image == 'fixed') html += ' hidden';
+    html += '">';
+    html += '<div class="select is-fullwidth"><select id="mobile-image" class="form-control">';
+    html += '<option value="1:1"';
+    if(mobile_image == '1:1') html += ' selected';
+    html += '>1:1</option>';
+    html += '<option value="3:2"';
+    if(mobile_image == '3:2') html += ' selected';
+    html += '>3:2</option>';
+    html += '<option value="4:3"';
+    if(mobile_image == '4:3') html += ' selected';
+    html += '>4:3</option>';
+    html += '<option value="16:9"';
+    if(mobile_image == '16:9') html += ' selected';
+    html += '>16:9</option>';
+    html += '</select></div></div></div>';
+    html += '<div class="col-12">';
+    html += '<div class="row">';
+    html += '<div class="col-6">';
+    html += '<div class="form-group control mobile-img-fixed';
+    if(mobile_image != 'fixed') html += ' hidden';
+    html += '"><label class="label">W</label>';
+    html += '<input class="input form-control" type="number" id="mobile-image-width" placeholder="Width px" value="'+mobile_image_w+'">';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="col-6">';
+    html += '<div class="form-group control mobile-img-fixed';
+    if(mobile_image != 'fixed') html += ' hidden';
+    html += '"><div class="label">H</div>';
+    html += '<input class="input form-control" type="number" id="mobile-image-height" placeholder="Height px" value="'+mobile_image_h+'">';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div></div></div>';
+
+    html += '</article>';
+
+    html += '<article class="message is-orange">';
+    html += '<div class="message-header"><p>Custom CSS</p>';
+    html += '<span class="icon spin180"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
+    html += '</div><div class="message-body hidden">';
+    html += '<div class="form-group"><div class="control">';
+    html += '<textarea class="textarea form-control" placeholder="Custom CSS" id="native_css" rows="5">'+native_css+'</textarea>';
+    html += '</div></div>';
+    html += '</div></article>';
+    html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
+    html += '<label class="label">Text Formating</label></div>';
+    html += '<div class="form-group has-addons input-group">';
+    html += '<select id="native_font" class="form-control">';
+    html += '<option value="arial"';
+    if(native_font == 'arial') html += ' selected';
+    html += '>Arial</option>';
+    html += '<option value="helvetica"';
+    if(native_font == 'helvetica') html += ' selected';
+    html += '>Helvetica</option>';
+    html += '<option value="verdana"';
+    if(native_font == 'verdana') html += ' selected';
+    html += '>Verdana</option>';
+    html += '<option value="monospace"';
+    if(native_font == 'monospace') html += ' selected';
+    html += '>Monospace</option>';
+    html += '</select>';
+    html +=  '<div class="input-group-append">';
+    html += '<button class="button native-align';
+    if(native_align == 'left') html += ' is-selected';
+    html += '" data-value="left"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M3,7H15V9H3V7M3,11H21V13H3V11M3,15H15V17H3V15M3,19H21V21H3V19Z" /></svg></span></button>';
+    html += '<button class="button native-align';
+    if(native_align == 'center') html += ' is-selected';
+    html += '" data-value="center" style="border-left: 1px solid #dbdbdb;"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M7,7H17V9H7V7M3,11H21V13H3V11M7,15H17V17H7V15M3,19H21V21H3V19Z" /></svg></span></button>';
+    html += '<button class="button native-align';
+    if(native_align == 'right') html += ' is-selected';
+    html += '" data-value="right" style="border-left: 1px solid #dbdbdb;"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M9,7H21V9H9V7M3,11H21V13H3V11M9,15H21V17H9V15M3,19H21V21H3V19Z" /></svg></span></button>';
+    html += '</div>';
+
+    $('#zone-build-setting').html(html);
+}
+function buildSettingDIALOG() {
+    var html = '',
+        dia_method = setting.dia_method || 'close',
+        dia_class = setting.dia_class || [],
+        dia_delay = setting.dia_delay || 0;
+    html += '<div class="form-group" style="padding-bottom:1rem">';
+    html += '<label class="label">Trigger Method</label>';
+    html += '<div class="control">';
+    html += '<div class="row is-multiline">';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
+    if(dia_method == 'close') html += ' is-selected';
+    html += '" data-value="close"><p>Moving mouse off the page (typically to close the tab)</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
+    if(dia_method == 'a') html += ' is-selected';
+    html += '" data-value="a"><p>Clicking on links on your page</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
+    if(dia_method == 'class') html += ' is-selected';
+    html += '" data-value="class"><p>Clicking on specific class(es)</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
+    if(dia_method == 'auto') html += ' is-selected';
+    html += '" data-value="auto"><p>Automatic after some delays</p></div></div>';
+    html += '</div></div></div>';
+    html += '<div class="form-group';
+    if(dia_method != 'class') html += ' hidden';
+    html += '" id="dia_class_wrap">';
+    html += '<label class="label">Trigger Class(es)</label>';
+    html += '<div class="control">';
+    html += '<input id="dia_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
+    html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
+
+    html += '<div class="form-group';
+    if(dia_method != 'auto') html += ' hidden';
+    html += '" id="dia_auto_wrap">';
+    html += '<label class="label">Delay</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="dia_delay" type="number" value="'+dia_delay+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
+    $('#zone-build-setting').html(html);
+    new BulmaTagsInput(document.getElementById('dia_class'), {
+        allowDuplicates: false,
+    	caseSensitive: false,
+    	clearSelectionOnTyping: false,
+    	closeDropdownOnItemSelect: true,
+    	delimiter: ',',
+    	freeInput: true,
+    	highlightDuplicate: true,
+    	highlightMatchesString: true,
+    	itemValue: undefined,
+      	itemText: undefined,
+    	maxTags: undefined,
+    	maxChars: undefined,
+    	minChars: 1,
+    	noResultsLabel: 'No results found',
+    	placeholder: '',
+    	removable: true,
+    	searchMinChars: 2,
+    	searchOn: 'text',
+    	selectable: false,
+    	source: undefined,
+    	tagClass: 'is-rounded is-success',
+    	trim: true
+    });
+    if(dia_method == 'class') document.getElementById('dia_class').BulmaTagsInput().add(dia_class.join(','));
+}
+function buildSettingDIRECT() {
+    $('#zone-build-setting').html('');
+}
+// function buildPreview() {
+//     var device = $('.preview-device.is-selected').attr('data-value');
+// }
+function generatePreview(code) {
+    
+    if(code == 1) return generatePreviewIPP();
+    if(code == 4) return generatePreviewNATIVE();
+    if(code == 3) return generatePreviewVAST();
+    if(code == 6) return generatePreviewDIALOG();
+    $('#zone-preview').html('');
+    $('#zone-setting').removeClass('col-lg-6');
+    $('#zone-setting').addClass('col-lg-12');
+    $('#zone-generate-preview').hide();
+    return false;
+}
+function generatePreviewIPP() {
+    var title = 'Advertising Title';
+    var description = 'Advertising Description';
+    var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
+    var ipp_position = $('.ipp_position.is-selected').attr('data-value');
+    var position = ipp_position.split("-");
+    var html = '<style>.preview-animated{transform:translate(0) !important;transition:transform 1s ease;}</style>';
+    html += '<div id="preview-ipp" style="display:flex;height:100%;overflow:hidden;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
+    html += '<div style="position:relative;width:100%;min-height:200px;">';
+    html += '<div id="preview-item" class="preview-animated" style="position:absolute;display:flex;justify-content:flex-start;width:310px;height:60px;background:#fff;box-shadow:0 3px 3px rgba(0,0,0,.25);border-radius:6px;padding:10px;'+position[0]+':18px;'+position[1]+':8px;transform:translate('+(position[1]=='left'?'-':'')+'3700px);">';
+    html += '<div style="margin-right:12px;"><img id="preview-image" width="40" height="40" src="'+creative_url+'"></div>';
+    html += '<div style="display:flex;flex-direction:column;justify-content:center;">';
+    html += '<div id="preview-title" style="max-width:230px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;margin-bottom:4px;font-weight:500;font-size:12px;">'+title+'</div>';
+    html += '<div id="preview-description" style="max-width:230px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-size:11px;">'+description+'</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    // $('#zone-preview').html(html);
+    $('#zone-setting').removeClass('is-12-desktop');
+    $('#zone-setting').addClass('is-6-desktop');
+    $('#zone-generate-preview').show();
+    // if(window.timers) clearInterval(window.timers);
+    // window.timers = setInterval(function(){
+    //     $('#preview-item').removeClass('preview-animated');
+    //     setTimeout(function(){$('#preview-item').addClass('preview-animated');},500)
+    // }, 5000);
+    //////////////
+    html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
+    html += '<script>';
+    html += 'if(window.timers) clearInterval(window.timers);';
+    html += 'window.timers = setInterval(function(){';
+    html += ' $("#preview-item").removeClass("preview-animated");';
+    html += 'setTimeout(function(){$("#preview-item").addClass("preview-animated");},500)';
+    html += '}, 5000);';
+    html += '<\/script>';
+    html += '</body></html>';
+    var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
+    $('#thepage').detach();
+    $('#zone-preview-test').append(iFrame);
+    
+    var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
+    iFrameDoc.write(html);
+    iFrameDoc.close();
+}
+function generatePreviewNATIVE() {
+    // var size = $('#size').val();
+    var native_type = $('.native_type.is-selected').attr('data-value');
+    if(desktop_preview){
+        var title = $('.desktop-text.is-selected[data-value="title"]').length?'Advertising Title':"";
+        var description = $('.desktop-text.is-selected[data-value="description"]').length?'Advertising Description':"";
+        var columns = $('#desktop_col').val();
+        var rows = $('#desktop_row').val();
+        var text_position = $('#desktop-text').val();
+    }else{
+        var title = $('.mobile-text.is-selected[data-value="title"]').length?'Advertising Title':"";
+        var description = $('.mobile-text.is-selected[data-value="description"]').length?'Advertising Description':"";
+        var columns = $('#mobile_col').val();
+        var rows = $('#mobile_row').val();
+        var text_position = $('#mobile-text').val();
     }
-    function buildSettingNATIVE() {
-        var html = '', native_type = setting.native_type || 'classic';
-        var desktop_size = setting.desktop_size || '728x90';
-        var mobile_size = setting.mobile_size || '300x250';
-        var desktop_col = setting.desktop_col || 4;
-        var desktop_row = setting.desktop_row || 1;
-        var desktop_text_title = setting.desktop_text_title || 1;
-        var desktop_text_description = setting.desktop_text_description || 1;
-        var desktop_text_position = setting.desktop_text_position || 'bottom';
-        var desktop_spacing = setting.desktop_spacing || '10px';
-        var desktop_image = setting.desktop_image || '16:9';
-        var mobile_breaking = setting.mobile_breaking || '450px';
-        var mobile_col = setting.mobile_col || 1;
-        var mobile_row = setting.mobile_row || 2;
-        var mobile_text_title = setting.mobile_text_title || 1;
-        var mobile_text_description = setting.mobile_text_description || 1;
-        var mobile_text_position = setting.mobile_text_position || 'right';
-        var mobile_spacing = setting.mobile_spacing || '6px';
-        var mobile_image = setting.mobile_image || '16:9';
-        var native_css = setting.native_css || '';
-        var native_font = setting.native_font || 'arial';
-        var native_align = setting.native_align || 'left';
-
-        var desktop_image_w = 200, desktop_image_h = 200;
-        if(desktop_image.indexOf(':') == -1) {
-            desktop_image = desktop_image.split('-');
-            desktop_image_w = desktop_image[0].replace('px', '');
-            desktop_image_h = desktop_image[1].replace('px', '');
-            desktop_image = 'fixed';
+    var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
+    var align = $('.native-align.is-selected').attr('data-value');
+    if(native_type == 'native') {
+        var html = '<div id="preview-native" style="display:content;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
+        var row;
+        for (row = 0; row < rows; row++) {
+            html += '<div class="columns is-gapless is-mobile">';
+            var column;
+            for (column = 0; column < columns; column++) {
+                if(columns==5){
+                    html += '<div class="column is-one-fifth"><div style="padding:.1rem">';
+                }else{
+                    html += '<div class="column is-'+12/columns+'"><div style="padding:.1rem">';
+                }
+                if(text_position=="bottom"){
+                    html += '<a style="text-decoration: none;color: #999999;display: flex;position: relative;flex-direction: column;">';
+                    html += '<div style="position: relative;float: left;width: 100%;min-width: auto;z-index: 2;flex: initial;height: 100%;">';
+                    html += '<div style="background-image:url('+creative_url+');background-size:100% auto;position: absolute;top: 0;left: 0;;width:100%;height:100%;background-repeat:no-repeat;transition: background-size 0.3s;"></div>';
+                    html += '<div style="width: 100%;padding-top: 100%;z-index: 1">';
+                    html += '</div></div>';
+                    html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.05rem;padding-right:.5rem;text-align:'+align+'">'+title+'</div>';
+                    html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.80rem;color:#b5b5b5;padding-right:.5rem;text-align:'+align+'">'+description+'</div>';
+                    html += '</a>';
+                }else{
+                    html += '<a style="text-decoration: none;color: #999999;display: flex;position: relative;flex-direction: row;">';
+                    html += '<div style="position: relative;float: left;width: calc(100% - 460px);min-width: auto;z-index: 2;flex: 1;height: 100%;">';
+                    html += '<div style="background-image:url('+creative_url+');background-size:100% auto;position: absolute;top: 0;left: 0;;width:100%;height:100%;background-repeat:no-repeat;transition: background-size 0.3s;"></div>';
+                    html += '<div style="width: 100%;padding-top: 100%;z-index: 1">';
+                    html += '</div></div>';
+                    html += '<div style="max-width: 460px;max-height: 450px;overflow: hidden;position: initial;right: 0;top: 0;width: 460px;height: auto;padding-left: 10px;padding-right: 0;padding-top: 0px;padding-bottom: 0;display: block;text-align: left;flex: 1;position: relative;">';
+                    html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.05rem;padding-right:.5rem;text-align:'+align+'">'+title+'</div>';
+                    html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.80rem;color:#b5b5b5;padding-right:.5rem;text-align:'+align+'">'+description+'</div>';
+                    html += '</div>';
+                    html += '</a>';
+                }
+                html += '</div></div>';
+            }
+            html += '</div>';
         }
-        var desktop_spacing_w = _parseInt(desktop_spacing), desktop_spacing_h = desktop_spacing.replace(desktop_spacing_w, '');
-        var mobile_image_w = 200, mobile_image_h = 200;
-        if(mobile_image.indexOf(':') == -1) {
-            mobile_image = mobile_image.split('-');
-            mobile_image_w = mobile_image[0].replace('px', '');
-            mobile_image_h = mobile_image[1].replace('px', '');
-            mobile_image = 'fixed';
-        }
-        var mobile_spacing_w = _parseInt(mobile_spacing), mobile_spacing_h = mobile_spacing.replace(mobile_spacing_w, '');
-
-        html += '<div class="form-group">';
-        html += '<label class="label">Banner Type</label>';
-        html += '<div class="control mt-1">';
-        html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
-        html += '<div class="col-6">';
-        html += '<div class="flatbox native_type';
-        if(native_type == 'classic') html += ' is-selected';
-        html += '" data-value="classic"><p>Classic</p></div></div>';
-        html += '<div class="col-6"><div class="flatbox native_type';
-        if(native_type == 'native') html += ' is-selected';
-        html += '" data-value="native"><p>Native</p></div></div>';
-        html += '</div></div></div>';
-        html += '<div id="banner-classic" class="banner-setting-wrap';
-        if(native_type != 'classic') html += ' hidden';
-        html += '"><div class="form-group"><label class="label">Desktop Size</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_size" class="form-control">';
-        html += '<option value="728x90"';
-        if(desktop_size == '728x90') html += ' selected';
-        html += '>Leaderboard 728x90</option>';
-        html += '<option value="300x250"';
-        if(desktop_size == '300x250') html += ' selected';
-        html += '>Rectangle 300x250</option>';
-        html += '<option value="300x100"';
-        if(desktop_size == '300x100') html += ' selected';
-        html += '>Rectangle 300x100</option>';
-        html += '<option value="160x600"';
-        if(desktop_size == '160x600') html += ' selected';
-        html += '>Vertical Skyscraper 160x600</option>';
-        html += '<option value="900x250"';
-        if(desktop_size == '900x250') html += ' selected';
-        html += '>Banner 900x250</option>';
-        html += '</select></div></div></div>';
-        html += '<div class="form-group"><label class="label">Mobile Size</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_size" class="form-control">';
-        html += '<option value="300x250"';
-        if(mobile_size == '300x250') html += ' selected';
-        html += '>Rectangle 300x250</option>';
-        html += '<option value="300x100"';
-        if(mobile_size == '300x100') html += ' selected';
-        html += '>Rectangle 300x100</option>';
-        html += '<option value="0"';
-        if(mobile_size == '0') html += ' selected';
-        html += '>Same as Desktop</option>';
-        html += '</select></div></div></div></div>';
-        html += '<div id="banner-native" class="banner-setting-wrap';
-        if(native_type != 'native') html += ' hidden';
-        html += '"><article class="message is-orange">';
-        html += '<div class="message-header"><p>Desktop</p>';
-        html += '<span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
-        html += '</div><div class="message-body">';
-        html += '<div class="row is-mobile is-gaplessly">';
-        html += '<div class="col-6">';
-        html += '<div class="form-group"><label class="label">Columns</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_col" class="form-control">';
-        html += '<option value="1"';
-        if(desktop_col == 1) html += ' selected';
-        html += '>1</option>';
-        html += '<option value="2"';
-        if(desktop_col == 2) html += ' selected';
-        html += '>2</option>';
-        html += '<option value="3"';
-        if(desktop_col == 3) html += ' selected';
-        html += '>3</option>';
-        html += '<option value="4"';
-        if(desktop_col == 4) html += ' selected';
-        html += '>4</option>';
-        html += '<option value="5"';
-        if(desktop_col == 5) html += ' selected';
-        html += '>5</option>';
-        html += '<option value="6"';
-        if(desktop_col == 6) html += ' selected';
-        html += '>6</option>';
-        html += '</select></div></div></div>';
-        html += '</div><div class="col-6">';
-        html += '<div class="form-group"><label class="label">Rows</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="desktop_row" class="form-control">';
-        html += '<option value="1"';
-        if(desktop_row == 1) html += ' selected';
-        html += '>1</option>';
-        html += '<option value="2"';
-        if(desktop_row == 2) html += ' selected';
-        html += '>2</option>';
-        html += '<option value="3"';
-        if(desktop_row == 3) html += ' selected';
-        html += '>3</option>';
-        html += '</select></div></div></div>';
-        html += '</div></div>';
-
-        html += '<div class="form-group" style="margin-bottom:.5em;">';
-        html += '<label class="label">Text</label></div>';
-        html += '<div class="form-group has-addons input-group">';
-        html += '<div class="input-group-append">';
-        html += '<div class="button desktop-text';
-        if(desktop_text_title == 1) html += ' is-selected';
-        html += '" data-value="title">Title</div>';
-        html += '<div class="button desktop-text';
-        if(desktop_text_description == 1) html += ' is-selected';
-        html += '" data-value="description" style="border-left: 1px solid #dbdbdb;">Description</div>';
         html += '</div>';
-        html += '<select id="desktop-text" class="form-control">';
-        html += '<option value="bottom"';
-        if(desktop_text_position == 'bottom') html += ' selected';
-        html += '>Position: Bottom</option>';
-        html += '<option value="right"';
-        if(desktop_text_position == 'right') html += ' selected';
-        html += '>Position: Right</option>';
-        html += '</select></div>';
-
-        html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
-        html += '<label class="label">Spacing</label></div>';
-        html += '<div class="form-group has-addons input-group">';
-        html += '<input class="input form-control" type="number" id="desktop-spacing" placeholder="Spacing" value="'+desktop_spacing_w+'">';
-        html += '<div class="input-group-append">';
-        html += '<button class="button desktop-spacing';
-        if(desktop_spacing_h == 'px') html += ' is-selected';
-        html += '" data-value="px">Px</button>';
-        html += '<button class="button desktop-spacing';
-        if(desktop_spacing_h == 'em') html += ' is-selected';
-        html += '" data-value="em" style="border-left: 1px solid #dbdbdb;">Em</button>';
-        html += '<button class="button desktop-spacing';
-        if(desktop_spacing_h == 'rem') html += ' is-selected';
-        html += '" data-value="rem" style="border-left: 1px solid #dbdbdb;">Rem</button>';
-        html += '</div></div>';
-
-        html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
-        html += '<label class="label">Image</label></div>';
-        html += '<div class="control">';
-        html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
-        html += '<div class="col-6">';
-        html += '<div class="flatbox desktop-image';
-        if(desktop_image != 'fixed') html += ' is-selected';
-        html += '" data-value="ratio">Ratio</div>';
-        html += '</div>';
-        html += '<div class="col-6">';
-        html += '<div class="flatbox desktop-image';
-        if(desktop_image == 'fixed') html += ' is-selected';
-        html += '" data-value="fixed">Fixed</div>';
-        html += '</div>';
-        html += '<div class="col-12 mt-1">';
-        html += '<div class="form-group control is-expanded img-ratio';
-        if(desktop_image == 'fixed') html += ' hidden';
-        html += '"><div class="select is-fullwidth"><select id="desktop-image" class="form-control">';
-        html += '<option value="1:1"';
-        if(desktop_image == '1:1') html += ' selected';
-        html += '>1:1</option>';
-        html += '<option value="3:2"';
-        if(desktop_image == '3:2') html += ' selected';
-        html += '>3:2</option>';
-        html += '<option value="4:3"';
-        if(desktop_image == '4:3') html += ' selected';
-        html += '>4:3</option>';
-        html += '<option value="16:9"';
-        if(desktop_image == '16:9') html += ' selected';
-        html += '>16:9</option>';
-        html += '</select></div>';
-        html += '</div>';
-        html += '</div>';
-        html += '<div class="col-12">';
-        html += '<div class="row">';
-        html += '<div class="col-6">';
-        html += '<div class="form-group control img-fixed';
-        if(desktop_image != 'fixed') html += ' hidden';
-        html += '"><label class="label">W</label>';
-        html += '<input class="input form-control" type="number" id="desktop-image-width" placeholder="Width px" value="'+desktop_image_w+'">';
-        html += '</div>';
-        html += '</div>';
-        html += '<div class="col-6">';
-        html += '<div class="form-group control img-fixed';
-        if(desktop_image != 'fixed') html += ' hidden';
-        html += '"><div class="label">H</div>';
-        html += '<input class="input form-control" type="number" id="desktop-image-height" placeholder="Height px" value="'+desktop_image_h+'">';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div></div></div>';
-
-        html += '</article>';
-
-
-        html += '<article class="message is-orange">';
-        html += '<div class="message-header"><p>Mobile</p>';
-        html += '<span class="icon spin180"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
-        html += '</div><div class="message-body hidden">';
-        html += '<div class="form-group"><label class="label">Breaking Point</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_breaking" class="form-control">';
-        html += '<option value="450px"';
-        if(mobile_breaking == '450px') html += ' selected';
-        html += '>Small 450px</option>';
-        html += '<option value="800px"';
-        if(mobile_breaking == '800px') html += ' selected';
-        html += '>Medium 800px</option>';
-        html += '<option value="0"';
-        if(mobile_breaking == '0') html += ' selected';
-        html += '>Desktop Style Only</option>';
-        html += '</select></div></div></div>';
-        html += '<div class="row is-mobile is-gaplessly">';
-        html += '<div class="col-6">';
-        html += '<div class="form-group"><label class="label">Columns</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_col" class="form-control">';
-        html += '<option value="1"';
-        if(mobile_col == 1) html += ' selected';
-        html += '>1</option>';
-        html += '<option value="2"';
-        if(mobile_col == 2) html += ' selected';
-        html += '>2</option>';
-        html += '</select></div></div></div>';
-        html += '</div><div class="col-6">';
-        html += '<div class="form-group"><label class="label">Rows</label>';
-        html += '<div class="control"><div class="select is-fullwidth"><select id="mobile_row" class="form-control">';
-        html += '<option value="1"';
-        if(mobile_row == 1) html += ' selected';
-        html += '>1</option>';
-        html += '<option value="2"';
-        if(mobile_row == 2) html += ' selected';
-        html += '>2</option>';
-        html += '<option value="3"';
-        if(mobile_row == 3) html += ' selected';
-        html += '>3</option>';
-        html += '<option value="4"';
-        if(mobile_row == 4) html += ' selected';
-        html += '>4</option>';
-        html += '<option value="5"';
-        if(mobile_row == 5) html += ' selected';
-        html += '>5</option>';
-        html += '<option value="6"';
-        if(mobile_row == 6) html += ' selected';
-        html += '>6</option>';
-        html += '</select></div></div></div>';
-        html += '</div></div>';
-
-        html += '<div class="form-group" style="margin-bottom:.5em;">';
-        html += '<label class="label">Text</label></div>';
-        html += '<div class="form-group has-addons input-group">';
-        html += '<div class="input-group-append">';
-        html += '<div class="button mobile-text';
-        if(mobile_text_title == 1) html += ' is-selected';
-        html += '" data-value="title">Title</div>';
-        html += '<div class="button mobile-text';
-        if(mobile_text_description == 1) html += ' is-selected';
-        html += '" data-value="description" style="border-left: 1px solid #dbdbdb;">Description</div>';
-        html += '</div>';
-        html += '<select id="mobile-text" class="form-control">';
-        html += '<option value="bottom"';
-        if(mobile_text_position == 'bottom') html += ' selected';
-        html += '>Position: Bottom</option>';
-        html += '<option value="right"';
-        if(mobile_text_position == 'right') html += ' selected';
-        html += '>Position: Right</option>';
-        html += '</select></div>';
-
-        html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
-        html += '<label class="label">Spacing</label></div>';
-        html += '<div class="form-group has-addons input-group">';
-        html += '<input class="input form-control" type="number" id="mobile-spacing" placeholder="Spacing" value="'+mobile_spacing_w+'">';
-        html += '<div class="input-group-append">';
-        html += '<button class="button mobile-spacing';
-        if(mobile_spacing_h == 'px') html += ' is-selected';
-        html += '" data-value="px">Px</button>';
-        html += '<button class="button mobile-spacing';
-        if(mobile_spacing_h == 'em') html += ' is-selected';
-        html += '" data-value="em" style="border-left: 1px solid #dbdbdb;">Em</button>';
-        html += '<button class="button mobile-spacing';
-        if(mobile_spacing_h == 'rem') html += ' is-selected';
-        html += '" data-value="rem" style="border-left: 1px solid #dbdbdb;">Rem</button>';
-        html += '</div></div>';
-
-        html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
-        html += '<label class="label">Image</label></div>';
-        html += '<div class="control">';
-        html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
-        html += '<div class="col-6">';
-        html += '<div class="flatbox mobile-image';
-        if(mobile_image != 'fixed') html += ' is-selected';
-        html += '" data-value="ratio">Ratio</div>';
-        html += '</div>';
-        html += '<div class="col-6">';
-        html += '<div class="flatbox mobile-image';
-        if(mobile_image == 'fixed') html += ' is-selected';
-        html += '" data-value="fixed">Fixed</div>';
-        html += '</div>';
-        html += '<div class="col-12 mt-1">';
-        html += '<div class="form-group control is-expanded mobile-img-ratio';
-        if(mobile_image == 'fixed') html += ' hidden';
-        html += '">';
-        html += '<div class="select is-fullwidth"><select id="mobile-image" class="form-control">';
-        html += '<option value="1:1"';
-        if(mobile_image == '1:1') html += ' selected';
-        html += '>1:1</option>';
-        html += '<option value="3:2"';
-        if(mobile_image == '3:2') html += ' selected';
-        html += '>3:2</option>';
-        html += '<option value="4:3"';
-        if(mobile_image == '4:3') html += ' selected';
-        html += '>4:3</option>';
-        html += '<option value="16:9"';
-        if(mobile_image == '16:9') html += ' selected';
-        html += '>16:9</option>';
-        html += '</select></div></div></div>';
-        html += '<div class="col-12">';
-        html += '<div class="row">';
-        html += '<div class="col-6">';
-        html += '<div class="form-group control mobile-img-fixed';
-        if(mobile_image != 'fixed') html += ' hidden';
-        html += '"><label class="label">W</label>';
-        html += '<input class="input form-control" type="number" id="mobile-image-width" placeholder="Width px" value="'+mobile_image_w+'">';
-        html += '</div>';
-        html += '</div>';
-        html += '<div class="col-6">';
-        html += '<div class="form-group control mobile-img-fixed';
-        if(mobile_image != 'fixed') html += ' hidden';
-        html += '"><div class="label">H</div>';
-        html += '<input class="input form-control" type="number" id="mobile-image-height" placeholder="Height px" value="'+mobile_image_h+'">';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div></div></div>';
-
-        html += '</article>';
-
-        html += '<article class="message is-orange">';
-        html += '<div class="message-header"><p>Custom CSS</p>';
-        html += '<span class="icon spin180"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z" /></svg></span>';
-        html += '</div><div class="message-body hidden">';
-        html += '<div class="form-group"><div class="control">';
-        html += '<textarea class="textarea form-control" placeholder="Custom CSS" id="native_css" rows="5">'+native_css+'</textarea>';
-        html += '</div></div>';
-        html += '</div></article>';
-        html += '<div class="form-group mt-1" style="margin-bottom:.5em;">';
-        html += '<label class="label">Text Formating</label></div>';
-        html += '<div class="form-group has-addons input-group">';
-        html += '<select id="native_font" class="form-control">';
-        html += '<option value="arial"';
-        if(native_font == 'arial') html += ' selected';
-        html += '>Arial</option>';
-        html += '<option value="helvetica"';
-        if(native_font == 'helvetica') html += ' selected';
-        html += '>Helvetica</option>';
-        html += '<option value="verdana"';
-        if(native_font == 'verdana') html += ' selected';
-        html += '>Verdana</option>';
-        html += '<option value="monospace"';
-        if(native_font == 'monospace') html += ' selected';
-        html += '>Monospace</option>';
-        html += '</select>';
-        html +=  '<div class="input-group-append">';
-        html += '<button class="button native-align';
-        if(native_align == 'left') html += ' is-selected';
-        html += '" data-value="left"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M3,7H15V9H3V7M3,11H21V13H3V11M3,15H15V17H3V15M3,19H21V21H3V19Z" /></svg></span></button>';
-        html += '<button class="button native-align';
-        if(native_align == 'center') html += ' is-selected';
-        html += '" data-value="center" style="border-left: 1px solid #dbdbdb;"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M7,7H17V9H7V7M3,11H21V13H3V11M7,15H17V17H7V15M3,19H21V21H3V19Z" /></svg></span></button>';
-        html += '<button class="button native-align';
-        if(native_align == 'right') html += ' is-selected';
-        html += '" data-value="right" style="border-left: 1px solid #dbdbdb;"><span class="icon"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M3,3H21V5H3V3M9,7H21V9H9V7M3,11H21V13H3V11M9,15H21V17H9V15M3,19H21V21H3V19Z" /></svg></span></button>';
-        html += '</div>';
-
-        $('#zone-build-setting').html(html);
-    }
-    function buildSettingDIALOG() {
-        var html = '',
-            dia_method = setting.dia_method || 'close',
-            dia_class = setting.dia_class || [],
-            dia_delay = setting.dia_delay || 0;
-        html += '<div class="form-group" style="padding-bottom:1rem">';
-        html += '<label class="label">Trigger Method</label>';
-        html += '<div class="control">';
-        html += '<div class="row is-multiline">';
-        html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
-        if(dia_method == 'close') html += ' is-selected';
-        html += '" data-value="close"><p>Moving mouse off the page (typically to close the tab)</p></div></div>';
-        html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
-        if(dia_method == 'a') html += ' is-selected';
-        html += '" data-value="a"><p>Clicking on links on your page</p></div></div>';
-        html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
-        if(dia_method == 'class') html += ' is-selected';
-        html += '" data-value="class"><p>Clicking on specific class(es)</p></div></div>';
-        html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
-        if(dia_method == 'auto') html += ' is-selected';
-        html += '" data-value="auto"><p>Automatic after some delays</p></div></div>';
-        html += '</div></div></div>';
-        html += '<div class="form-group';
-        if(dia_method != 'class') html += ' hidden';
-        html += '" id="dia_class_wrap">';
-        html += '<label class="label">Trigger Class(es)</label>';
-        html += '<div class="control">';
-        html += '<input id="dia_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
-        html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
-
-        html += '<div class="form-group';
-        if(dia_method != 'auto') html += ' hidden';
-        html += '" id="dia_auto_wrap">';
-        html += '<label class="label">Delay</label>';
-        html += '<div class="input-group">';
-        html += '<input class="input form-control" id="dia_delay" type="number" value="'+dia_delay+'">';
-        html += '<div class="input-group-append">';
-        html += '<span class="input-group-text">Seconds</span>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-
-        $('#zone-build-setting').html(html);
-        new BulmaTagsInput(document.getElementById('dia_class'), {
-            allowDuplicates: false,
-            caseSensitive: false,
-            clearSelectionOnTyping: false,
-            closeDropdownOnItemSelect: true,
-            delimiter: ',',
-            freeInput: true,
-            highlightDuplicate: true,
-            highlightMatchesString: true,
-            itemValue: undefined,
-            itemText: undefined,
-            maxTags: undefined,
-            maxChars: undefined,
-            minChars: 1,
-            noResultsLabel: 'No results found',
-            placeholder: '',
-            removable: true,
-            searchMinChars: 2,
-            searchOn: 'text',
-            selectable: false,
-            source: undefined,
-            tagClass: 'is-rounded is-success',
-            trim: true
-        });
-        if(dia_method == 'class') document.getElementById('dia_class').BulmaTagsInput().add(dia_class.join(','));
-    }
-    function buildSettingDIRECT() {
-        $('#zone-build-setting').html('');
-    }
-    // function buildPreview() {
-    //     var device = $('.preview-device.is-selected').attr('data-value');
-    // }
-    function generatePreview(code) {
-
-        if(code == 1) return generatePreviewIPP();
-        if(code == 4) return generatePreviewNATIVE();
-        if(code == 3) return generatePreviewVAST();
-        if(code == 6) return generatePreviewDIALOG();
-        $('#zone-preview').html('');
-        $('#zone-setting').removeClass('col-lg-6');
-        $('#zone-setting').addClass('col-lg-12');
-        $('#zone-generate-preview').hide();
-        return false;
-    }
-    function generatePreviewIPP() {
-        var title = 'Advertising Title';
-        var description = 'Advertising Description';
-        var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
-        var ipp_position = $('.ipp_position.is-selected').attr('data-value');
-        var position = ipp_position.split("-");
-        var html = '<style>.preview-animated{transform:translate(0) !important;transition:transform 1s ease;}</style>';
-        html += '<div id="preview-ipp" style="display:flex;height:100%;overflow:hidden;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
-        html += '<div style="position:relative;width:100%;min-height:200px;">';
-        html += '<div id="preview-item" class="preview-animated" style="position:absolute;display:flex;justify-content:flex-start;width:310px;height:60px;background:#fff;box-shadow:0 3px 3px rgba(0,0,0,.25);border-radius:6px;padding:10px;'+position[0]+':18px;'+position[1]+':8px;transform:translate('+(position[1]=='left'?'-':'')+'3700px);">';
-        html += '<div style="margin-right:12px;"><img id="preview-image" width="40" height="40" src="'+creative_url+'"></div>';
-        html += '<div style="display:flex;flex-direction:column;justify-content:center;">';
-        html += '<div id="preview-title" style="max-width:230px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;margin-bottom:4px;font-weight:500;font-size:12px;">'+title+'</div>';
-        html += '<div id="preview-description" style="max-width:230px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-size:11px;">'+description+'</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
+        
+        html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
+        html += '</body></html>';
         // $('#zone-preview').html(html);
         $('#zone-setting').removeClass('is-12-desktop');
         $('#zone-setting').addClass('is-6-desktop');
         $('#zone-generate-preview').show();
-        // if(window.timers) clearInterval(window.timers);
-        // window.timers = setInterval(function(){
-        //     $('#preview-item').removeClass('preview-animated');
-        //     setTimeout(function(){$('#preview-item').addClass('preview-animated');},500)
-        // }, 5000);
-        //////////////
-        html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
-        html += '<script>';
-        html += 'if(window.timers) clearInterval(window.timers);';
-        html += 'window.timers = setInterval(function(){';
-    html += ' $("#preview-item").removeClass("preview-animated");';
-    html += 'setTimeout(function(){$("#preview-item").addClass("preview-animated");},500)';
-    html += '}, 5000);';
-        html += '<\/script>';
-        html += '</body></html>';
+        
         var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
         $('#thepage').detach();
         $('#zone-preview-test').append(iFrame);
-
+        
         var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
         iFrameDoc.write(html);
         iFrameDoc.close();
-    }
-    function generatePreviewNATIVE() {
-        // var size = $('#size').val();
-        var native_type = $('.native_type.is-selected').attr('data-value');
-        if(desktop_preview){
-            var title = $('.desktop-text.is-selected[data-value="title"]').length?'Advertising Title':"";
-            var description = $('.desktop-text.is-selected[data-value="description"]').length?'Advertising Description':"";
-            var columns = $('#desktop_col').val();
-            var rows = $('#desktop_row').val();
-            var text_position = $('#desktop-text').val();
-        }else{
-            var title = $('.mobile-text.is-selected[data-value="title"]').length?'Advertising Title':"";
-            var description = $('.mobile-text.is-selected[data-value="description"]').length?'Advertising Description':"";
-            var columns = $('#mobile_col').val();
-            var rows = $('#mobile_row').val();
-            var text_position = $('#mobile-text').val();
-        }
-        var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
-        var align = $('.native-align.is-selected').attr('data-value');
-        if(native_type == 'native') {
-            var html = '<div id="preview-native" style="display:content;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
-            var row;
-            for (row = 0; row < rows; row++) {
-                html += '<div class="columns is-gapless is-mobile">';
-                var column;
-                for (column = 0; column < columns; column++) {
-                    if(columns==5){
-                        html += '<div class="column is-one-fifth"><div style="padding:.1rem">';
-                    }else{
-                        html += '<div class="column is-'+12/columns+'"><div style="padding:.1rem">';
-                    }
-                    if(text_position=="bottom"){
-                        html += '<a style="text-decoration: none;color: #999999;display: flex;position: relative;flex-direction: column;">';
-                        html += '<div style="position: relative;float: left;width: 100%;min-width: auto;z-index: 2;flex: initial;height: 100%;">';
-                        html += '<div style="background-image:url('+creative_url+');background-size:100% auto;position: absolute;top: 0;left: 0;;width:100%;height:100%;background-repeat:no-repeat;transition: background-size 0.3s;"></div>';
-                        html += '<div style="width: 100%;padding-top: 100%;z-index: 1">';
-                        html += '</div></div>';
-                        html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.05rem;padding-right:.5rem;text-align:'+align+'">'+title+'</div>';
-                        html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.80rem;color:#b5b5b5;padding-right:.5rem;text-align:'+align+'">'+description+'</div>';
-                        html += '</a>';
-                    }else{
-                        html += '<a style="text-decoration: none;color: #999999;display: flex;position: relative;flex-direction: row;">';
-                        html += '<div style="position: relative;float: left;width: calc(100% - 460px);min-width: auto;z-index: 2;flex: 1;height: 100%;">';
-                        html += '<div style="background-image:url('+creative_url+');background-size:100% auto;position: absolute;top: 0;left: 0;;width:100%;height:100%;background-repeat:no-repeat;transition: background-size 0.3s;"></div>';
-                        html += '<div style="width: 100%;padding-top: 100%;z-index: 1">';
-                        html += '</div></div>';
-                        html += '<div style="max-width: 460px;max-height: 450px;overflow: hidden;position: initial;right: 0;top: 0;width: 460px;height: auto;padding-left: 10px;padding-right: 0;padding-top: 0px;padding-bottom: 0;display: block;text-align: left;flex: 1;position: relative;">';
-                        html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.05rem;padding-right:.5rem;text-align:'+align+'">'+title+'</div>';
-                        html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.80rem;color:#b5b5b5;padding-right:.5rem;text-align:'+align+'">'+description+'</div>';
-                        html += '</div>';
-                        html += '</a>';
-                    }
-                    html += '</div></div>';
-                }
-                html += '</div>';
-            }
+    } else {
+        if(!$('#preview-classic').length) {
+            var html = '<div id="preview-classic" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
+            html += '<div style="background-image:url(<?=ASSET_URL?>/preview/banner.jpg);background-size:contain;width:100%;min-height:330px;background-repeat:no-repeat;"></div>';
             html += '</div>';
-
             html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
-            html += '</body></html>';
             // $('#zone-preview').html(html);
             $('#zone-setting').removeClass('is-12-desktop');
             $('#zone-setting').addClass('is-6-desktop');
             $('#zone-generate-preview').show();
-
+            
+            html += '</body></html>';
             var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
             $('#thepage').detach();
             $('#zone-preview-test').append(iFrame);
-
+            
             var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
             iFrameDoc.write(html);
             iFrameDoc.close();
-        } else {
-            if(!$('#preview-classic').length) {
-                var html = '<div id="preview-classic" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
-                html += '<div style="background-image:url(<?=ASSET_URL?>/preview/banner.jpg);background-size:contain;width:100%;min-height:330px;background-repeat:no-repeat;"></div>';
-                html += '</div>';
-                html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
-                // $('#zone-preview').html(html);
-                $('#zone-setting').removeClass('is-12-desktop');
-                $('#zone-setting').addClass('is-6-desktop');
-                $('#zone-generate-preview').show();
-
-                html += '</body></html>';
-                var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
-                $('#thepage').detach();
-                $('#zone-preview-test').append(iFrame);
-
-                var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
-                iFrameDoc.write(html);
-                iFrameDoc.close();
-            }
         }
-        if(window.timers) clearInterval(window.timers);
     }
-    function generatePreviewVAST() {
-        // var creative_url = 'https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4';
-        // var playerSettings = {
-        //     "file": "//content.jwplatform.com/videos/1g8jjku3-cIp6U8lV.mp4",
-        //     "image": "//content.jwplatform.com/thumbs/1g8jjku3-720.jpg",
-        //     "autostart": false,
-        //     "displayPlaybackLabel": true,
-        //     "primary": "html5",
-        //     "advertising": {
-        //         "schedule": [{
-        //             "vastxml": '<VAST version="2.0"><Ad id="preroll"><InLine><Creatives><Creative><Linear><MediaFiles><MediaFile height="396" width="600" bitrate="0" type="video/mp4" delivery="progressive"><![CDATA['+creative_url+']]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>',
-        //             "offset": "pre"
-        //         }],
-        //         "client": "vast"
-        //     }
-        // };
-        var html = '<div id="preview-vast" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
-        html += '<div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">';
-        html += '<div id="preview-player"></div>';
-        html += '</div>';
-        html += '</div>';
-        // $('#zone-preview').html(html);
-        $('#zone-setting').removeClass('is-12-desktop');
-        $('#zone-setting').addClass('is-6-desktop');
-        $('#zone-generate-preview').show();
-
-        html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
-        html += '<script>';
-        html += 'var playerSettings = {';
+    if(window.timers) clearInterval(window.timers);
+}
+function generatePreviewVAST() {
+    // var creative_url = 'https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4';
+    // var playerSettings = {
+    //     "file": "//content.jwplatform.com/videos/1g8jjku3-cIp6U8lV.mp4",
+    //     "image": "//content.jwplatform.com/thumbs/1g8jjku3-720.jpg",
+    //     "autostart": false,
+    //     "displayPlaybackLabel": true,
+    //     "primary": "html5",
+    //     "advertising": {
+    //         "schedule": [{
+    //             "vastxml": '<VAST version="2.0"><Ad id="preroll"><InLine><Creatives><Creative><Linear><MediaFiles><MediaFile height="396" width="600" bitrate="0" type="video/mp4" delivery="progressive"><![CDATA['+creative_url+']]></MediaFile></MediaFiles></Linear></Creative></Creatives></InLine></Ad></VAST>',
+    //             "offset": "pre"
+    //         }],
+    //         "client": "vast"
+    //     }
+    // };
+    var html = '<div id="preview-vast" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
+    html += '<div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">';
+    html += '<div id="preview-player"></div>';
+    html += '</div>';
+    html += '</div>';
+    // $('#zone-preview').html(html);
+    $('#zone-setting').removeClass('is-12-desktop');
+    $('#zone-setting').addClass('is-6-desktop');
+    $('#zone-generate-preview').show();
+    
+    html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
+    html += '<script>';
+    html += 'var playerSettings = {';
     html += '    "file": "//content.jwplatform.com/videos/1g8jjku3-cIp6U8lV.mp4",';
     html += '    "image": "//content.jwplatform.com/thumbs/1g8jjku3-720.jpg",';
     html += '    "autostart": false,';
@@ -1613,412 +1613,412 @@
     html += '    "advertising": {';
     html += '        "schedule": [{';
     html += '            "vastxml": \'<VAST version="2.0"><Ad id="preroll"><InLine><Creatives><Creative><Linear><MediaFiles><MediaFile height="396" width="600" bitrate="0" type="video/mp4" delivery="progressive"><![CDATA[https://content.jwplatform.com/videos/AEhg3fFb-bPwArWA4.mp4]]></MediaFile><\/MediaFiles><\/Linear><\/Creative><\/Creatives><\/InLine><\/Ad><\/VAST>\',';
-        html += '             "offset": "pre"';
-        html += '         }],';
-        html += '         "client": "vast"';
-        html += '     }';
-        html += ' };';
-
-        html += 'if(window.timers) clearInterval(window.timers);';
-
-        html += 'try {';
-        html += '    jwplayer().remove();';
-        html += '    jwplayer(\'preview-player\').setup(playerSettings);';
-        html += '}catch(e) {';
-        html += '    $.getScript(\'https://cdn.jwplayer.com/libraries/qWykpG2x.js\', function(){';
-        html += '        jwplayer(\'preview-player\').setup(playerSettings);';
-        html += '    });';
-        html += '}';
-        html += '<\/script>';
-        html += '</body></html>';
-
-        var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
-        $('#thepage').detach();
-        $('#zone-preview-test').append(iFrame);
-
-        var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
-        iFrameDoc.write(html);
-        iFrameDoc.close();
-        }
-        function generatePreviewDIALOG() {
-        var title = 'Advertising Title';
-        var description = 'Advertising Description';
-        var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
-
-        var html = '<style>.preview-animated{transform:translate(0,.5rem) !important;}</style>';
-        html += '<div id="preview-dialog" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
-        html += '<div style="width:100%;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;">';
-        html += '<div style="width:100%;height:40px;padding-right:20px;display:flex;align-items:center;justify-content:flex-end;"><span class="icon"><svg viewBox="0 0 24 24">';
-        html += '<path fill="#afa6a6" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>';
-        html += '</svg></span></div>';
-        html += '<div style="display:flex;justify-content:center;padding:10px;">';
-        html += '<div style="position:relative;width:calc(100% - 40px);max-width:400px;max-height:400px;display:flex;justify-content:center;">';
-        html += '<img id="preview-image" src="'+creative_url+'">';
-        html += '<div style="position:absolute;width:100%;padding:.3rem .5rem 1rem;background:linear-gradient(0deg, transparent, rgba(0, 0, 0, .7));">';
-        html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.25rem;color:#fff;">'+title+'</div>';
-        html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.95rem;color:#fff;">'+description+'</div>';
-        html += '</div>';
-        html += '<div style="position:absolute;width:100%;bottom:0;padding:1rem .7rem;background:linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));">';
-        html += '<div id="preview-item" class="preview-animated" style="transition:transform 2.2s ease;transform:translate(0);text-transform:uppercase;background-color:#00a980;color:#fff;font-size:1.3rem;font-weight:500;padding:.3rem 0;text-align:center;border-radius:.3rem;box-shadow:0 1rem 1rem rgba(0, 0, 0, .15);background-size:1px 1px;background-position:50%;background:linear-gradient(0deg, #008b24, #44f75b);text-shadow:0 1px 1px rgba(0, 0, 0, .3);">Continue</div>'
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        html += '</div>';
-        // $('#zone-preview').html(html);
-        $('#zone-setting').removeClass('is-12-desktop');
-        $('#zone-setting').addClass('is-6-desktop');
-        $('#zone-generate-preview').show();
-        if(window.timers) clearInterval(window.timers);
-        window.timers = setInterval(function(){
+    html += '             "offset": "pre"';
+    html += '         }],';
+    html += '         "client": "vast"';
+    html += '     }';
+    html += ' };';
+    
+    html += 'if(window.timers) clearInterval(window.timers);';
+    
+    html += 'try {';
+    html += '    jwplayer().remove();';
+    html += '    jwplayer(\'preview-player\').setup(playerSettings);';
+    html += '}catch(e) {';
+    html += '    $.getScript(\'https://cdn.jwplayer.com/libraries/qWykpG2x.js\', function(){';
+    html += '        jwplayer(\'preview-player\').setup(playerSettings);';
+    html += '    });';
+    html += '}';
+    html += '<\/script>';
+    html += '</body></html>';
+    
+    var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
+    $('#thepage').detach();
+    $('#zone-preview-test').append(iFrame);
+    
+    var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
+    iFrameDoc.write(html);
+    iFrameDoc.close();
+}
+function generatePreviewDIALOG() {
+    var title = 'Advertising Title';
+    var description = 'Advertising Description';
+    var creative_url = '<?=ASSET_URL?>/preview/ipp.png';
+    
+    var html = '<style>.preview-animated{transform:translate(0,.5rem) !important;}</style>';
+    html += '<div id="preview-dialog" style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-radius:10px 10px 0 0;background:linear-gradient(180deg,#f2f2f2,hsla(0,0%,94.9%,0));">';
+    html += '<div style="width:100%;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;">';
+    html += '<div style="width:100%;height:40px;padding-right:20px;display:flex;align-items:center;justify-content:flex-end;"><span class="icon"><svg viewBox="0 0 24 24">';
+    html += '<path fill="#afa6a6" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"></path>';
+    html += '</svg></span></div>';
+    html += '<div style="display:flex;justify-content:center;padding:10px;">';
+    html += '<div style="position:relative;width:calc(100% - 40px);max-width:400px;max-height:400px;display:flex;justify-content:center;">';
+    html += '<img id="preview-image" src="'+creative_url+'">';
+    html += '<div style="position:absolute;width:100%;padding:.3rem .5rem 1rem;background:linear-gradient(0deg, transparent, rgba(0, 0, 0, .7));">';
+    html += '<div id="preview-title" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:600;font-size:1.25rem;color:#fff;">'+title+'</div>';
+    html += '<div id="preview-description" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-weight:400;font-size:.95rem;color:#fff;">'+description+'</div>';
+    html += '</div>';
+    html += '<div style="position:absolute;width:100%;bottom:0;padding:1rem .7rem;background:linear-gradient(180deg, transparent, rgba(0, 0, 0, .7));">';
+    html += '<div id="preview-item" class="preview-animated" style="transition:transform 2.2s ease;transform:translate(0);text-transform:uppercase;background-color:#00a980;color:#fff;font-size:1.3rem;font-weight:500;padding:.3rem 0;text-align:center;border-radius:.3rem;box-shadow:0 1rem 1rem rgba(0, 0, 0, .15);background-size:1px 1px;background-position:50%;background:linear-gradient(0deg, #008b24, #44f75b);text-shadow:0 1px 1px rgba(0, 0, 0, .3);">Continue</div>'
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+    // $('#zone-preview').html(html);
+    $('#zone-setting').removeClass('is-12-desktop');
+    $('#zone-setting').addClass('is-6-desktop');
+    $('#zone-generate-preview').show();
+    if(window.timers) clearInterval(window.timers);
+    window.timers = setInterval(function(){
         $('#preview-item').toggleClass('preview-animated');
-        }, 2000);
+    }, 2000);
+    
+    html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
+    html += '<script>';
+    html += 'if(window.timers) clearInterval(window.timers);';
+    html += 'window.timers = setInterval(function(){';
+    html += '$("#preview-item").toggleClass("preview-animated");';
+    html += '}, 2000);';
+    html += '<\/script>';
+    html += '</body></html>';
+    
+    var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
+    $('#thepage').detach();
+    $('#zone-preview-test').append(iFrame);
+    
+    var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
+    iFrameDoc.write(html);
+    iFrameDoc.close();
+}
+function _parseFloat(e) {
+    let number = parseFloat(e);
+    if(number<0){
+        number = -number;
+    }
+    return number || 0;
+}
+function _parseInt(e) {
+    let number = parseInt(e,10);
+    if(number<0){
+        number = -number;
+    }
+    return number || 0;
+}
 
-        html = '<html style="overflow:auto"><head>' + '<link rel="stylesheet" href="https://cdn.viraads.com/css/app.css?v=1608426561">'+ '<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"><\/script></head><body>'+ html;
-        html += '<script>';
-        html += 'if(window.timers) clearInterval(window.timers);';
-        html += 'window.timers = setInterval(function(){';
-        html += '$("#preview-item").toggleClass("preview-animated");';
-        html += '}, 2000);';
-        html += '<\/script>';
-        html += '</body></html>';
-
-        var iFrame = $('<iframe id="thepage" style="width:100%; height:100%"></iframe>');
-        $('#thepage').detach();
-        $('#zone-preview-test').append(iFrame);
-
-        var iFrameDoc = iFrame[0].contentDocument || iFrame[0].contentWindow.document;
-        iFrameDoc.write(html);
-        iFrameDoc.close();
+$(document).ready(function() {
+    buildSetting();
+    $(document).on('click', '.help-modal', function() {
+        $('#'+$(this).attr('data-target')).toggleClass('is-active');
+    });
+    $('.preview-device').on('click', function() {
+        $('#device-desktop').addClass('hidden');
+        $('#device-tablet').addClass('hidden');
+        $('#device-mobile').addClass('hidden');
+        var $this = $(this), value = $this.attr('data-value');
+        value == 'desktop' || value == 'tablet' ?desktop_preview = 1:desktop_preview = 0;
+        $('.preview-device').removeClass('is-selected');
+        $this.addClass('is-selected');
+        $('#device-'+value).removeClass('hidden');
+        $(".zone-preview-wrap").removeAttr( 'style' );
+        if(value!='desktop'){
+            $('.zone-preview-wrap').css({'background-color': '#f7f9fe','border': 'solid #d4d4d4','border-radius': '28px','border-width': '46px 8px 24px','min-height': '300px','border': '2px solid #e1e4eb'});
+        }else{
+            $('.zone-preview-wrap').css({'border': 'solid #d4d4d4','border-radius': '8px','border-width': '2px','min-height': '300px','border': '2px solid #e1e4eb'});
         }
-        function _parseFloat(e) {
-            let number = parseFloat(e);
-            if(number<0){
-                number = -number;
+        if(value=='mobile'){
+            $('.zone-preview-wrap').css({'max-width':'376px','margin': '10px auto 0'});
+        }
+        generatePreview(ad_format);
+    });
+    $(document).on('click', '.pop_method', function() {
+        var $this = $(this), value = $this.attr('data-value');
+        $('.pop_method').removeClass('is-selected');
+        $this.addClass('is-selected');
+        if(value=='class') {
+            $('#pop_class_wrap').removeClass('hidden');
+        } else {
+            $('#pop_class_wrap').addClass('hidden');
+        }
+    });
+    $(document).on('click', '.dia_method', function() {
+        var $this = $(this), value = $this.attr('data-value');
+        $('.dia_method').removeClass('is-selected');
+        $this.addClass('is-selected');
+        if(value=='class') {
+            $('#dia_class_wrap').removeClass('hidden');
+        } else {
+            $('#dia_class_wrap').addClass('hidden');
+        }
+        if(value=='auto') {
+            $('#dia_auto_wrap').removeClass('hidden');
+        } else {
+            $('#dia_auto_wrap').addClass('hidden');
+        }
+    });
+    $(document).on('click', '.native_type', function() {
+        var $this = $(this), value = $this.attr('data-value');
+        $('.native_type').removeClass('is-selected');
+        $this.addClass('is-selected');
+        $('.banner-setting-wrap').addClass('hidden');
+        $('#banner-'+value).removeClass('hidden');
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#desktop_col', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#desktop_row', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#mobile_col', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#mobile_row', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#desktop-text', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('change', '#mobile-text', function() {
+        generatePreview(ad_format);
+    });
+    $(document).on('click', '.exclude-ad', function() {
+        $(this).toggleClass('btn-danger');
+    });
+    
+    $(document).on('click', '.message-header', function() {
+        var $this = $(this);
+        $this.find('.icon').toggleClass('spin180');
+        $this.closest('.message').find('.message-body').toggleClass('hidden');
+    });
+    $(document).on('click', '.desktop-text, .mobile-text', function() {
+        $(this).toggleClass('is-selected');
+        generatePreview(ad_format);
+    });
+    $(document).on('click', '.ipp_label', function() {
+        $('.ipp_label').removeClass('is-selected');
+        $(this).addClass('is-selected');
+    });
+    $(document).on('click', '.ipp_position', function() {
+        $('.ipp_position').removeClass('is-selected');
+        $(this).addClass('is-selected');
+        generatePreview(ad_format);
+    });
+    $(document).on('click', '.desktop-spacing', function() {
+        $('.desktop-spacing').removeClass('is-selected');
+        $(this).addClass('is-selected');
+    });
+    $(document).on('click', '.mobile-spacing', function() {
+        $('.mobile-spacing').removeClass('is-selected');
+        $(this).addClass('is-selected');
+    });
+    $(document).on('click', '.native-align', function() {
+        $('.native-align').removeClass('is-selected');
+        $(this).addClass('is-selected');
+        generatePreview(ad_format);
+    });
+    $(document).on('click', '.desktop-image', function() {
+        var $this = $(this), value = $this.attr('data-value');
+        $('.desktop-image').removeClass('is-selected');
+        $this.addClass('is-selected');
+        if(value == 'ratio') {
+            $('.img-ratio').removeClass('hidden');
+            $('.img-fixed').addClass('hidden');
+        } else {
+            $('.img-fixed').removeClass('hidden');
+            $('.img-ratio').addClass('hidden');
+        }
+    });
+    $(document).on('click', '.mobile-image', function() {
+        var $this = $(this), value = $this.attr('data-value');
+        $('.mobile-image').removeClass('is-selected');
+        $this.addClass('is-selected');
+        if(value == 'ratio') {
+            $('.mobile-img-ratio').removeClass('hidden');
+            $('.mobile-img-fixed').addClass('hidden');
+        } else {
+            $('.mobile-img-fixed').removeClass('hidden');
+            $('.mobile-img-ratio').addClass('hidden');
+        }
+    });
+
+    $('.platform-toggle').on('click', function() {
+        $('.platform-toggle').toggleClass('is-selected');
+        buildOsSelection();
+    });
+    $('.os-toggle').on('click', function() {
+        $('.os-toggle').toggleClass('is-selected');
+        buildBrowserSelection();
+    });
+    $('.browser-toggle').on('click', function() {
+        $('.browser-toggle').toggleClass('is-selected');
+    });
+
+    $('#enterAction').click(function() {
+        var $this = $(this), data = {}, floor_cpm = _parseFloat($('#bid').val());
+        data.fallback = $.trim($('#fallback').val());
+        if(data.fallback && data.fallback.indexOf('https://') != 0) {
+            __tajs.showAlert('Fallback Url should be start with https');
+            return false;
+        }
+        data.frequency = _parseInt($('#frequency_number').val())+':'+_parseInt($('#frequency_time').val())+$('#frequency_timetype').val();
+        
+        if(ad_format == 1) {
+            data.ipp_start = _parseInt($('#ipp_start').val());
+            data.ipp_total = _parseInt($('#ipp_total').val());
+            data.ipp_delay = _parseInt($('#ipp_delay').val());
+            data.ipp_label = $('.ipp_label.is-selected').attr('data-value') == 'show';
+            data.ipp_position = $('.ipp_position.is-selected').attr('data-value');
+            if(data.ipp_total < 1) {
+                __tajs.showAlert('Please allow at least 1 notification');
+                return false;
             }
-            return number || 0;
-        }
-        function _parseInt(e) {
-            let number = parseInt(e,10);
-            if(number<0){
-                number = -number;
+        } else if(ad_format == 2) {
+            data.pop_start = _parseInt($('#pop_start').val());
+            data.pop_method = $('.pop_method.is-selected').attr('data-value');
+            data.pop_class = data.pop_method == 'class' ? document.getElementById('pop_class').BulmaTagsInput().items : [];
+            data.pop_class = data.pop_class.join(",");
+            //data.pop_class = data.pop_method == 'class' ? document.getElementById('pop_class').tagsinput("items") : [];
+            data.pop_delay = _parseInt($('#pop_delay').val());
+        } else if(ad_format == 3) {
+            data.vast_skip = _parseInt($('#vast_skip').val());
+            data.vast_impr = $.trim($('#vast_impr').val());
+            data.vast_click = $.trim($('#vast_click').val());
+        } else if(ad_format == 4) {
+            data.native_type = $('.native_type.is-selected').attr('data-value');
+            if(data.native_type == 'classic') {
+                data.desktop_size = $('#desktop_size').val();
+                data.mobile_size = $('#mobile_size').val();
+            } else {
+                data.desktop_col = $('#desktop_col').val();
+                data.desktop_row = $('#desktop_row').val();
+                data.desktop_text_title = $('.desktop-text.is-selected[data-value="title"]').length;
+                data.desktop_text_description = $('.desktop-text.is-selected[data-value="description"]').length;
+                data.desktop_text_position = $('#desktop-text').val();
+                data.desktop_spacing = _parseInt($('#desktop-spacing').val()) + $('.desktop-spacing.is-selected').attr('data-value');
+                data.desktop_image = $('.img-ratio.hidden').length ? _parseInt($('#desktop-image-width').val())+'px-'+_parseInt($('#desktop-image-height').val())+'px' : $('#desktop-image').val();
+                data.mobile_breaking = $('#mobile_breaking').val();
+                data.mobile_col = $('#mobile_col').val();
+                data.mobile_row = $('#mobile_row').val();
+                data.mobile_text_title = $('.mobile-text.is-selected[data-value="title"]').length;
+                data.mobile_text_description = $('.mobile-text.is-selected[data-value="description"]').length;
+                data.mobile_text_position = $('#mobile-text').val();
+                data.mobile_spacing = _parseInt($('#mobile-spacing').val()) + $('.mobile-spacing.is-selected').attr('data-value');
+                data.mobile_image = $('.mobile-img-ratio.hidden').length ? _parseInt($('#mobile-image-width').val())+'px-'+_parseInt($('#mobile-image-height').val())+'px' : $('#mobile-image').val();
+                data.native_css = $.trim($('#native_css').val());
+                data.native_font = $('#native_font').val();
+                data.native_align = $('.native-align.is-selected').attr('data-value');
             }
-            return number || 0;
+        } else if(ad_format == 6) {
+            data.dia_method = $('.dia_method.is-selected').attr('data-value');
+            data.dia_class = data.dia_method == 'class' ? document.getElementById('dia_class').BulmaTagsInput().items : [];
+            data.dia_delay = data.dia_method == 'auto' ? _parseInt($('#dia_delay').val()) : 0;
         }
-
-        $(document).ready(function() {
-            buildSetting();
-            $(document).on('click', '.help-modal', function() {
-                $('#'+$(this).attr('data-target')).toggleClass('is-active');
-            });
-            $('.preview-device').on('click', function() {
-                $('#device-desktop').addClass('hidden');
-                $('#device-tablet').addClass('hidden');
-                $('#device-mobile').addClass('hidden');
-                var $this = $(this), value = $this.attr('data-value');
-                value == 'desktop' || value == 'tablet' ?desktop_preview = 1:desktop_preview = 0;
-                $('.preview-device').removeClass('is-selected');
-                $this.addClass('is-selected');
-                $('#device-'+value).removeClass('hidden');
-                $(".zone-preview-wrap").removeAttr( 'style' );
-                if(value!='desktop'){
-                    $('.zone-preview-wrap').css({'background-color': '#f7f9fe','border': 'solid #d4d4d4','border-radius': '28px','border-width': '46px 8px 24px','min-height': '300px','border': '2px solid #e1e4eb'});
-                }else{
-                    $('.zone-preview-wrap').css({'border': 'solid #d4d4d4','border-radius': '8px','border-width': '2px','min-height': '300px','border': '2px solid #e1e4eb'});
-                }
-                if(value=='mobile'){
-                    $('.zone-preview-wrap').css({'max-width':'376px','margin': '10px auto 0'});
-                }
-                generatePreview(ad_format);
-            });
-            $(document).on('click', '.pop_method', function() {
-                var $this = $(this), value = $this.attr('data-value');
-                $('.pop_method').removeClass('is-selected');
-                $this.addClass('is-selected');
-                if(value=='class') {
-                    $('#pop_class_wrap').removeClass('hidden');
-                } else {
-                    $('#pop_class_wrap').addClass('hidden');
-                }
-            });
-            $(document).on('click', '.dia_method', function() {
-                var $this = $(this), value = $this.attr('data-value');
-                $('.dia_method').removeClass('is-selected');
-                $this.addClass('is-selected');
-                if(value=='class') {
-                    $('#dia_class_wrap').removeClass('hidden');
-                } else {
-                    $('#dia_class_wrap').addClass('hidden');
-                }
-                if(value=='auto') {
-                    $('#dia_auto_wrap').removeClass('hidden');
-                } else {
-                    $('#dia_auto_wrap').addClass('hidden');
-                }
-            });
-            $(document).on('click', '.native_type', function() {
-                var $this = $(this), value = $this.attr('data-value');
-                $('.native_type').removeClass('is-selected');
-                $this.addClass('is-selected');
-                $('.banner-setting-wrap').addClass('hidden');
-                $('#banner-'+value).removeClass('hidden');
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#desktop_col', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#desktop_row', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#mobile_col', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#mobile_row', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#desktop-text', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('change', '#mobile-text', function() {
-                generatePreview(ad_format);
-            });
-            $(document).on('click', '.exclude-ad', function() {
-                $(this).toggleClass('btn-danger');
-            });
-
-            $(document).on('click', '.message-header', function() {
-                var $this = $(this);
-                $this.find('.icon').toggleClass('spin180');
-                $this.closest('.message').find('.message-body').toggleClass('hidden');
-            });
-            $(document).on('click', '.desktop-text, .mobile-text', function() {
-                $(this).toggleClass('is-selected');
-                generatePreview(ad_format);
-            });
-            $(document).on('click', '.ipp_label', function() {
-                $('.ipp_label').removeClass('is-selected');
-                $(this).addClass('is-selected');
-            });
-            $(document).on('click', '.ipp_position', function() {
-                $('.ipp_position').removeClass('is-selected');
-                $(this).addClass('is-selected');
-                generatePreview(ad_format);
-            });
-            $(document).on('click', '.desktop-spacing', function() {
-                $('.desktop-spacing').removeClass('is-selected');
-                $(this).addClass('is-selected');
-            });
-            $(document).on('click', '.mobile-spacing', function() {
-                $('.mobile-spacing').removeClass('is-selected');
-                $(this).addClass('is-selected');
-            });
-            $(document).on('click', '.native-align', function() {
-                $('.native-align').removeClass('is-selected');
-                $(this).addClass('is-selected');
-                generatePreview(ad_format);
-            });
-            $(document).on('click', '.desktop-image', function() {
-                var $this = $(this), value = $this.attr('data-value');
-                $('.desktop-image').removeClass('is-selected');
-                $this.addClass('is-selected');
-                if(value == 'ratio') {
-                    $('.img-ratio').removeClass('hidden');
-                    $('.img-fixed').addClass('hidden');
-                } else {
-                    $('.img-fixed').removeClass('hidden');
-                    $('.img-ratio').addClass('hidden');
-                }
-            });
-            $(document).on('click', '.mobile-image', function() {
-                var $this = $(this), value = $this.attr('data-value');
-                $('.mobile-image').removeClass('is-selected');
-                $this.addClass('is-selected');
-                if(value == 'ratio') {
-                    $('.mobile-img-ratio').removeClass('hidden');
-                    $('.mobile-img-fixed').addClass('hidden');
-                } else {
-                    $('.mobile-img-fixed').removeClass('hidden');
-                    $('.mobile-img-ratio').addClass('hidden');
-                }
-            });
-
-            $('.platform-toggle').on('click', function() {
-                $('.platform-toggle').toggleClass('is-selected');
-                buildOsSelection();
-            });
-            $('.os-toggle').on('click', function() {
-                $('.os-toggle').toggleClass('is-selected');
-                buildBrowserSelection();
-            });
-            $('.browser-toggle').on('click', function() {
-                $('.browser-toggle').toggleClass('is-selected');
-            });
-
-            $('#enterAction').click(function() {
-                var $this = $(this), data = {}, floor_cpm = _parseFloat($('#bid').val());
-                data.fallback = $.trim($('#fallback').val());
-                if(data.fallback && data.fallback.indexOf('https://') != 0) {
-                    __tajs.showAlert('Fallback Url should be start with https');
-                    return false;
-                }
-                data.frequency = _parseInt($('#frequency_number').val())+':'+_parseInt($('#frequency_time').val())+$('#frequency_timetype').val();
-
-                if(ad_format == 1) {
-                    data.ipp_start = _parseInt($('#ipp_start').val());
-                    data.ipp_total = _parseInt($('#ipp_total').val());
-                    data.ipp_delay = _parseInt($('#ipp_delay').val());
-                    data.ipp_label = $('.ipp_label.is-selected').attr('data-value') == 'show';
-                    data.ipp_position = $('.ipp_position.is-selected').attr('data-value');
-                    if(data.ipp_total < 1) {
-                        __tajs.showAlert('Please allow at least 1 notification');
-                        return false;
-                    }
-                } else if(ad_format == 2) {
-                    data.pop_start = _parseInt($('#pop_start').val());
-                    data.pop_method = $('.pop_method.is-selected').attr('data-value');
-                    data.pop_class = data.pop_method == 'class' ? document.getElementById('pop_class').BulmaTagsInput().items : [];
-                    data.pop_class = data.pop_class.join(",");
-                    //data.pop_class = data.pop_method == 'class' ? document.getElementById('pop_class').tagsinput("items") : [];
-                    data.pop_delay = _parseInt($('#pop_delay').val());
-                } else if(ad_format == 3) {
-                    data.vast_skip = _parseInt($('#vast_skip').val());
-                    data.vast_impr = $.trim($('#vast_impr').val());
-                    data.vast_click = $.trim($('#vast_click').val());
-                } else if(ad_format == 4) {
-                    data.native_type = $('.native_type.is-selected').attr('data-value');
-                    if(data.native_type == 'classic') {
-                        data.desktop_size = $('#desktop_size').val();
-                        data.mobile_size = $('#mobile_size').val();
-                    } else {
-                        data.desktop_col = $('#desktop_col').val();
-                        data.desktop_row = $('#desktop_row').val();
-                        data.desktop_text_title = $('.desktop-text.is-selected[data-value="title"]').length;
-                        data.desktop_text_description = $('.desktop-text.is-selected[data-value="description"]').length;
-                        data.desktop_text_position = $('#desktop-text').val();
-                        data.desktop_spacing = _parseInt($('#desktop-spacing').val()) + $('.desktop-spacing.is-selected').attr('data-value');
-                        data.desktop_image = $('.img-ratio.hidden').length ? _parseInt($('#desktop-image-width').val())+'px-'+_parseInt($('#desktop-image-height').val())+'px' : $('#desktop-image').val();
-                        data.mobile_breaking = $('#mobile_breaking').val();
-                        data.mobile_col = $('#mobile_col').val();
-                        data.mobile_row = $('#mobile_row').val();
-                        data.mobile_text_title = $('.mobile-text.is-selected[data-value="title"]').length;
-                        data.mobile_text_description = $('.mobile-text.is-selected[data-value="description"]').length;
-                        data.mobile_text_position = $('#mobile-text').val();
-                        data.mobile_spacing = _parseInt($('#mobile-spacing').val()) + $('.mobile-spacing.is-selected').attr('data-value');
-                        data.mobile_image = $('.mobile-img-ratio.hidden').length ? _parseInt($('#mobile-image-width').val())+'px-'+_parseInt($('#mobile-image-height').val())+'px' : $('#mobile-image').val();
-                        data.native_css = $.trim($('#native_css').val());
-                        data.native_font = $('#native_font').val();
-                        data.native_align = $('.native-align.is-selected').attr('data-value');
-                    }
-                } else if(ad_format == 6) {
-                    data.dia_method = $('.dia_method.is-selected').attr('data-value');
-                    data.dia_class = data.dia_method == 'class' ? document.getElementById('dia_class').BulmaTagsInput().items : [];
-                    data.dia_delay = data.dia_method == 'auto' ? _parseInt($('#dia_delay').val()) : 0;
-                }
-
-                data.excluded_types = [];
-                $('.exclude-ad.btn-danger').each(function(){
-                    data.excluded_types.push($(this).attr('data-value'));
-                });
-                if($('.browser-toggle.is-selected').hasClass('include-toggle')) {
-                    data.browser_include = browser_tags.value;
-                } else {
-                    data.browser_exclude = browser_tags.value;
-                }
-                if($('.os-toggle.is-selected').hasClass('include-toggle')) {
-                    data.platform_include = platform_tags.value;
-                    data.os_include = os_tags.value;
-                } else {
-                    data.platform_exclude = platform_tags.value;
-                    data.os_exclude = os_tags.value;
-                }
-
-                $this.addClass('is-loading');
-                $this.prop('disabled', true);
-                $.post(window.location.pathname, {csrf_token: __tajs.csrf, data: JSON.stringify(data), floor_cpm: floor_cpm}, function(res) {
-                    $this.removeClass('is-loading');
-                    $this.prop('disabled', false);
-                    if (res.success) {
-                        window.location.replace(res.data);
-                    }
-                    else {
-                        __tajs.showAlert(res.data);
-                    }
-                });
-            });
-            generatePreview(ad_format);
+        
+        data.excluded_types = [];
+        $('.exclude-ad.btn-danger').each(function(){
+            data.excluded_types.push($(this).attr('data-value'));
         });
+        if($('.browser-toggle.is-selected').hasClass('include-toggle')) {
+            data.browser_include = browser_tags.value;
+        } else {
+            data.browser_exclude = browser_tags.value;
+        }
+        if($('.os-toggle.is-selected').hasClass('include-toggle')) {
+            data.platform_include = platform_tags.value;
+            data.os_include = os_tags.value;
+        } else {
+            data.platform_exclude = platform_tags.value;
+            data.os_exclude = os_tags.value;
+        }				
 
-
-        function buildOsSelection() {
-            os_tags.removeAll();
-            os_tags._emptyDropdown();
-            let selected = platform_tags.value;
-            let isInclude = $('.platform-toggle.is-selected').hasClass('include-toggle');
-            if(!selected.length) {
-                oses.forEach((item) => {
-                    os_tags._createDropdownItem({text: item.name, value: item.name});
-                })
-                buildBrowserSelection();
-                return true;
+        $this.addClass('is-loading');
+        $this.prop('disabled', true);
+        $.post(window.location.pathname, {csrf_token: __tajs.csrf, data: JSON.stringify(data), floor_cpm: floor_cpm}, function(res) {
+            $this.removeClass('is-loading');
+            $this.prop('disabled', false);
+            if (res.success) {
+                window.location.replace(res.data);
             }
-            let p_ids = [];
-            platforms.forEach((item) => {
-                if(isInclude) {
-                    if(selected.indexOf(item.name) > -1) p_ids.push(item.id)
-                } else {
-                    if(selected.indexOf(item.name) == -1) p_ids.push(item.id)
-                }
-            })
-            let o_ids = [];
-            p_ids.forEach((id) => {
-                mapPlatformOs.forEach((item) => {
-                    if(id == item.platform_id) o_ids.push(item.os_id)
-                })
-            })
+            else {
+                __tajs.showAlert(res.data);
+            }
+        });
+    });
+    generatePreview(ad_format);
+});
+
+
+function buildOsSelection() {
+        os_tags.removeAll();
+        os_tags._emptyDropdown();
+        let selected = platform_tags.value;
+        let isInclude = $('.platform-toggle.is-selected').hasClass('include-toggle');
+        if(!selected.length) {
             oses.forEach((item) => {
-                if(o_ids.indexOf(item.id) > -1) {
-                    os_tags._createDropdownItem({text: item.name, value: item.name});
-                }
-            });
+                os_tags._createDropdownItem({text: item.name, value: item.name});
+            })
             buildBrowserSelection();
+            return true;
         }
-        function buildBrowserSelection() {
-            browser_tags.removeAll();
-            browser_tags._emptyDropdown();
-            let selected = os_tags.value;
-            let isInclude = $('.os-toggle.is-selected').hasClass('include-toggle');
-            let available = []
-            Array.from(os_tags.dropdown.children).some(function(a){
-                available.push(a.dataset.value)
+        let p_ids = [];
+        platforms.forEach((item) => {
+            if(isInclude) {
+                if(selected.indexOf(item.name) > -1) p_ids.push(item.id)
+            } else {
+                if(selected.indexOf(item.name) == -1) p_ids.push(item.id)
+            }
+        })
+        let o_ids = [];
+        p_ids.forEach((id) => {
+            mapPlatformOs.forEach((item) => {
+                if(id == item.platform_id) o_ids.push(item.os_id)
             })
-            let p_names = [];
-            available.forEach((name) => {
-                if(!selected.length) {
-                    p_names.push(name)
-                } else {
-                    if(isInclude) {
-                        if(selected.indexOf(name) > -1) p_names.push(name)
-                    } else {
-                        if(selected.indexOf(name) == -1) p_names.push(name)
-                    }
-                }
-            })
-            let p_ids = [];
-            oses.forEach((item) => {
-                if(p_names.indexOf(item.name) > -1) p_ids.push(item.id)
-            })
-            let o_ids = [];
-            p_ids.forEach((id) => {
-                mapOsBrowser.forEach((item) => {
-                    if(id == item.os_id) o_ids.push(item.browser_id)
-                })
-            })
-            browsers.forEach((item) => {
-                if(o_ids.indexOf(item.id) > -1) {
-                    browser_tags._createDropdownItem({text: item.name, value: item.name});
-                }
-            })
+        })
+        oses.forEach((item) => {
+            if(o_ids.indexOf(item.id) > -1) {
+                os_tags._createDropdownItem({text: item.name, value: item.name});
+            }
+        });
+        buildBrowserSelection();
+}
+function buildBrowserSelection() {
+    browser_tags.removeAll();
+    browser_tags._emptyDropdown();
+    let selected = os_tags.value;
+    let isInclude = $('.os-toggle.is-selected').hasClass('include-toggle');
+    let available = []
+    Array.from(os_tags.dropdown.children).some(function(a){
+        available.push(a.dataset.value)
+    })
+    let p_names = [];
+    available.forEach((name) => {
+        if(!selected.length) {
+            p_names.push(name)
+        } else {
+            if(isInclude) {
+                if(selected.indexOf(name) > -1) p_names.push(name)
+            } else {
+                if(selected.indexOf(name) == -1) p_names.push(name)
+            }
         }
+    })
+    let p_ids = [];
+    oses.forEach((item) => {
+        if(p_names.indexOf(item.name) > -1) p_ids.push(item.id)
+    })
+    let o_ids = [];
+    p_ids.forEach((id) => {
+        mapOsBrowser.forEach((item) => {
+            if(id == item.os_id) o_ids.push(item.browser_id)
+        })
+    })
+    browsers.forEach((item) => {
+        if(o_ids.indexOf(item.id) > -1) {
+            browser_tags._createDropdownItem({text: item.name, value: item.name});
+        }
+    })
+}
 
 
 

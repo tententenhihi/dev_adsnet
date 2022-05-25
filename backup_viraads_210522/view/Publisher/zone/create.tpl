@@ -160,6 +160,7 @@
     </section>
     <!-- Form wizard with number tabs section end -->
 </div>
+<script src="<?=$this->asset2('app-assets/vendors/js/extensions/jquery.steps.min.js')?>"></script>
 <script>
     /* global $, __tajs */
     $(document).ready(function() {

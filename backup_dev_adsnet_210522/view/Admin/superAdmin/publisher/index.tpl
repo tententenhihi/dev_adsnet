@@ -149,7 +149,7 @@ span.icon svg {
 
     <div class="row is-multiline" style="flex-wrap: wrap">
         <div class="col-lg-3 col-md-6 col-12">
-            <a class="card" href="/website/pending">
+            <a class="card" href="/publisher/website/pending">
                 <div class="card-header d-flex align-items-start pb-0">
                     <div class="title-publisher-admin">
                         <h2 class="text-bold-700 mt-0"><?=$this->helper->numberFormat($this->data->pendingWebsite)?></h2>
@@ -165,7 +165,7 @@ span.icon svg {
 
         </div>
         <div class="col-lg-3 col-md-6 col-12">
-            <a class="card" href="/withdraw/pending">
+            <a class="card" href="/billing/withdraw/pending">
                 <div class="card-header d-flex align-items-start pb-0">
                     <div class="title-publisher-admin">
                         <h2 class="text-bold-700 mt-0"><?=$this->helper->numberFormat($this->data->pendingWithdraw)?></h2>

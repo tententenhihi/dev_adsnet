@@ -7,8 +7,8 @@ class Adcash
     protected $baseUrl = 'https://api.myadcash.com/api/v1/';
     protected $apiToken = null;
     protected $timezone = 'CET';
-    protected $username = '--email--';
-    protected $password = '--pass--';
+    protected $username = 'payment@gome.io';
+    protected $password = 'Beba@9089';
     protected $publisherId = 858406;
     protected $lastRevenue = 0;
     protected $client;

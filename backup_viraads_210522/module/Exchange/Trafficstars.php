@@ -7,10 +7,10 @@ class Trafficstars
     protected $baseUrl = 'https://api.trafficstars.com/';
     protected $apiToken = null;
     protected $timezone = 'CET';
-    protected $username = '--email--';
-    protected $password = '--pass--';
-    protected $clientId = '--clientid--';
-    protected $clientSecret = '--client-secrect--';
+    protected $username = 'admin@taroads.com';
+    protected $password = 'Beba@9089';
+    protected $clientId = '39944304696542135986649738110323';
+    protected $clientSecret = '32775722787228578445833134337561';
     protected $lastRevenue = 0;
     protected $client;
     protected $zone_id;

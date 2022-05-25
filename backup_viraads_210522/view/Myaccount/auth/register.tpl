@@ -3,7 +3,7 @@
 <head>
     <meta name="csrf-token" content="<?=$this->csrf()?>" />
     <title><?=SITE_NAME?></title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <link rel="apple-touch-icon" href="<?=$this->asset2('app-assets/images/ico/apple-icon-120.png')?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?=$this->asset2('app-assets/images/ico/favicon.ico')?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -33,7 +33,14 @@
     <!-- BEGIN: Custom JS-->
     <script src="<?=$this->asset2('assets/js/scripts.js')?>"></script>
     <!-- BEGIN Custom JS-->
-
+     <style>
+        btn-primary{
+            background-color:#8b08bb;
+        }
+        a{
+            color:#8b08bb;
+        }
+    </style>
 </head>
 <!-- END: Head-->
 <body class="vertical-layout vertical-menu-modern 1-column  navbar-floating footer-static bg-full-screen-image  blank-page blank-page" data-open="click" data-menu="vertical-menu-modern" data-col="1-column">
@@ -49,11 +56,15 @@
                     <div class="col-xl-8 col-10 d-flex justify-content-center" >
                         <div class="card bg-authentication rounded-0 mb-0" >
                             <div class="row m-0">
-                                <div class="col-lg-6 d-lg-block text-center align-self-center pl-0 pr-3 py-0">
-                                    <img src="<?=$this->asset2('app-assets/images/pages/register.jpg')?>" alt="branding logo">
+                               
+                                <div class="col-lg-6 d-lg-block d-none text-center align-self-center pl-0 pr-3 py-0">
+                                    <img src="<?=$this->asset2('app-assets/images/pages/register2.png')?>" alt="branding logo" width="100%">
                                 </div>
                                 <div class="col-lg-6 col-12 p-0">
-                                    <div class="card rounded-0 mb-0 p-2" id="register_form" >
+                                    <div class="card rounded-0 mb-0 p-2  h-100 justify-content-center" id="register_form" >
+                                      <div class="card-logo d-flex justify-content-center mb-2 d-xl-none d-lg-none">
+                                        <img src="<?=$this->asset2('app-assets/images/logo/logo-viraads.png')?>" alt="logo" id="logo1" width="70%" style="margin-top: 20px;">
+                                    </div>
                                         <div class="card-header pt-50 pb-1">
                                             <div class="card-title">
                                                 <h4 class="mb-0">Create Account</h4>
@@ -102,7 +113,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card rounded-0 mb-0 p-2"  id="register_done" style="display:none">
+                                    <div class="card rounded-0 mb-0 p-2 h-100"  id="register_done" style="display:none">
                                         <div class="card-header pt-50 pb-1">
                                             <div class="card-title">
                                                 

@@ -156,6 +156,16 @@
                     </li>
                 </ul>
             </li>
+            <li class="nav-item has-sub sidebar-group"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Card">Referrals</span></a>
+                <ul class="menu-content" >
+                    <li class=""><a href="/referral"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Overview</span></a>
+                    </li>
+                    <li class=""><a href="/referral/publisher"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Publisher</span></a>
+                    </li>
+                    <li class=""><a href="/referral/advertiser"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">Advertiser</span></a>
+                    </li>
+                </ul>
+            </li>
             <li class="nav-item has-sub sidebar-group"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Card">Publisher</span></a>
                 <ul class="menu-content" >
                     <li class=""><a href="/publisher"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Publishers Overview</span></a>
@@ -210,7 +220,7 @@
                     </li>
                     <li class=""><a href="/system/log"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Log</span></a>
                     </li>
-                    <li class=""><a href="/system/setting"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">System Overview</span></a>
+                    <li class=""><a href="/system/setting"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Setting</span></a>
                     </li>
                 </ul>
             </li>

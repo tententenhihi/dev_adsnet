@@ -75,8 +75,8 @@
         line-height: inherit;
       }
       .btn-primary a:hover {
-        background-color: #ae6dad !important;
-        border-color: #ae6dad !important;
+        background-color: #006ed6 !important;
+        border-color: #006ed6 !important;
       }
       .btn-primary a:focus {
         outline: transparent auto 0px;
@@ -107,7 +107,7 @@
                   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                     <tr>
                       <td style="font-family: sans-serif; font-size: 16px; vertical-align: top;">
-                        <img width="50%" height="auto" src="https://cdn.wataads.com/img/logo-wataads.png" style="border:0;margin:0;margin-left: auto;margin-right: auto;width: 50%;display: block;padding-bottom: 15px;">
+                        <img height="auto" src="https://cdn.wataads.com/app-assets/images/logo/logo1.png" style="border:0;margin:0;margin-left: auto;margin-right: auto;width: 20%;display: block;padding-bottom: 15px;">
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Welcome, {{USER_NAME}}!</p>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">Your account is fully activated, now you can start using any services available on our platform</p>
                         <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
@@ -117,7 +117,7 @@
                                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
                                   <tbody>
                                     <tr>
-                                      <td style="font-family: sans-serif; font-size: 16px; vertical-align: top; background-color: #ae6dad; border-radius: 5px; text-align: center;"><a href="{{MYACCOUNT_URL}}" target="_blank" style="display: inline-block; color: #ffffff; background-color: #ae6dad; border: solid 1px #ae6dad; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #ae6dad;">Go to my Dashboard!</a> </td>
+                                      <td style="font-family: sans-serif; font-size: 16px; vertical-align: top; background-color: #006ed6; border-radius: 5px; text-align: center;"><a href="{{MYACCOUNT_URL}}" target="_blank" style="display: inline-block; color: #ffffff; background-color: #006ed6; border: solid 1px #ae6dad; border-radius: 5px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-weight: bold; margin: 0; padding: 12px 25px; text-transform: capitalize; border-color: #006ed6;">Go to my Dashboard!</a> </td>
                                     </tr>
                                   </tbody>
                                 </table>
@@ -142,13 +142,13 @@
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                 <tr style="margin:0">
                   <td>
-                    <img width="81" height="auto" src="https://cdn.wataads.com/img/logo-wataads.png" style="border:0;margin:0;display:inline-block">
+                    <img width="50px" height="auto" src="https://cdn.wataads.com/app-assets/images/logo/logo1.png" style="border:0;margin:0;display:inline-block">
                   </td>
                 </tr>
                 <tr>
                   <td class="content-block" style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #9da9bb; text-align: center;">
                     <span style="margin:0">
-                      <a href="{{FRONTEND_URL}}" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> WataAds </a> | <a href="{{FRONTEND_URL}}/legal/faqs" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Support </a> | <a href="{{FRONTEND_URL}}/legal/terms" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Terms and Conditions </a> | <a href="{{FRONTEND_URL}}/legal/privacy" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Privacy Policy </a>
+                      <a href="{{FRONTEND_URL}}" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> ViraAds </a> | <a href="{{FRONTEND_URL}}/legal/faqs" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Support </a> | <a href="{{FRONTEND_URL}}/legal/terms" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Terms and Conditions </a> | <a href="{{FRONTEND_URL}}/legal/privacy" style="margin:0;color:rgb(0,112,201);white-space:nowrap;text-decoration:none" target="_blank"> Privacy Policy </a>
                     </span>
                     <br> <span class="apple-link" style="color: #9da9bb; font-size: 12px; text-align: center;">{{SITE_NAME}}. Thank you for reading our email</span>
                     <br> Don't like these emails? <a href="{{MYACCOUNT_URL}}/profile" style="text-decoration: underline; color: #9da9bb; font-size: 12px; text-align: center;">Unsubscribe</a>.

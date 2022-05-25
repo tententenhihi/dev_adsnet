@@ -9,6 +9,13 @@
 .buttons.is-gapless .button {
     margin-right: 0 !important;
 }
+.table-responsive .badge{
+    min-width: 70px;
+}
+.btn-tag{
+    cursor: pointer;
+    min-width: 150px !important;
+}
 </style>
 <div class="content-body">
     <div class="row">
@@ -81,6 +88,7 @@
                                     <th>Zone</th>
                                     <th>Website</th>
                                     <th>User</th>
+                                    <th>Ad Tag</th>
                                     <th>Summary</th>
                                     <th>Min eCPM</th>
                                     <th>Created</th>
@@ -99,6 +107,11 @@
                                     <td><a class="item-name" href="/publisher/zone/detail?id=<?=$item->id?>"><?=$item->id?> - <?=$item->name?></a></td>
                                     <td><a href="/publisher/website/detail?id=<?=$item->website_id?>"><?=$item->domain?></a></td>
                                     <td><a href="/user?id=<?=$item->user_id?>">#<?=$item->user_id?> - <?=$item->user_name?></a></td>
+                                    <td>
+                                         <span class="badge badge-warning btn-tag mb-1" data-id="<?=$item->id?>" data-guide="<?=$this->data->adformats[$item->ad_format]->tag_guide?>" data-script="<?=htmlentities($this->data->adformats[$item->ad_format]->tag_script)?>">
+                                            <span><?=$item->name_ad_format?></span>
+                                        </span>
+                                    </td>
                                     <td>
                                         <?php if($item->status=='Active'): ?>
                                         <a class="btn btn-sm is-gapless" href="/publisher/report?start_date=<?=$this->data->weekAgo?>&end_date=<?=$this->data->today?>&website_id=<?=$item->website_id?>&zone_id=<?=$item->id?>&country=&browser=&platform=&os=&group_by=Date&order_by=Date">
@@ -145,12 +158,22 @@
     </div>
 </div>
 <script>
-/* global $ */
-$(document).ready(function() {
-    $('#enterAction').on('click', function() {
-        var val = $.trim($('#search').val());
-        if (val.length < 2) return false;
-        window.location.href = window.location.pathname+'?q='+encodeURIComponent(val);
+    /* global $ */
+    function renderTag(id, guide, script) {
+        $('#guide').html(guide.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'));
+        $('#ad_script').val(script.replace('{{id}}', id));
+    }
+    $(document).ready(function() {
+        $('#enterAction').on('click', function() {
+            var val = $.trim($('#search').val());
+            if (val.length < 2) return false;
+            window.location.href = window.location.pathname+'?q='+encodeURIComponent(val);
+        });
+        $('.btn-tag').on('click', function() {
+            var $this = $(this), id = $this.attr('data-id'), guide = $this.attr('data-guide'), script = $this.attr('data-script');
+            $('#tag-content').html(renderTag(id, guide, script));
+            $('#showTag').modal('show');
+        });
+        
     });
-});
 </script>

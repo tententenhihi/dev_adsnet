@@ -17,8 +17,8 @@
 
     
 
-    <!-- BEGIN: Page Vendor JS
-    <script src="<?=$this->asset2('app-assets/vendors/js/extensions/jquery.steps.min.js')?>"></script>-->
+    <!-- BEGIN: Page Vendor JS-->
+
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -59,6 +59,18 @@
                 $(this).parent().addClass('active');
             }
         })
+    });
+
+    $('.language').click(function(){
+        var language = $(this).attr('data-language');
+        $.post('/language', {csrf_token: __tajs.csrf, language: language}, function(res){
+            if(res === 'Success') {
+                console.log('Success');
+                window.location.reload();
+            }else {
+                console.log('Error');
+            }
+        });
     });
     </script>
 </body>

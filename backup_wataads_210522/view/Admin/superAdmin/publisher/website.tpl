@@ -17,12 +17,8 @@ table .badge {
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
             <?php if($this->data->user): ?>
-            <div class="media mb-2">
-                <div class="media-body" style="background-color: antiquewhite">
-                    <div style="border-left: 4px solid #48c774; padding: 1.25em 1.5em;">
-                        <p>Showing only Websites from user #<?=$this->data->user->id?> - <?=$this->data->user->name?> (<?=$this->data->user->email?>)<br>
-                    </div>
-                </div>
+            <div class="alert alert-info">
+                <p>Showing only Websites from user #<?=$this->data->user->id?> - <?=$this->data->user->name?> (<?=$this->data->user->email?>)<br>
             </div>
             <?php endif; ?>
             <div class="card">
@@ -150,9 +146,15 @@ table .badge {
                                                 <i class="feather icon-edit"></i> <span>Edit</span>
                                             </button>
                                             <?php if($item->status=='Pending'): ?>
-                                            <button type="button" class="btn btn-success mb-1 waves-effect waves-light btn-verify" data-id="<?=$item->id?>">
-                                                <i class="feather icon-check"></i> <span><?=$item->is_verified?'Approve':'Verify'?></span>
+                                            <button class="btn btn-success mb-1 btn-verify" data-id="<?=$item->id?>">
+                                                <i class="feather icon-check"></i>
+                                                <span><?=$item->is_verified?'Approve':'Verify'?></span>
                                             </button>
+                                            <button class="btn btn-danger mb-1 btn-reject" data-id="<?=$item->id?>">
+                                                <i class="feather icon-slash"></i>
+                                                <span>Reject</span>
+                                            </button>
+
 
                                             <?php endif; ?>
                                         </div>

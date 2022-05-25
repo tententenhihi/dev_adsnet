@@ -6,7 +6,7 @@
 <head>
      <meta name="csrf-token" content="<?=$this->csrf()?>" />
     <title><?=SITE_NAME?></title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <link rel="apple-touch-icon" href="<?=$this->asset2('app-assets/images/ico/apple-icon-120.png')?>">
     <link rel="shortcut icon" type="image/x-icon" href="<?=$this->asset2('app-assets/images/ico/favicon.ico')?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
@@ -35,6 +35,14 @@
     <!-- END: Custom CSS-->
     <script src="<?=$this->asset2('assets/js/scripts.js')?>"></script>
 
+     <style>
+        btn-primary{
+            background-color:#8b08bb;
+        }
+        a{
+            color:#8b08bb;
+        }
+    </style>
 </head>
 <!-- END: Head-->
 
@@ -53,11 +61,15 @@
                     <div class="col-xl-7 col-md-9 col-10 d-flex justify-content-center px-0">
                         <div class="card bg-authentication rounded-0 mb-0">
                             <div class="row m-0">
-                                <div class="col-lg-6 d-lg-block text-center align-self-center">
-                                    <img src="<?=$this->asset2('app-assets/images/pages/forgot-password.png')?>" alt="branding logo">
+                               
+                                <div class="col-lg-6 d-lg-block d-none text-center align-self-center">
+                                    <img src="<?=$this->asset2('app-assets/images/pages/forgot-password-2.png')?>" alt="branding logo" width="100%">
                                 </div>
                                 <div class="col-lg-6 col-12 p-0">
-                                    <div class="card rounded-0 mb-0 px-2 py-1" id="forgot_form">
+                                    <div class="card rocard rounded-0 mb-0 px-2 py-1 h-100 justify-content-center" id="forgot_form">
+                                     <div class="card-logo d-flex justify-content-center mb-2 d-xl-none d-lg-none">
+                                        <img src="<?=$this->asset2('app-assets/images/logo/logo-viraads.png')?>" alt="logo" id="logo1" width="70%" style="margin-top: 20px;">
+                                    </div>
                                         <div class="card-header pb-1">
                                             <div class="card-title">
                                                 <h4 class="mb-0">Recover your password</h4>

@@ -129,7 +129,7 @@
                           </tbody>
                         </table>
                         <p style="font-family: sans-serif; font-size: 16px; font-weight: normal; margin: 0; Margin-bottom: 15px;">
-                        	Thank you very much and do not forget to contact us if you have any questions or face any difficulties, our staff is available 24/7 on <a href="https://t.me/wataads" style="color:#007bff">Telegram</a>, <a href="skype:live:.cid.3a7b22ac71aa01f4?chat" style="color:#007bff">Skype</a> and <a href="{{MYACCOUNT_URL}}/support" style="color:#007bff">Support System</a>
+                        	Thank you very much and do not forget to contact us if you have any questions or face any difficulties, our staff is available 24/7 on <a href="https://t.me/viraadsnet" style="color:#007bff">Telegram</a>, <a href="skype:live:.cid.3a7b22ac71aa01f4?chat" style="color:#007bff">Skype</a> and <a href="{{MYACCOUNT_URL}}/support" style="color:#007bff">Support System</a>
 						</p>
                       </td>
                     </tr>

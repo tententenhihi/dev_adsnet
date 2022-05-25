@@ -1,8 +1,16 @@
 <style>
-.loading, .loading:after {border-radius: 50%;width: 10em;height: 10em;}
-.loading {margin:20px auto;font-size: 10px;position: relative;text-indent: -9999em;border-top:1.1em solid rgba(174, 109, 173, 0.1);border-right:1.1em solid rgba(174, 109, 173, 0.1);border-bottom:1.1em solid rgba(174, 109, 173, 0.1);border-left:1.1em solid #ae6dad;transform:translateZ(0);animation:a 1.1s infinite linear;}
-.is-more {padding-top:0;padding-right:0;margin-top:-.5rem;background-color:transparent;border:none;color: #6c757d;}
-.is-more:focus{box-shadow:none !important;}
+.loading, .loading:after {
+    /*border-radius: 50%;width: 10em;height: 10em;*/
+}
+.loading {
+    /*margin:20px auto;font-size: 10px;position: relative;text-indent: -9999em;border-top:1.1em solid rgba(174, 109, 173, 0.1);border-right:1.1em solid rgba(174, 109, 173, 0.1);border-bottom:1.1em solid rgba(174, 109, 173, 0.1);border-left:1.1em solid #ae6dad;transform:translateZ(0);animation:a 1.1s infinite linear;*/
+}
+.is-more {
+    /*padding-top:0;padding-right:0;margin-top:-.5rem;background-color:transparent;border:none;color: #6c757d;*/
+}
+.is-more:focus{
+    /*box-shadow:none !important;*/
+}
 
 
 .tag:not(body).is-rounded {
@@ -35,69 +43,6 @@
 .tag:not(body) .delete {
     margin-left: 0.25rem;
     margin-right: -0.375rem;
-}
-.is-small.delete, .is-small.modal-close {
-    height: 16px;
-    max-height: 16px;
-    max-width: 16px;
-    min-height: 16px;
-    min-width: 16px;
-    width: 16px;
-}
-.delete, .modal-close {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    background-color: rgba(10,10,10,.2);
-    border: none;
-    border-radius: 290486px;
-    cursor: pointer;
-    pointer-events: auto;
-    display: inline-block;
-    flex-grow: 0;
-    flex-shrink: 0;
-    font-size: 0;
-    height: 20px;
-    max-height: 20px;
-    max-width: 20px;
-    min-height: 20px;
-    min-width: 20px;
-    outline: 0;
-    position: relative;
-    vertical-align: top;
-    width: 20px;
-}
-.delete::before, .modal-close::before {
-    height: 2px;
-    width: 50%;
-}
-.delete::after, .delete::before, .modal-close::after, .modal-close::before {
-    background-color: #fff;
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform-origin: center center;
-}
-.delete::after, .modal-close::after {
-    height: 50%;
-    width: 2px;
-}
-.delete::after, .delete::before, .modal-close::after, .modal-close::before {
-    background-color: #fff;
-    content: "";
-    display: block;
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transform-origin: center center;
 }
 
 .collapse:not(.show) {
@@ -150,11 +95,7 @@
                         </div>
                         <div class="buttons text-center is-generate" style="margin-top:2rem;">
                             <button class="btn btn-success btn-generate">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M15.86 4.39V19.39C15.86 21.06 17 22 18.25 22C19.39 22 20.64 21.21 20.64 19.39V4.5C20.64 2.96 19.5 2 18.25 2S15.86 3.06 15.86 4.39M9.61 12V19.39C9.61 21.07 10.77 22 12 22C13.14 22 14.39 21.21 14.39 19.39V12.11C14.39 10.57 13.25 9.61 12 9.61S9.61 10.67 9.61 12M5.75 17.23C7.07 17.23 8.14 18.3 8.14 19.61C8.14 20.93 7.07 22 5.75 22S3.36 20.93 3.36 19.61C3.36 18.3 4.43 17.23 5.75 17.23Z"></path>
-                                    </svg>
-                                </span>
+                                <i class="feather icon-bar-chart-2"></i>
                                 <span>Generate Report</span>
                             </button>
                         </div>
@@ -229,12 +170,8 @@
                             <p class="help text-info">Leave empty to not filter by OSes</p>
                         </div>
                         <div class="buttons text-center is-generate hidden" style="margin-top:2rem;">
-                            <button class="button is-success btn-generate">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M15.86 4.39V19.39C15.86 21.06 17 22 18.25 22C19.39 22 20.64 21.21 20.64 19.39V4.5C20.64 2.96 19.5 2 18.25 2S15.86 3.06 15.86 4.39M9.61 12V19.39C9.61 21.07 10.77 22 12 22C13.14 22 14.39 21.21 14.39 19.39V12.11C14.39 10.57 13.25 9.61 12 9.61S9.61 10.67 9.61 12M5.75 17.23C7.07 17.23 8.14 18.3 8.14 19.61C8.14 20.93 7.07 22 5.75 22S3.36 20.93 3.36 19.61C3.36 18.3 4.43 17.23 5.75 17.23Z"></path>
-                                    </svg>
-                                </span>
+                            <button class="btn btn-success btn-generate">
+                                <i class="feather icon-bar-chart-2"></i>
                                 <span>Generate Report</span>
                             </button>
                         </div>
@@ -286,12 +223,8 @@
                             <p class="help text-info">Leave empty to order by Date</p>
                         </div>
                         <div class="buttons text-center" style="margin-top:2rem;">
-                            <button class="button is-success btn-generate">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M15.86 4.39V19.39C15.86 21.06 17 22 18.25 22C19.39 22 20.64 21.21 20.64 19.39V4.5C20.64 2.96 19.5 2 18.25 2S15.86 3.06 15.86 4.39M9.61 12V19.39C9.61 21.07 10.77 22 12 22C13.14 22 14.39 21.21 14.39 19.39V12.11C14.39 10.57 13.25 9.61 12 9.61S9.61 10.67 9.61 12M5.75 17.23C7.07 17.23 8.14 18.3 8.14 19.61C8.14 20.93 7.07 22 5.75 22S3.36 20.93 3.36 19.61C3.36 18.3 4.43 17.23 5.75 17.23Z"></path>
-                                    </svg>
-                                </span>
+                            <button class="btn btn-success btn-generate">
+                                <i class="feather icon-bar-chart-2"></i>
                                 <span>Generate Report</span>
                             </button>
                         </div>
@@ -657,7 +590,7 @@ function fillData() {
 function getResult() {
     $.post(window.location.href, {csrf_token: __tajs .csrf}, function(res){
         if(!res.success) {
-            $('#result').html('<p class="has-text-danger has-text-centered">Please try again</p>');
+            $('#result').html('<p class="text-danger text-center">Please try again</p>');
             __tajs .showAlert(res.data);
             return false;
         }

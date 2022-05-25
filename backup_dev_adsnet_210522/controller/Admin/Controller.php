@@ -214,6 +214,12 @@ class Controller
             echo json_encode($this->data, JSON_PRETTY_PRINT);
         } else {
             if(!$this->fullPage) {
+                if($_COOKIE["language"] === 'vn'){
+                    $lang = 'vn';
+                }else{
+                    $lang = 'en';
+                }
+                include BASE_PATH.'/language/locale/'. $lang . '.php';
                 include BASE_PATH.'/view/'.$this->header.'.tpl';
             }
             include BASE_PATH.'/view/'.$this->view.'.tpl';

@@ -18,7 +18,6 @@
     
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="<?=$this->asset2('app-assets/vendors/js/extensions/jquery.steps.min.js')?>"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
@@ -41,17 +40,17 @@
     $(document).ready(function(){
         __tajs.renderTime();
 
-        var path = location.pathname;
-        console.log(path);
-        if(path.includes('create')){
-            console.log(path.replace(/^(\/[^\/]+).*$/,'$1'));
-            path = path.replace(/^(\/[^\/]+).*$/,'$1');
-        }else{
-            console.log(path.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1'));
-            path = path.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1');
-        }
-        // var path = location.pathname.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1');
+        // var path = location.pathname;
         // console.log(path);
+        // if(path.includes('create')){
+        //     console.log(path.replace(/^(\/[^\/]+).*$/,'$1'));
+        //     path = path.replace(/^(\/[^\/]+).*$/,'$1');
+        // }else{
+        //     console.log(path.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1'));
+        //     path = path.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1');
+        // }
+        var path = location.pathname.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1');
+        console.log(path);
         $('#main-menu-navigation .nav-item a').each(function (){
             if($(this).attr('href') === path){
                 $(this).parent().addClass('active');

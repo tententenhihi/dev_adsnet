@@ -10,7 +10,11 @@
     margin-right: 0 !important;
 }
 .table-responsive .badge{
-    width: 70px;
+    min-width: 70px;
+}
+.btn-tag{
+    cursor: pointer;
+    min-width: 150px !important;
 }
 </style>
 
@@ -81,10 +85,9 @@
                                     <td><a class="item-name mb-1" href="/zone/detail/<?=$item->id?>"><?=$item->id?> - <?=$item->name?></a></td>
                                     <td><a class="item-name mb-1" href="/website/detail/<?=$item->website_id?>"><?=$item->domain?></a></td>
                                     <td>
-                                        <button class="btn btn-light btn-tag mb-1" data-id="<?=$item->id?>" data-guide="<?=$this->data->adformats[$item->ad_format]->tag_guide?>" data-script="<?=htmlentities($this->data->adformats[$item->ad_format]->tag_script)?>">
-                                            <i class="feather icon-chevron-left"></i><i class="feather icon-chevron-right"></i>
-                                            <span><?=$this->data->adformats[$item->ad_format]->name?></span>
-                                        </button>
+                                        <span class="badge badge-warning btn-tag mb-1" data-id="<?=$item->id?>" data-guide="<?=$this->data->adformats[$item->ad_format]->tag_guide?>" data-script="<?=htmlentities($this->data->adformats[$item->ad_format]->tag_script)?>">
+                                            <span><?=$this->data->adformats[$item->ad_format]->name ?></span>
+                                        </span>
                                     </td>
                                     <td>
                                         <?php if($item->status=='Active'): ?>

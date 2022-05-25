@@ -45,7 +45,40 @@
             }else if(path === '/' && $(this).attr('href') === '/dashboard'){
                 $(this).parent().addClass('active');
             }
-        })
+        });
+    });
+
+    //set cookie
+    function setCookie(key, value, expiry) {
+        var expires = new Date();
+        expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
+
+    //get cookie
+    function getCookie(key) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+
+    //remove cookie
+    function eraseCookie(key) {
+        var keyValue = getCookie(key);
+        setCookie(key, keyValue, '-1');
+    }
+
+    $('.language').click(function(){
+        // setCookie('language', $(this).attr('data-language'), '90');
+        // window.location.href = window.location.pathname + '?language=' + encodeURIComponent($(this).attr('data-language'));
+        var language = $(this).attr('data-language');
+        $.post('/language', {csrf_token: __tajs.csrf, language: language}, function(res){
+            if(res === 'Success') {
+                console.log('Success');
+                window.location.reload();
+            }else {
+                console.log('Error');
+            }
+        });
     });
     </script>
 </body>

@@ -78,12 +78,18 @@
                     <ul class="nav navbar-nav float-right ">
                         <li class="dropdown dropdown-language nav-item">
                             <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="flag-icon flag-icon-us"></i>
-                                <span class="selected-language">English</span>
+                                <?php if($_COOKIE["language"] === 'vn'): ?>
+                                    <i class="flag-icon flag-icon-vn"></i>
+                                    <span class="selected-language">Tiếng Việt</span>
+                                <?php else: ?>
+                                    <i class="flag-icon flag-icon-us"></i>
+                                    <span class="selected-language">English</span>
+                                <?php endif; ?>
+
                             </a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                                <a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
-				                <a class="dropdown-item" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Tiếng Việt</a>
+                                <a class="dropdown-item language" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
+				                <a class="dropdown-item language" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Tiếng Việt</a>
                             </div>
                         </li>
                         <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
@@ -140,7 +146,7 @@
         <div class="shadow-bottom"></div>
         <div class="main-menu-content mt-1">
             <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
-                <li class=" nav-item"><a href="/dashboard"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+                <li class=" nav-item"><a href="/dashboard"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard"><?= $langArray['Dashboard'] ?></span></a>
                 </li>
                 <li class=" navigation-header"><span>Account</span>
                 </li>
@@ -148,7 +154,7 @@
                 </li>
                 <li class=" nav-item hidden"><a href="/profile"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat">Profile</span></a>
                 </li>
-                <li class=" nav-item"><a href="/referral"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Todo">Referral</span></a>
+                <li class=" nav-item"><a href="/referral"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Todo"><?= $langArray['Referral'] ?></span></a>
                 </li>
                 <li class=" nav-item"><a href="/notification"><i class="fa fa-bell-o"></i><span class="menu-title" data-i18n="Calender">Notifications</span></a>
                 </li>
@@ -179,7 +185,7 @@
 
                 <li class=" navigation-header"><span>Support</span>
                 </li>
-                <li class=" nav-item"><a href="/announcement"><i class="feather icon-bell"></i><span class="menu-title" data-i18n="Profile">Annoucements</span></a>
+                <li class=" nav-item"><a href="/announcement"><i class="feather icon-bell"></i><span class="menu-title" data-i18n="Profile">Announcements</span></a>
                 </li>
                 <li class=" nav-item"><a href="/support"><i class="feather icon-help-circle"></i><span class="menu-title" data-i18n="Account Settings">Support Ticket</span></a>
                 </li>

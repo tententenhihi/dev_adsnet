@@ -25,11 +25,11 @@
     color: #006ed6;
 }
 .button.is-selected {
-    background-color: #006ed6;
+    background-color: #880d88;
     color: #fff;
 }
 .button.is-selected:focus {
-    border-color: #006ed6;
+    border-color: #880d88;
     box-shadow: none;
 }
 .button.is-default:focus {
@@ -72,7 +72,7 @@
     border: 1px solid rgba(128, 128, 128, 0.21);
     padding: 7px;
 }
-.native_type, .pop_method{
+.native_type, .pop_method, .dia_method{
     box-shadow: 0 0 16px 3px rgb(128 128 128 / 13%);
     margin-left: 0.1rem;
     margin-right: 0.1rem;
@@ -97,6 +97,99 @@
     cursor: pointer;
     border-radius: 33px;
     padding: 12px 15px 10px 15px;
+}
+.tag:not(body).is-rounded {
+    border-radius: 290486px;
+}
+.tag:not(body).is-success {
+    background-color: #48c774;
+    color: #fff;
+}
+.tags-input .tag {
+    font-size: 1rem;
+    margin: 0.1rem;
+}
+.tag:not(body) {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    /*color: #4a4a4a;*/
+    display: inline-flex;
+    font-size: .75rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+}
+
+.tag:not(body) .delete {
+    margin-left: 0.25rem;
+    margin-right: -0.375rem;
+}
+.is-small.delete, .is-small.modal-close {
+    height: 16px;
+    max-height: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    min-width: 16px;
+    width: 16px;
+}
+.delete, .modal-close {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba(10,10,10,.2);
+    border: none;
+    border-radius: 290486px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 20px;
+    max-height: 20px;
+    max-width: 20px;
+    min-height: 20px;
+    min-width: 20px;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+}
+.delete::before, .modal-close::before {
+    height: 2px;
+    width: 50%;
+}
+.delete::after, .delete::before {
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
+}
+.delete::after, .modal-close::after {
+    height: 50%;
+    width: 2px;
+}
+.delete::after, .delete::before{
+    background-color: #fff;
+    content: "";
+    display: block;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform-origin: center center;
 }
 </style>
 <div class="content-body">
@@ -412,7 +505,7 @@
                 <div class="card-content data-step" id="step-0">
                     <div class="card-body card-dashboard">
                         <div class="buttons text-center pt-1">
-                            <button class="btn btn-success mb-1" id="enterAction">
+                            <button type="button" class="btn btn-success mb-1" id="enterAction">
                                 <i class="feather icon-check"></i>
                                 <span>Save</span>
                             </button>
@@ -439,12 +532,6 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Help</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
 
                     <ul>
@@ -460,9 +547,9 @@
                     </ul>
 
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light btn-close">Got It</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-success btn-close">Got It</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -571,7 +658,7 @@ function buildSettingPOP() {
         pop_method = setting.pop_method || 'any',
         pop_class = setting.pop_class || [],
         pop_delay = setting.pop_delay || 0;
-        pop_start = setting.pop_start || 0;
+
     html += '<div class="form-group" style="padding-bottom:1rem">';
     html += '<label class="label">Trigger Method</label>';
     html += '<div class="control">';
@@ -592,23 +679,18 @@ function buildSettingPOP() {
     html += '<label class="label">Trigger Class(es)</label>';
     html += '<div class="control">';
     html += '<input id="pop_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
-    html += '</div><p class="text-info">class-name-1, class-name-2, class-name-3</p></div>';
-    html += '<div class="form-group" style="margin-bottom:.5em;">';
-    html += '<label class="label">Start Delay</label>';
-    html += '</div>';
-    html += '<div class="form-group has-addons">';
-    html += '<div class="control is-expanded">';
-    html += '<input class="input form-control" id="pop_start" type="number" value="'+pop_start+'">';
-    html += '</div><div class="control">';
-    html += '<div class="button is-static">Seconds</div></div></div>';
-    html += '<div class="form-group" style="margin-bottom:.5em;">';
-    html += '<label class="label">Delay Between Triggers</label>';
-    html += '</div>';
-    html += '<div class="form-group has-addons">';
-    html += '<div class="control is-expanded">';
+    html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
+
+    html += '<div class="form-group">';
+    html += '<label class="label">Delay</label>';
+    html += '<div class="input-group">';
     html += '<input class="input form-control" id="pop_delay" type="number" value="'+pop_delay+'">';
-    html += '</div><div class="control">';
-    html += '<div class="button is-static">Seconds</div></div></div>';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
     $('#zone-build-setting').html(html);
     new BulmaTagsInput(document.getElementById('pop_class'), {
         allowDuplicates: false,
@@ -631,28 +713,27 @@ function buildSettingPOP() {
     	searchOn: 'text',
     	selectable: false,
     	source: undefined,
-    	tagClass: 'is-rounded is-success',
+        tagClass: 'is-rounded btn-success',
     	trim: true
     });
     if(pop_method == 'class') document.getElementById('pop_class').BulmaTagsInput().add(pop_class.join(','));
 }
 function buildSettingVAST() {
-   var html ='';
+    var html ='',
     vast_skip = setting.vast_skip || 10,
     vast_impr = setting.vast_impr || '',
     vast_click = setting.vast_click || '';
-    html += '<div class="help-modal" data-target="helpModalVAST">';
-    html += '<span class="icon"><svg viewBox="0 0 24 24" style="width: 20px">';
-    html += '<path fill="currentColor" d="M15.07,11.25L14.17,12.17C13.45,12.89 13,13.5 13,15H11V14.5C11,13.39 11.45,12.39 12.17,11.67L13.41,10.41C13.78,10.05 14,9.55 14,9C14,7.89 13.1,7 12,7A2,2 0 0,0 10,9H8A4,4 0 0,1 12,5A4,4 0 0,1 16,9C16,9.88 15.64,10.67 15.07,11.25M13,19H11V17H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z" />';
-    html += '</svg></span></div>';
-    html += '<div class="form-group" style="margin-bottom:.5rem;">';
+
+    html += '<div class="form-group">';
     html += '<label class="label">Skippable after (seconds)</label>';
-    html += '</div>';
-    html += '<div class="form-group has-addons">';
-    html += '<div class="control is-expanded">';
+    html += '<div class="input-group">';
     html += '<input class="input form-control" id="vast_skip" type="number" value="'+vast_skip+'">';
-    html += '</div><div class="control">';
-    html += '<div class="button is-static">Seconds</div></div></div>';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text">Seconds</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '</div>';
+
     html += '<div class="form-group">';
     html += '<label class="label">Impression Tracking</label>';
     html += '<div class="control has-icons-left">';
@@ -663,8 +744,8 @@ function buildSettingVAST() {
     html += '<div class="control has-icons-left">';
     html += '<input class="input form-control" id="vast_click" type="text" value="'+vast_click+'" placeholder="Empty to not set">';
     html += '</div></div>';
-    $('#zone-build-setting').html(html);
 
+    $('#zone-build-setting').html(html);
 }
 function buildSettingNATIVE() {
     var html = '', native_type = setting.native_type || 'classic';
@@ -708,8 +789,8 @@ function buildSettingNATIVE() {
 
     html += '<div class="form-group">';
     html += '<label class="label">Banner Type</label>';
-    html += '<div class="control">';
-    html += '<div class="row is-mobile is-gapless d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
+    html += '<div class="control mt-1">';
+    html += '<div class="row d-flex" style="margin-left:-.35rem;margin-right:-.35rem;">';
     html += '<div class="col-6">';
     html += '<div class="flatbox native_type';
     if(native_type == 'classic') html += ' is-selected';
@@ -1067,38 +1148,56 @@ function buildSettingNATIVE() {
 }
 function buildSettingDIALOG() {
     var html = '',
-        dia_method = setting.dia_method || 'close',
-        dia_class = setting.dia_class || [],
-        dia_start = setting.dia_start || 0;
-    html += '<div class="form-group" style="padding-bottom:1rem">';
+    dia_method = setting.dia_method || 'close',
+    dia_class = setting.dia_class || [],
+    dia_delay = setting.dia_delay || 0;
+
+    html += '<div class="form-group">';
     html += '<label class="label">Trigger Method</label>';
     html += '<div class="control">';
-    html += '<div class="columns is-multiline">';
-    html += '<div class="column is-12"><div class="flatbox dia_method';
+    html += '<div class="row is-multiline">';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
     if(dia_method == 'close') html += ' is-selected';
     html += '" data-value="close"><p>Moving mouse off the page (typically to close the tab)</p></div></div>';
-    html += '<div class="column is-12"><div class="flatbox dia_method';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
     if(dia_method == 'a') html += ' is-selected';
     html += '" data-value="a"><p>Clicking on links on your page</p></div></div>';
-    html += '<div class="column is-12"><div class="flatbox dia_method';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
     if(dia_method == 'class') html += ' is-selected';
     html += '" data-value="class"><p>Clicking on specific class(es)</p></div></div>';
+    html += '<div class="col-12 mt-1"><div class="flatbox dia_method';
+    if(dia_method == 'auto') html += ' is-selected';
+    html += '" data-value="auto"><p>Automatic after some delays</p></div></div>';
     html += '</div></div></div>';
+
     html += '<div class="form-group';
     if(dia_method != 'class') html += ' hidden';
     html += '" id="dia_class_wrap">';
     html += '<label class="label">Trigger Class(es)</label>';
     html += '<div class="control">';
     html += '<input id="dia_class" class="input form-control" type="text" data-type="tags" placeholder="Trigger Class" value="">';
-    html += '</div><p class="help is-info">class-name-1, class-name-2, class-name-3</p></div>';
-    html += '<div class="form-group" style="margin-bottom:.5em;">';
-    html += '<label class="label">Start Delay</label>';
+    html += '</div><p class="help text-info">class-name-1, class-name-2, class-name-3</p></div>';
+
+    html += '<div class="form-group';
+    if(dia_method != 'auto') html += ' hidden';
+    html += '" id="dia_auto_wrap">';
+    html += '<label class="label">Delay</label>';
+    html += '<div class="input-group">';
+    html += '<input class="input form-control" id="dia_delay" type="number" value="'+dia_delay+'">';
+    html += '<div class="input-group-append">';
+    html += '<span class="input-group-text">Seconds</span>';
     html += '</div>';
-    html += '<div class="form-group has-addons">';
-    html += '<div class="control is-expanded">';
-    html += '<input class="input form-control" id="dia_start" type="number" value="'+dia_start+'">';
-    html += '</div><div class="control">';
-    html += '<div class="button is-static">Seconds</div></div></div>';
+    html += '</div>';
+    html += '</div>';
+    // html += '<div class="form-group" style="margin-bottom:.5em;">';
+    // html += '<label class="label">Start Delay</label>';
+    // html += '</div>';
+    // html += '<div class="form-group has-addons">';
+    // html += '<div class="control is-expanded">';
+    // html += '<input class="input form-control" id="dia_start" type="number" value="'+dia_start+'">';
+    // html += '</div><div class="control">';
+    // html += '<div class="button is-static">Seconds</div></div></div>';
+
     $('#zone-build-setting').html(html);
     new BulmaTagsInput(document.getElementById('dia_class'), {
         allowDuplicates: false,
@@ -1121,7 +1220,7 @@ function buildSettingDIALOG() {
     	searchOn: 'text',
     	selectable: false,
     	source: undefined,
-    	tagClass: 'is-rounded is-success',
+    	tagClass: 'btn-rounded btn-success',
     	trim: true
     });
     if(dia_method == 'class') document.getElementById('dia_class').BulmaTagsInput().add(dia_class.join(','));
@@ -1139,8 +1238,8 @@ function generatePreview(code) {
     if(code == 3) return generatePreviewVAST();
     if(code == 6) return generatePreviewDIALOG();
     $('#zone-preview').html('');
-    $('#zone-setting').removeClass('is-6-desktop');
-    $('#zone-setting').addClass('is-12-desktop');
+    $('#zone-setting').removeClass('col-lg-6');
+    $('#zone-setting').addClass('col-lg-12');
     $('#zone-generate-preview').hide();
     return false;
 }
@@ -1456,6 +1555,12 @@ $(document).ready(function() {
         } else {
             $('#dia_class_wrap').addClass('hidden');
         }
+        if(value=='auto') {
+            $('#dia_auto_wrap').removeClass('hidden');
+        } else {
+            $('#dia_auto_wrap').addClass('hidden');
+        }
+
     });
     $(document).on('click', '.native_type', function() {
         var $this = $(this), value = $this.attr('data-value');
@@ -1542,7 +1647,7 @@ $(document).ready(function() {
         }
     });
     $('#enterAction').click(function() {
-        var $this = $(this), data = {}, floor_cpm = _parseFloat($('#bid').val());
+        var $this = $(this), data = {}, floor_cpm = _parseFloat($('#bid').val()), id = <?=$this->data->id?>;
         data.fallback = $.trim($('#fallback').val());
         if(data.fallback && data.fallback.indexOf('https://') != 0) {
             __tajs.showAlert('Fallback Url should be start with https');
@@ -1554,14 +1659,13 @@ $(document).ready(function() {
             data.ipp_start = _parseInt($('#ipp_start').val());
             data.ipp_total = _parseInt($('#ipp_total').val());
             data.ipp_delay = _parseInt($('#ipp_delay').val());
-            data.ipp_label = $('.ipp_label.is-selected').attr('data-value') == 'show';
+            data.ipp_label = $('.ipp_label.is-selected').attr('data-value');
             data.ipp_position = $('.ipp_position.is-selected').attr('data-value');
             if(data.ipp_total < 1) {
                 __tajs.showAlert('Please allow at least 1 notification');
                 return false;
             }
         } else if(ad_format == 2) {
-            data.pop_start = _parseInt($('#pop_start').val());
             data.pop_method = $('.pop_method.is-selected').attr('data-value');
             data.pop_class = data.pop_method == 'class' ? document.getElementById('pop_class').BulmaTagsInput().items : [];
             data.pop_delay = _parseInt($('#pop_delay').val());
@@ -1581,7 +1685,7 @@ $(document).ready(function() {
                 data.desktop_text_description = $('.desktop-text.is-selected[data-value="description"]').length;
                 data.desktop_text_position = $('#desktop-text').val();
                 data.desktop_spacing = _parseInt($('#desktop-spacing').val()) + $('.desktop-spacing.is-selected').attr('data-value');
-                data.desktop_image = $('.img-ratio.hidden').length ? _parseInt($('#desktop-image-width').val())+'px-'+_parseInt($('#desktop-image-height').val())+'px' : $('#desktop-image').val();
+                data.desktop_image = $('.img-ratio.is-hidden').length ? _parseInt($('#desktop-image-width').val())+'px-'+_parseInt($('#desktop-image-height').val())+'px' : $('#desktop-image').val();
                 data.mobile_breaking = $('#mobile_breaking').val();
                 data.mobile_col = $('#mobile_col').val();
                 data.mobile_row = $('#mobile_row').val();
@@ -1589,7 +1693,7 @@ $(document).ready(function() {
                 data.mobile_text_description = $('.mobile-text.is-selected[data-value="description"]').length;
                 data.mobile_text_position = $('#mobile-text').val();
                 data.mobile_spacing = _parseInt($('#mobile-spacing').val()) + $('.mobile-spacing.is-selected').attr('data-value');
-                data.mobile_image = $('.mobile-img-ratio.hidden').length ? _parseInt($('#mobile-image-width').val())+'px-'+_parseInt($('#mobile-image-height').val())+'px' : $('#mobile-image').val();
+                data.mobile_image = $('.mobile-img-ratio.is-hidden').length ? _parseInt($('#mobile-image-width').val())+'px-'+_parseInt($('#mobile-image-height').val())+'px' : $('#mobile-image').val();
                 data.native_css = $.trim($('#native_css').val());
                 data.native_font = $('#native_font').val();
                 data.native_align = $('.native-align.is-selected').attr('data-value');
@@ -1597,17 +1701,17 @@ $(document).ready(function() {
         } else if(ad_format == 6) {
             data.dia_method = $('.dia_method.is-selected').attr('data-value');
             data.dia_class = data.dia_method == 'class' ? document.getElementById('dia_class').BulmaTagsInput().items : [];
-            data.dia_start = _parseInt($('#dia_start').val());
+            data.dia_delay = data.dia_method == 'auto' ? _parseInt($('#dia_delay').val()) : 0;
         }
 
         data.excluded_types = [];
-        $('.exclude-ad.is-danger').each(function(){
+        $('.exclude-ad.btn-danger').each(function(){
             data.excluded_types.push($(this).attr('data-value'));
         });
 
         $this.addClass('is-loading');
         $this.prop('disabled', true);
-        $.post(window.location.pathname, {csrf_token: __tajs.csrf, data: JSON.stringify(data), floor_cpm: floor_cpm}, function(res) {
+        $.post(window.location.pathname, {csrf_token: __tajs.csrf, id: id, data: JSON.stringify(data), floor_cpm: floor_cpm}, function(res) {
             $this.removeClass('is-loading');
             $this.prop('disabled', false);
             if (res.success) {

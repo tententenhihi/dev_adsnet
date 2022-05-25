@@ -225,4 +225,14 @@ class Auth extends \System\Db
 
         return $stmt->fetch()->permission??null;
     }
+
+    public function updateLanguage($user_id, $language)
+    {
+        $stmt = $this->pdo->prepare('UPDATE user SET language = :language WHERE id = :user_id');
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->bindValue(':language', $language);
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
 }

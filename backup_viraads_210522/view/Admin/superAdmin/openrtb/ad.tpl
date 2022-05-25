@@ -3,7 +3,7 @@
     margin-bottom: 0 !important;
 }
 
-.has-text-muted {
+.text-muted {
     color: #b5b5c3 !important;
 }
 
@@ -117,7 +117,7 @@ hr {
 }
 
 .mt-4>div.are-transparent>a:hover {
-    background-color: rgba(128, 128, 128, 0.39) !important;
+    /*background-color: rgba(128, 128, 128, 0.39) !important;*/
 }
 
 .media-left .badge i {
@@ -189,7 +189,7 @@ hr {
         </div>
 
         <?php if($this->data->data): ?>
-        <div class="columns is-multiline">
+        <div class="row is-multiline">
             <?php foreach($this->data->data AS $item): ?>
             <div class="col-lg-12 col-md-12 col-12">
                 <div class="card">
@@ -212,15 +212,10 @@ hr {
                                         <a href="/openrtb/ad/detail?id=<?=$item->id?>"><span
                                                 class="item-name"><?=$item->name?></span></a>
                                     </h2>
-                                    <div class="buttons are-transparent" style="margin-left:-.5rem">
-                                        <a class="button is-muted" href="/openrtb/network?id=<?=$item->network_id?>">
+                                    <div class="buttons are-transparent" style="padding-top: 5px;">
+                                        <a class="btn btn-default" href="/openrtb/network?id=<?=$item->network_id?>">
                                             <i class="feather icon-target"></i>
                                             <span class="item-url"><?=$item->network_name?></span>
-                                        </a>
-                                        <a type="button" class="btn btn-default mb-1 waves-effect waves-light"
-                                            href="<?=$item->url?>" target="_blank">
-                                            <i class="feather icon-link"></i>
-                                            <span>Open Ad Link</span>
                                         </a>
                                     </div>
                                 </div>
@@ -241,61 +236,31 @@ hr {
                                                     </span>
                                                 </button>
 
-                                                <div class="dropdown-menu" id="dropdown-item-<?=$item->id?>"
+                                                <div class="dropdown-menu dropdown-menu-right" id="dropdown-item-<?=$item->id?>"
                                                     role="menu">
                                                     <div class="dropdown-content">
-                                                        <a class="dropdown-item has-text-info btn-rename">
-                                                            <span class="icon">
-                                                                <svg viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
+                                                        <a class="dropdown-item text-info btn-rename">
+                                                            <i class="feather icon-edit"></i>
                                                             <span>Rename</span>
                                                         </a>
-                                                        <a class="dropdown-item has-text-primary "
+                                                        <a class="dropdown-item text-primary "
                                                             href="/openrtb/ad/setup?id=<?=$item->id?>">
-                                                            <span class="icon">
-                                                                <svg viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="M13.78 15.3L19.78 21.3L21.89 19.14L15.89 13.14L13.78 15.3M17.5 10.1C17.11 10.1 16.69 10.05 16.36 9.91L4.97 21.25L2.86 19.14L10.27 11.74L8.5 9.96L7.78 10.66L6.33 9.25V12.11L5.63 12.81L2.11 9.25L2.81 8.55H5.62L4.22 7.14L7.78 3.58C8.95 2.41 10.83 2.41 12 3.58L9.89 5.74L11.3 7.14L10.59 7.85L12.38 9.63L14.2 7.75C14.06 7.42 14 7 14 6.63C14 4.66 15.56 3.11 17.5 3.11C18.09 3.11 18.61 3.25 19.08 3.53L16.41 6.2L17.91 7.7L20.58 5.03C20.86 5.5 21 6 21 6.63C21 8.55 19.45 10.1 17.5 10.1Z">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
+                                                            <i class="fa fa-cogs"></i>
                                                             <span>Setup</span>
                                                         </a>
                                                         <a href="/openrtb/report?start_date=<?=$this->data->weekAgo?>&end_date=<?=$this->data->today?>&ad=<?=$item->id?>"
-                                                            class="dropdown-item has-text-info">
-                                                            <span class="icon">
-                                                                <svg viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="M15.86 4.39V19.39C15.86 21.06 17 22 18.25 22C19.39 22 20.64 21.21 20.64 19.39V4.5C20.64 2.96 19.5 2 18.25 2S15.86 3.06 15.86 4.39M9.61 12V19.39C9.61 21.07 10.77 22 12 22C13.14 22 14.39 21.21 14.39 19.39V12.11C14.39 10.57 13.25 9.61 12 9.61S9.61 10.67 9.61 12M5.75 17.23C7.07 17.23 8.14 18.3 8.14 19.61C8.14 20.93 7.07 22 5.75 22S3.36 20.93 3.36 19.61C3.36 18.3 4.43 17.23 5.75 17.23Z">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
+                                                            class="dropdown-item text-info">
+                                                            <i class="feather icon-bar-chart-2"></i>
                                                             <span>Report</span>
                                                         </a>
                                                         <?php if($item->status == 'Active'): ?>
-                                                        <a class="dropdown-item has-text-danger btn-disable">
-                                                            <span class="icon">
-                                                                <svg viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="M15,16H13V8H15M11,16H9V8H11M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
+                                                        <a class="dropdown-item text-danger btn-disable">
+                                                            <i class="feather icon-pause-circle"></i>
                                                             <span>Disable</span>
                                                         </a>
                                                         <?php else: ?>
-                                                        <a class="dropdown-item has-text-success btn-enable">
-                                                            <span class="icon">
-                                                                <svg viewBox="0 0 24 24">
-                                                                    <path fill="currentColor"
-                                                                        d="M10,16.5V7.5L16,12M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z">
-                                                                    </path>
-                                                                </svg>
-                                                            </span>
+                                                        <a class="dropdown-item text-success btn-enable">
+                                                            <i class="feather icon-play-circle"></i>
                                                             <span>Enable</span>
                                                         </a>
                                                         <?php endif; ?>
@@ -315,7 +280,7 @@ hr {
                                     </a>
                                     <a href="/openrtb/report?start_date=<?=$this->data->weekAgo?>&end_date=<?=$this->data->today?>&ad_id=<?=$item->id?>"
                                     class="btn btn-info mb-1 waves-effect waves-light">
-                                        <i class="feather icon-mouse-pointer"></i>
+                                        <i class="fa fa-mouse-pointer"></i>
                                         <span>Click: <?=$this->helper->numberFormat($item->click)?></span>
                                     </a>
                                     <button class="btn btn-danger mb-1 waves-effect waves-light">

@@ -106,7 +106,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="card rounded-0 mb-0 p-2"  id="register_done" style="display:none">
+                                    <div class="card rounded-0 mb-0 p-2 h-100 justify-content-center" id="register_done" style="display:none">
                                         <div class="card-header pt-50 pb-1">
                                             <div class="card-title">
                                                 

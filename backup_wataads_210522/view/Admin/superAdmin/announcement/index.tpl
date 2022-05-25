@@ -10,7 +10,7 @@
                     </div>
                     <div class="dropdown chart-dropdown">
                         Filter by:
-                        <button class="btn border-0 dropdown-toggle px-50 waves-effect waves-light" type="button"
+                        <button class="btn border-0 dropdown-toggle px-50" type="button"
                                 id="dropdownItem3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <?=$this->data->type?>
                         </button>
@@ -38,7 +38,7 @@
                                                        placeholder="Service or Subject" aria-label="filter"
                                                        value="<?=$this->data->key?>">
                                                 <div class="input-group-append">
-                                                    <button class="btn btn-primary waves-effect waves-light"
+                                                    <button class="btn btn-primary"
                                                             type="button" id="search-btn"><i
                                                                 class="feather icon-search"></i> Search
                                                     </button>
@@ -85,10 +85,10 @@
                                                         <?php endif; ?>
                                                     </div>
                                                     <div class="col-lg-3 col-12 pull-right" style="justify-content: end;align-items: center;display: flex;">
-                                                        <button type="button" class="btn btn-icon btn-icon rounded-circle btn-flat-success waves-effect waves-light btn_edit">
+                                                        <button type="button" class="btn btn-icon btn-icon rounded-circle btn-flat-success btn_edit">
                                                             <i class="feather icon-edit"></i>
                                                         </button>
-                                                        <button type="button" class="btn btn-icon btn-icon rounded-circle btn-flat-danger waves-effect waves-light btn_remove">
+                                                        <button type="button" class="btn btn-icon btn-icon rounded-circle btn-flat-danger btn_remove">
                                                             <i class="feather icon-trash"></i>
                                                         </button>
                                                     </div>
@@ -118,75 +118,68 @@
     </div>
 </div>
 
-<div class="modal fade text-left" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
-     style="display: none;" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+<div class="modal fade show" id="announcementModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" style="display: none;"> aria-modal="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
-            <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Announcement</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
+            <div class="modal-body">
+                <input type="hidden" id="id">
+                <div class="form-group">
+                    <label class="label">Subject</label>
+                    <input class="form-control" type="text" id="subject" placeholder="Announcement Subject">
                 </div>
-                <div class="modal-body">
-                    <input type="hidden" id="id">
-                    <div class="form-group">
-                        <label class="label">Subject</label>
-                        <input class="form-control" type="text" id="subject" placeholder="Announcement Subject">
-                    </div>
-                    <div class="form-group">
-                        <label class="label">Service</label>
+                <div class="form-group">
+                    <label class="label">Service</label>
 
-                        <select id="service" class="form-control">
-                            <option value="global">Global</option>
-                            <option value="publisher">Publisher</option>
-                            <option value="advertiser">Advertiser</option>
-                        </select>
+                    <select id="service" class="form-control">
+                        <option value="global">Global</option>
+                        <option value="publisher">Publisher</option>
+                        <option value="advertiser">Advertiser</option>
+                    </select>
 
-                    </div>
-                    <div class="form-group">
-                        <label class="label">Type</label>
+                </div>
+                <div class="form-group">
+                    <label class="label">Type</label>
 
-                        <select id="type" class="form-control">
-                            <option value="info">Info</option>
-                            <option value="success">Success</option>
-                            <option value="warning">Warning</option>
-                        </select>
+                    <select id="type" class="form-control">
+                        <option value="info">Info</option>
+                        <option value="success">Success</option>
+                        <option value="warning">Warning</option>
+                    </select>
 
-                    </div>
-                    <div class="form-group">
-                        <label class="label">Description</label>
+                </div>
+                <div class="form-group">
+                    <label class="label">Description</label>
 
-                        <textarea id="description" rows="3" class="form-control" placeholder="Announcement Short Description"></textarea>
+                    <textarea id="description" rows="3" class="form-control" placeholder="Announcement Short Description"></textarea>
 
-                    </div>
-                    <div class="form-group">
-                        <label class="label">Message</label>
-                        <div class="control">
-                            <textarea id="message" rows="6" class="form-control" placeholder="Announcement Long Message"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="label">Show on Dashboard?</label>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" checked="" name="customCheck" id="is_shown">
-                            <label class="custom-control-label" for="is_shown">Yes, show this on member's dashboard</label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="label">Stick?</label>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" checked="" name="customCheck" id="is_sticky">
-                            <label class="custom-control-label" for="is_sticky">Yes, show it on top of others on Dashboard</label>
-                        </div>
+                </div>
+                <div class="form-group">
+                    <label class="label">Message</label>
+                    <div class="control">
+                        <textarea id="message" rows="6" class="form-control" placeholder="Announcement Long Message"></textarea>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="btn_submit">Save</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+
+                <div class="form-group">
+                    <label class="label">Show on Dashboard?</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked="" name="customCheck" id="is_shown">
+                        <label class="custom-control-label" for="is_shown">Yes, show this on member's dashboard</label>
+                    </div>
                 </div>
+                <div class="form-group">
+                    <label class="label">Stick?</label>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" checked="" name="customCheck" id="is_sticky">
+                        <label class="custom-control-label" for="is_sticky">Yes, show it on top of others on Dashboard</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-primary" id="btn_submit">
+                    <i class="feather icon-check"></i> Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="feather icon-x"></i> Close</button>
             </div>
         </div>
     </div>

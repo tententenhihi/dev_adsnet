@@ -134,7 +134,7 @@ class Domain extends Controller
         		'status' => 'active'
     		]);
         }
-        
+
         $db = new \Model\Publisher\Domain;
         try {
             $id = $db->addDomain($user_id, $name, $cf_zone_id, 'Pending');

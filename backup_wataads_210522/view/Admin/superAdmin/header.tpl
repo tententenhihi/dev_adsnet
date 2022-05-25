@@ -73,7 +73,7 @@
                             <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-flag">
                                 <a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
-				                <a class="dropdown-item" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Tiếng Việt</a>
+				                <a class="dropdown-item" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Ti?ng Vi?t</a>
                             </div>
                         </li>-->
                     <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
@@ -103,8 +103,7 @@
             </div>
         </div>
     </div>
-</nav>
-<ul class="main-search-list-defaultlist-other-list d-none">
+</nav><ul class="main-search-list-defaultlist-other-list d-none">
     <li class="auto-suggestion d-flex align-items-center justify-content-between cursor-pointer"><a class="d-flex align-items-center justify-content-between w-100 py-50">
             <div class="d-flex justify-content-start"><span class="mr-75 feather icon-alert-circle"></span><span>No results found.</span></div>
         </a></li>
@@ -128,7 +127,7 @@
         </ul>
     </div>
     <div class="shadow-bottom"></div>
-    <div class="main-menu-content mt-1">
+    <div class="main-menu-content mb-1">
         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
             <li class=" nav-item">
                 <a href="/dashboard">
@@ -153,6 +152,16 @@
                     <li class=""><a href="/user/authentication"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Authentications</span></a>
                     </li>
                     <li class=""><a href="/user/session"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">User Sessions</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item has-sub sidebar-group"><a href="#"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Card">Referrals</span></a>
+                <ul class="menu-content" >
+                    <li class=""><a href="/referral"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Overview</span></a>
+                    </li>
+                    <li class=""><a href="/referral/publisher"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Publisher</span></a>
+                    </li>
+                    <li class=""><a href="/referral/advertiser"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">Advertiser</span></a>
                     </li>
                 </ul>
             </li>
@@ -210,7 +219,7 @@
                     </li>
                     <li class=""><a href="/system/log"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Log</span></a>
                     </li>
-                    <li class=""><a href="/system/setting"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">System Overview</span></a>
+                    <li class=""><a href="/system/setting"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Setting</span></a>
                     </li>
                 </ul>
             </li>
@@ -234,6 +243,20 @@
                     <li class=""><a href="/exchange/payment"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Exchange Payments</span></a>
                     </li>
                     <li class=""><a href="/exchange/report"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Standard Report</span></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item has-sub sidebar-group"><a href="#"><i class="feather icon-repeat"></i><span class="menu-title" data-i18n="Card">OpenRTB</span></a>
+                <ul class="menu-content" >
+                    <li class=""><a href="/openrtb"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Basic">Overview</span></a>
+                    </li>
+                    <li class=""><a href="/openrtb/network"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">All Networks</span></a>
+                    </li>
+                    <li class=""><a href="/openrtb/ad"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Statistics">Ads</span></a>
+                    </li>
+                    <li class=""><a href="/openrtb/payment"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Exchange Payments</span></a>
+                    </li>
+                    <li class=""><a href="/openrtb/report"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">Standard Report</span></a>
                     </li>
                 </ul>
             </li>

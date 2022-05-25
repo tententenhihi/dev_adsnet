@@ -143,7 +143,7 @@
                             <a class="dropdown-item select-chart-30day" data-type="impression">Impression</a>
                             <a class="dropdown-item select-chart-30day" data-type="click">Click</a>
                             <a class="dropdown-item select-chart-30day" data-type="conversion">Conversion</a>
-                            <a class="dropdown-item select-chart-30day" data-type="revenue">Revenue</a>
+                            <a class="dropdown-item select-chart-30day" data-type="cost">Cost</a>
                             <a class="dropdown-item select-chart-30day" data-type="metrics">All Metrics</a>
                             
                         </div>
@@ -164,7 +164,7 @@
             <div class="card">
                 <div class="card-header d-flex align-items-start pb-0">
                     <div>
-                        <p>7days Spent</p>
+                        <p>7days Cost</p>
                         <h2 class="text-bold-700 mb-0"><?=$this->helper->currencyFormat($this->data->last7day['cost'])?></h2>
                         <p class="text-<?php if($this->data->compare['cost'] < 0): ?>danger<?php else: ?>success<?php endif; ?>">
                             <?php if($this->data->compare['cost'] < 0): ?>
@@ -268,7 +268,7 @@
                             <a class="dropdown-item select-chart-30day" data-type="impression">Impression</a>
                             <a class="dropdown-item select-chart-30day" data-type="click">Click</a>
                             <a class="dropdown-item select-chart-30day" data-type="conversion">Conversion</a>
-                            <a class="dropdown-item select-chart-30day" data-type="revenue">Revenue</a>
+                            <a class="dropdown-item select-chart-30day" data-type="cost">Cost</a>
                             
                         </div>
                     </div>
@@ -296,7 +296,7 @@
                             <a class="dropdown-item select-chart-30day" data-type="impression">Impression</a>
                             <a class="dropdown-item select-chart-30day" data-type="click">Click</a>
                             <a class="dropdown-item select-chart-30day" data-type="conversion">Conversion</a>
-                            <a class="dropdown-item select-chart-30day" data-type="revenue">Revenue</a>
+                            <a class="dropdown-item select-chart-30day" data-type="cost">Cost</a>
                             
                         </div>
                     </div>
@@ -322,7 +322,7 @@
                             <a class="dropdown-item select-chart-30day" data-type="impression">Impression</a>
                             <a class="dropdown-item select-chart-30day" data-type="click">Click</a>
                             <a class="dropdown-item select-chart-30day" data-type="conversion">Conversion</a>
-                            <a class="dropdown-item select-chart-30day" data-type="revenue">Revenue</a>
+                            <a class="dropdown-item select-chart-30day" data-type="cost">Cost</a>
                             
                         </div>
                     </div>
@@ -393,9 +393,9 @@
 <script>
 /* global $, __tajs */
 var last30day_data = <?=json_encode($this->data->last30day_stats)?>;
-var country_data = <?=json_encode($this->data->country)?>;
-var campaign_data = <?=json_encode($this->data->campaign)?>;
-var ad_data = <?=json_encode($this->data->ad)?>;
+    var country_data = <?=json_encode($this->data->country)?>;
+    var website_data = <?=json_encode($this->data->website)?>;
+    var zone_data = <?=json_encode($this->data->zone)?>;
 function count_note() {
     var max = 9999, current = $.trim($('#user_note').val()).length, count = $('#note_count');
     var left = max - current;
@@ -590,7 +590,7 @@ $(document).ready(function(){
             $this.closest('.dropdown').find('.current-selected').html($this.html());
             drawChartWrap('chart-30day', 'line', function(){
                 var data = [];
-                data.push(['Date', 'Impression', 'Click', 'Conversion', 'Spent']);
+                data.push(['Date', 'Impression', 'Click', 'Conversion', 'Cost']);
                 for (const i in last30day_data) {
                   data.push([i, last30day_data[i].impression, last30day_data[i].click, last30day_data[i].conversion, last30day_data[i].cost])
                 }

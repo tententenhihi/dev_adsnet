@@ -87,7 +87,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="card rounded-0 mb-0 px-2 py-1"  id="forgot_done" style="display:none">
+                                    <div class="card rounded-0 mb-0 px-2 py-1 h-100 justify-content-center" id="forgot_done" style="display:none">
                                         <div class="card-header pb-1">
                                             <div class="card-title">
                                                 <h4 class="mb-0">Recover your password</h4>

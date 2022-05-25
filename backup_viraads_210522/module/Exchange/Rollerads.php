@@ -5,7 +5,7 @@ namespace Module\Exchange;
 class Rollerads
 {
     protected $baseUrl = 'https://api.rollerads.com/sites/';
-    protected $apiToken = 'c297d8b11afa6a08a74951a2ff9d0c7ea9b1f40a29b74bfc06543efa93ae14b73d024a97b358a9aa5e4b9c3c04a2463aa895f7f17d6d832cc0d29f932f7827ba';
+    protected $apiToken = 'ab7bb3a38a5e06fee4bf9b05a9bca0786d66acb7c2c195440dbfafa8eac2ae1bcc7ef905f71b3841ac0e22b43ea77cb261f4ac6a9afc4914c2468ce49f635f1b';
     protected $timezone = 'UTC';
     protected $lastRevenue = 0;
     protected $client;

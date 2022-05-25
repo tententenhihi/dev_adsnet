@@ -1221,7 +1221,12 @@ class Publisher extends \System\Db
     
     public function listZone($init, $limit)
     {
-        $stmt = $this->pdo->prepare('SELECT a.*, b.domain, c.name as user_name FROM publisher_zone a JOIN publisher_website b ON a.website_id = b.id JOIN user c ON a.user_id = c.id ORDER BY a.id DESC LIMIT :init, :limit');
+        $stmt = $this->pdo->prepare('SELECT a.*, b.domain, c.name as user_name, d.name as name_ad_format
+                                FROM publisher_zone a 
+                                JOIN publisher_website b ON a.website_id = b.id 
+                                JOIN user c ON a.user_id = c.id 
+                                JOIN system_ad_format d ON a.ad_format = d.id
+                                ORDER BY a.id DESC LIMIT :init, :limit');
         $stmt->bindValue(':init', (int) $init, \PDO::PARAM_INT);
         $stmt->bindValue(':limit', (int) $limit, \PDO::PARAM_INT);
         $stmt->execute();

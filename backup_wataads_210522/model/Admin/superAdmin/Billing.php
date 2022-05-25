@@ -914,6 +914,7 @@ class Billing extends \System\Db
         $stmt->bindValue(':ad_id', (int) $ad_id, \PDO::PARAM_INT);
         $stmt->bindValue(':description', $description);
         $stmt->bindValue(':amount', $amount);
+        $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $stmt->execute();
 
         return $stmt->rowCount();
@@ -923,6 +924,56 @@ class Billing extends \System\Db
     {
         $stmt = $this->pdo->prepare('DELETE FROM user_receipt WHERE id = :id');
         $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
+
+    public function createUserReferralPayment($user_id, $referral_id, $source, $commission, $amount){
+        $stmt = $this->pdo->prepare('INSERT INTO user_referral_payment (user_id, referral_id, source, commission, amount) VALUES (:user_id, :referral_id, :source, :commission, :amount)');
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->bindValue(':referral_id', (int) $referral_id, \PDO::PARAM_INT);
+        $stmt->bindValue(':source', $source);
+        $stmt->bindValue(':commission', $commission);
+        $stmt->bindValue(':amount', $amount);
+        $stmt->execute();
+
+        return $this->pdo->lastInsertId();
+    }
+
+    public function getUserReferral($ref_user_id)
+    {
+        $stmt = $this->pdo->prepare('SELECT count(*) as count, id, user_id FROM user_referral WHERE ref_user_id = :ref_user_id');
+        $stmt->bindValue(':ref_user_id', (int) $ref_user_id, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch();
+    }
+
+
+    public function getAllReferralUser(){
+        $stmt = $this->pdo->prepare('SELECT * FROM user_referral');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+    public function checkPublisherStatistic($user_id){
+        $stmt = $this->pdo->prepare('SELECT count(*) FROM publisher_statistic WHERE user_id = :user_id');
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+    public function getPublisherStatistic($user_id, $created_at){
+        $stmt = $this->pdo->prepare('SELECT sum(revenue) as total FROM publisher_statistic WHERE user_id = :user_id AND created_at = :created_at');
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->bindValue(':created_at', $created_at);
+        $stmt->execute();
+        return $stmt->fetch();
+    }
+    public function depositPublisherBalance($user_id, $amount)
+    {
+        $stmt = $this->pdo->prepare('UPDATE user_balance SET pub_balance = pub_balance + :amount WHERE user_id = :user_id');
+        $stmt->bindValue(':user_id', (int) $user_id, \PDO::PARAM_INT);
+        $stmt->bindValue(':amount', $amount);
         $stmt->execute();
 
         return $stmt->rowCount();

@@ -11,7 +11,7 @@ class Structure extends Controller
             'info' => [
                 'description' => 'APIs are available for all active clients, generate and manage your apis on [My APIs]('.MYACCOUNT_URL.'/api) page.
                                   All our APIs base on HTTPS requests and JSON responses. For suggestions, bug reports, questions, please send
-                                  to [developers@wataads.com](mailto:developers@wataads.com)',
+                                  to [developers@viraads.com](mailto:developers@viraads.com)',
                 'version' => '1.0.0',
                 'title' => SITE_NAME.' APIs',
             ],
@@ -140,9 +140,9 @@ class Structure extends Controller
                                                     'data' => [
                                                         [
                                                             'id' => 1,
-                                                            'name' => 'WataAds',
-                                                            'domain' => 'www.wataads.com',
-                                                            'description' => 'Website WataAds',
+                                                            'name' => 'ViraAds',
+                                                            'domain' => 'www.viraads.com',
+                                                            'description' => 'Website ViraAds',
                                                             'status' => 'Active',
                                                             'category_id' => 1
                                                         ],
@@ -1103,7 +1103,7 @@ class Structure extends Controller
                                                         ],
                                                         [
                                                             'id' => 2,
-                                                            'name' => 'www.wataads.com',
+                                                            'name' => 'www.viraads.com',
                                                             'status' => 'Active',
                                                             'is_default' => true
                                                         ],

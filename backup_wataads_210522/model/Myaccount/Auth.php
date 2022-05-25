@@ -56,7 +56,7 @@ class Auth extends \System\Db
         return $this->pdo->lastInsertId();
     }
 
-    public function createUserRef($user_id, $ref_user_id, $status)
+    public function createUserReferral($user_id, $ref_user_id, $status)
     {
         $stmt = $this->pdo->prepare('INSERT INTO user_referral (user_id, ref_user_id, status) VALUES (:user_id, :ref_user_id, :status)');
         $stmt->bindValue(':user_id', $user_id);
@@ -133,6 +133,16 @@ class Auth extends \System\Db
         $stmt->bindValue(':timezone', $timezone);
         $stmt->bindValue(':language', $language);
         $stmt->bindValue(':is_subscribed', (int) $is_subscribed, \PDO::PARAM_INT);
+        $stmt->bindValue(':status', $status);
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
+
+    public function updateUserReferral($id, $status)
+    {
+        $stmt = $this->pdo->prepare('UPDATE user_referral SET status = :status WHERE ref_user_id = :id');
+        $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $stmt->bindValue(':status', $status);
         $stmt->execute();
 

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
 <title>Recovery your password - <?=SITE_NAME?></title>
 <link rel="shortcut icon" href="<?=$this->asset('img/favicon.png')?>">
 <link rel="stylesheet" href="<?=$this->asset('css/app.css')?>">

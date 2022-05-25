@@ -1221,7 +1221,12 @@ class Publisher extends \System\Db
     
     public function listZone($init, $limit)
     {
-        $stmt = $this->pdo->prepare('SELECT a.*, b.domain, c.name as user_name FROM publisher_zone a JOIN publisher_website b ON a.website_id = b.id JOIN user c ON a.user_id = c.id ORDER BY a.id DESC LIMIT :init, :limit');
+        $stmt = $this->pdo->prepare('SELECT a.*, b.domain, c.name as user_name, d.name as name_ad_format
+                                    FROM publisher_zone a 
+                                    JOIN publisher_website b ON a.website_id = b.id 
+                                    JOIN user c ON a.user_id = c.id 
+                                    JOIN system_ad_format d ON a.ad_format = d.id
+                                    ORDER BY a.id DESC LIMIT :init, :limit');
         $stmt->bindValue(':init', (int) $init, \PDO::PARAM_INT);
         $stmt->bindValue(':limit', (int) $limit, \PDO::PARAM_INT);
         $stmt->execute();
@@ -1485,10 +1490,26 @@ class Publisher extends \System\Db
 
         return $stmt->fetchAll();
     }
+
+    public function listAdFormatTag()
+    {
+        $stmt = $this->pdo->prepare('SELECT id, name, tag_guide, tag_script FROM system_ad_format LIMIT 999');
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
     
     public function getAdFormatTag($id)
     {
         $stmt = $this->pdo->prepare('SELECT name, tag_guide, tag_script FROM system_ad_format WHERE id = :id');
+        $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
+        $stmt->execute();
+        
+        return $stmt->fetch();
+    }
+
+    public function getAdFormatStatus($id)
+    {
+        $stmt = $this->pdo->prepare('SELECT status FROM system_ad_format WHERE id = :id');
         $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
         $stmt->execute();
         
@@ -1689,4 +1710,5 @@ class Publisher extends \System\Db
 
         return $this->pdo->lastInsertId();
     }
+
 }

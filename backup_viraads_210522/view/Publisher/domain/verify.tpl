@@ -57,19 +57,11 @@
                                     <div style="margin-top:3rem; text-align: center">
                                         <div class="buttons is-centered">
                                             <button class="btn btn-success btn-medium" id="verify">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M6.59,3.41L2,8L6.59,12.6L8,11.18L4.82,8L8,4.82L6.59,3.41M12.41,3.41L11,4.82L14.18,8L11,11.18L12.41,12.6L17,8L12.41,3.41M21.59,11.59L13.5,19.68L9.83,16L8.42,17.41L13.5,22.5L23,13L21.59,11.59Z" />
-                                    </svg>
-                                </span>
+                                                <i class="feather icon-check-circle"></i>
                                                 <span>Verify</span>
                                             </button>
                                             <button class="btn btn-danger btn-medium" id="cancel">
-                                <span class="icon">
-                                    <svg viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-                                    </svg>
-                                </span>
+                                                <i class="feather icon-x"></i>
                                                 <span>Cancel & Remove</span>
                                             </button>
                                         </div>

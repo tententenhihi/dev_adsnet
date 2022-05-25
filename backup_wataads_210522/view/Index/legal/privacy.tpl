@@ -64,27 +64,27 @@
                     <div id="content" class="centring">
                         <div class="documentation__cnts">
                             <div class="documentation__cnt follow-block init in-sight anim-end">
-                                <p>This Privacy Policy governs the manner in which WataAds collects, uses, maintains and discloses personal data collected from the Users of the WataAds Services.</p>
-                                <p>Please read the following Privacy Policy carefully to understand our practices regarding your information and how WataAds will use it.</p>
-                                <p>By continuing to use WataAds Services, you acknowledge that you have read, understood and accepted the information described in this Privacy Policy. If any User does not agree with this Privacy Policy in general or any part of it, such User should not access or use the WataAds Services.</p>
+                                <p>This Privacy Policy governs the manner in which ViraAds collects, uses, maintains and discloses personal data collected from the Users of the ViraAds Services.</p>
+                                <p>Please read the following Privacy Policy carefully to understand our practices regarding your information and how ViraAds will use it.</p>
+                                <p>By continuing to use ViraAds Services, you acknowledge that you have read, understood and accepted the information described in this Privacy Policy. If any User does not agree with this Privacy Policy in general or any part of it, such User should not access or use the ViraAds Services.</p>
                                 <h3>Data Collected</h3>
-                                <p>Creating an Account in WataAds system is required for using many of the features of the WataAds Services. We require certain information about you at registration, including your login (email) and password (which you generate), your full name, skype or telegram ID. Other required and optional information may be input by you as well. Any other information or content you provide us on the Service will be saved and associated with your account, including information that is used for funds transfers (either to us or from us).</p>
-                                <p>We may record information about your usage of the WataAds Services such as which products you view and purchase, the frequency and size of data transfers and other statistics. We will also keep information regarding all order and bids you place on the WataAds Services, and all metrics and measurements regarding such order, bids, advertisements, campaigns and any other of your activities on the WataAds Services. WataAds may keep a record of any correspondence between you and us, including support requests, e-mails and live chats.</p>
-                                <p>As well, by a user performing any actions on WataAds Website we may automatically collect the following information:</p>
+                                <p>Creating an Account in ViraAds system is required for using many of the features of the ViraAds Services. We require certain information about you at registration, including your login (email) and password (which you generate), your full name, skype or telegram ID. Other required and optional information may be input by you as well. Any other information or content you provide us on the Service will be saved and associated with your account, including information that is used for funds transfers (either to us or from us).</p>
+                                <p>We may record information about your usage of the ViraAds Services such as which products you view and purchase, the frequency and size of data transfers and other statistics. We will also keep information regarding all order and bids you place on the ViraAds Services, and all metrics and measurements regarding such order, bids, advertisements, campaigns and any other of your activities on the ViraAds Services. ViraAds may keep a record of any correspondence between you and us, including support requests, e-mails and live chats.</p>
+                                <p>As well, by a user performing any actions on ViraAds Website we may automatically collect the following information:</p>
                                 <ul>
                                     <li>Your platform, OS and browser versions, timezone, IP (Internet protocol) and other technical information.</li>
-                                    <li>Analytical information considering your WataAds Website visits. This information may include: the incoming source of your visit, your behavior flow, bounce-rate, enter and exit pages, page response times, certain pages spending time, and other information.</li>
+                                    <li>Analytical information considering your ViraAds Website visits. This information may include: the incoming source of your visit, your behavior flow, bounce-rate, enter and exit pages, page response times, certain pages spending time, and other information.</li>
                                 </ul>
                                 <h3>Data Usage</h3>
-                                <p>By the submitting your personal information and accepting the WataAds Terms of Use and Privacy Policy on our Website you consent with the legitimate grounds of processing your personal information.</p>
-                                <p>We may use the information you give us to provide you with certain features and to create a personalized experience on WataAds Website. We may also use that information to operate, maintain and improve features and functionality of the WataAds Services and performing the contract we have with use.</p>
+                                <p>By the submitting your personal information and accepting the ViraAds Terms of Use and Privacy Policy on our Website you consent with the legitimate grounds of processing your personal information.</p>
+                                <p>We may use the information you give us to provide you with certain features and to create a personalized experience on ViraAds Website. We may also use that information to operate, maintain and improve features and functionality of the ViraAds Services and performing the contract we have with use.</p>
                                 <p>We may be processed the transaction data, including your contact details, payment details, transaction details, for the purpose of payment and keeping proper records of those transactions.</p>
-                                <p>For the purpose of duly transactions performance on the WataAds Website Users might be required to provide their personal and payment processing data (such as name, surname, address, copies of ID cards or other identifying documents, residence place confirmation documents, credit card identification data) to the respective payment processor, including the consent for processing these data by the payment services in order to carry out the requested transactions.<br><b>PLEASE NOTE</b> that the respective personal and payment processing data provided by you to a third party Payment processor shall be collected, stored and processed solely by the respective Payment processor and not subject to this Privacy Policy. You should read carefully and follow the applicable privacy policies of the Payment processor.</p>
-                                <p>We may use your personal information for marketing purposes to promote our Website (Platform) and WataAds Services. Please note that we need additional consent in order to add you to WataAds newsletter mailing list, however, you may choose to stop receiving this information by notifying us.</p>
+                                <p>For the purpose of duly transactions performance on the ViraAds Website Users might be required to provide their personal and payment processing data (such as name, surname, address, copies of ID cards or other identifying documents, residence place confirmation documents, credit card identification data) to the respective payment processor, including the consent for processing these data by the payment services in order to carry out the requested transactions.<br><b>PLEASE NOTE</b> that the respective personal and payment processing data provided by you to a third party Payment processor shall be collected, stored and processed solely by the respective Payment processor and not subject to this Privacy Policy. You should read carefully and follow the applicable privacy policies of the Payment processor.</p>
+                                <p>We may use your personal information for marketing purposes to promote our Website (Platform) and ViraAds Services. Please note that we need additional consent in order to add you to ViraAds newsletter mailing list, however, you may choose to stop receiving this information by notifying us.</p>
                                 <p>We use commercially reasonable means to keep your information strictly confidential. However, your information will be shared with other parties in the following situations:</p>
                                 <ol>
-                                    <li>Information regarding your websites, applications, offers, services and/or properties will be made available to other users of the WataAds Services for the purposes of selling advertising space or buying advertising space, as the case may be.</li>
-                                    <li>With third parties that assist us in providing you with WataAds Services, such as payment processors (either to us or from us), business and analytics providers, content providers, marketers, and cloud service providers, but we require our third parties to only use your information for the purposes of providing the services requested of them and in accordance with this Privacy Policy.</li>
+                                    <li>Information regarding your websites, applications, offers, services and/or properties will be made available to other users of the ViraAds Services for the purposes of selling advertising space or buying advertising space, as the case may be.</li>
+                                    <li>With third parties that assist us in providing you with ViraAds Services, such as payment processors (either to us or from us), business and analytics providers, content providers, marketers, and cloud service providers, but we require our third parties to only use your information for the purposes of providing the services requested of them and in accordance with this Privacy Policy.</li>
                                     <li>We may in our discretion release certain data to comply with legal obligations, court orders or in order to enforce our Terms and other agreements. We may also release certain data to protect the rights, property or safety of us, our users and others. This includes providing information to other companies or organizations like the police or governmental authorities or intellectual property owners for the purposes of protection against or prosecution of any illegal activity, whether or not it is identified in the Terms. You acknowledge and agree that we may release your personal information in such circumstances, and waive all rights and objections thereto.</li>
                                     <li>To our professional advisers insofar as reasonably necessary for the purposes of managing risks, obtaining professional advice, or the establishment, exercise or defense of legal claims, whether in court proceedings or in an administrative or out-of-court procedure.</li>
                                 </ol>
@@ -92,7 +92,7 @@
                                 <h3>Protection of User’s Data</h3>
                                 <p>In order to help keep your data secure, we use SSL certificates for end-to-end encrypted connections among all of our servers, Services, and client applications.</p>
                                 <p>We have put in place commercially reasonable physical, electronic, and organizational procedures to safeguard and secure the information we collect. For example, password information is stored on our servers and is protected using hashing and encryption technologies.</p>
-                                <p>We do not store any of your payment or credit card information on our servers. The data is encrypted and securely stored by an independent companies which provide payment-processing services for WataAds.</p>
+                                <p>We do not store any of your payment or credit card information on our servers. The data is encrypted and securely stored by an independent companies which provide payment-processing services for ViraAds.</p>
                                 <h3>Data Protection Rights</h3>
                                 <p>In respect to the General Data Protection Regulation, all Users will have the following rights regarding personal data we hold about the Users:</p>
                                 <ol>
@@ -106,24 +106,24 @@
                                     <li>The right to withdraw consent. Withdraw the consent you gave us with regard to the processing of your personal data for certain purposes, such as to allow us to promote our products and services to you.</li>
                                 </ol>
                                 <h3>Cookies</h3>
-                                <p>We use cookies and other similar technologies ("Cookies") to enhance User’s experience using the WataAds Services. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, and to deliver a better and more personalized service.</p>
+                                <p>We use cookies and other similar technologies ("Cookies") to enhance User’s experience using the ViraAds Services. Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, and to deliver a better and more personalized service.</p>
                                 <p>Cookies may be either "persistent" Cookies or "session" Cookies. A persistent cookie consists of a text file sent by a web server to a web browser, which will be stored by the browser and will remain valid until its set expiry date (unless deleted by the user before the expiry date). A session cookie, on the other hand, will expire at the end of the user session, when the web browser is closed.</p>
                                 <p>We use the following Cookies:</p>
                                 <ul>
                                     <li>Strictly necessary Cookies. These are Cookies that are required for the operation of the Website.</li>
-                                    <li>Analytical/performance Cookies. They allow us to recognize and count the number of Users and to see how Users move around the Website when they are using it. This helps us to improve the way the Website works. We use Google Analytics which is a web analytics tool that helps us understand how Users engage with the Website. This information is used to compile reports and to help us improve WataAds Website. The reports disclose Website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit WataAds Website.</li>
-                                    <li>Functionality Cookies. These are used to recognize you when you return to the Website. This enables us to personalize WataAds content for Users (for example, User’s choice of language).</li>
+                                    <li>Analytical/performance Cookies. They allow us to recognize and count the number of Users and to see how Users move around the Website when they are using it. This helps us to improve the way the Website works. We use Google Analytics which is a web analytics tool that helps us understand how Users engage with the Website. This information is used to compile reports and to help us improve ViraAds Website. The reports disclose Website trends without identifying individual visitors. You can opt out of Google Analytics without affecting how you visit ViraAds Website.</li>
+                                    <li>Functionality Cookies. These are used to recognize you when you return to the Website. This enables us to personalize ViraAds content for Users (for example, User’s choice of language).</li>
                                 </ul>
                                 <h3>Children</h3>
                                 <p>We do not knowingly collect personal information from children under the age of 18. If we learn that we have collected the personal information of a child under the age of 18, we will take steps to delete the information as soon as possible.</p>
                                 <h3>Retention</h3>
-                                <p>WataAds retains personal information you provide to create your account for as long as you maintain an account with us. Personal information used to provide the services to you will be kept long enough to provide you with the service, including in archives and logs used to maintain and develop the service. Specifically, we delete data used for logging and error tracking after 90 days, we reset cookies on our website after 14 days. We also delete other personal data used to provide WataAds or to communicate with you within 30 days after your account is deleted. We may retain some usage statistics (including IP addresses) for as long as we have a business purpose in order to improve WataAds’s services, but these statistics are no longer linked to the deleted account.</p>
+                                <p>ViraAds retains personal information you provide to create your account for as long as you maintain an account with us. Personal information used to provide the services to you will be kept long enough to provide you with the service, including in archives and logs used to maintain and develop the service. Specifically, we delete data used for logging and error tracking after 90 days, we reset cookies on our website after 14 days. We also delete other personal data used to provide ViraAds or to communicate with you within 30 days after your account is deleted. We may retain some usage statistics (including IP addresses) for as long as we have a business purpose in order to improve ViraAds’s services, but these statistics are no longer linked to the deleted account.</p>
                                 <h3>External Links</h3>
-                                <p>WataAds Website may contain links to external websites not owned by or officially affiliated with WataAds in any way. WataAds is not responsible for the privacy practices or content of such websites. We advise you to review the privacy policy of external sites before providing any personal information.</p>
+                                <p>ViraAds Website may contain links to external websites not owned by or officially affiliated with ViraAds in any way. ViraAds is not responsible for the privacy practices or content of such websites. We advise you to review the privacy policy of external sites before providing any personal information.</p>
                                 <h3>Changes to this Privacy Policy</h3>
-                                <p>WataAds has the discretion to update this Privacy Policy at any time. When we do, we will post a notification on the main page of our website, revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about protection all the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
+                                <p>ViraAds has the discretion to update this Privacy Policy at any time. When we do, we will post a notification on the main page of our website, revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about protection all the personal information we collect. You acknowledge and agree that it is your responsibility to review this privacy policy periodically and become aware of modifications.</p>
                                 <h3>Contacts</h3>
-                                <p>If you have any questions about our privacy policy or wish to obtain more details in relation to the personal data, we process about you or wish to exercise any of your rights set out in this Privacy Policy please contact us via email at: <a href="mailto:support@wataads.com" title="Our email" target="_blank">contact@wataads.com</a></p>
+                                <p>If you have any questions about our privacy policy or wish to obtain more details in relation to the personal data, we process about you or wish to exercise any of your rights set out in this Privacy Policy please contact us via email at: <a href="mailto:support@viraads.com" title="Our email" target="_blank">contact@viraads.com</a></p>
                             </div>
                         </div>
                     </div>
@@ -152,8 +152,8 @@
                             <div class="col-md-4">
                                 <h6 class="footer-list-title text-warning mb-3">Customers</h6>
                                 <ul class="list-unstyled sub-menu">
-                                    <li><a href="https://adv.wataads.com/">Advertisers</a></li>
-                                    <li><a href="https://pub.wataads.com/">Publishers</a></li>
+                                    <li><a href="https://adv.viraads.com/">Advertisers</a></li>
+                                    <li><a href="https://pub.viraads.com/">Publishers</a></li>
                                     <li><a href="/legal/agency">Agency</a></li>
                                     <li><a href="/legal/ad-network">Ad Network</a></li>
                                 </ul>
@@ -161,7 +161,7 @@
                             <div class="col-md-4">
                                 <h6 class="footer-list-title text-warning mb-3">Resources</h6>
                                 <ul class="list-unstyled sub-menu">
-                                    <li><a href="https://api.wataads.com/">API Documentation</a></li>
+                                    <li><a href="https://api.viraads.com/">API Documentation</a></li>
                                     <li><a href="/blog">Blog</a></li>
                                 </ul>
                             </div>
@@ -174,7 +174,7 @@
                                                 <path fill="currentColor" d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
                                             </svg>
                                         </span>
-                                        <span>@wataads</span>
+                                        <span>@viraads</span>
                                     </a></li>
                                     <li><a href="skype:live:.cid.3a7b22ac71aa01f4?chat">
                                         <span class="icon">
@@ -182,7 +182,7 @@
                                                 <path fill="currentColor" d="M18,6C20.07,8.04 20.85,10.89 20.36,13.55C20.77,14.27 21,15.11 21,16A5,5 0 0,1 16,21C15.11,21 14.27,20.77 13.55,20.36C10.89,20.85 8.04,20.07 6,18C3.93,15.96 3.15,13.11 3.64,10.45C3.23,9.73 3,8.89 3,8A5,5 0 0,1 8,3C8.89,3 9.73,3.23 10.45,3.64C13.11,3.15 15.96,3.93 18,6M12.04,17.16C14.91,17.16 16.34,15.78 16.34,13.92C16.34,12.73 15.78,11.46 13.61,10.97L11.62,10.53C10.86,10.36 10,10.13 10,9.42C10,8.7 10.6,8.2 11.7,8.2C13.93,8.2 13.72,9.73 14.83,9.73C15.41,9.73 15.91,9.39 15.91,8.8C15.91,7.43 13.72,6.4 11.86,6.4C9.85,6.4 7.7,7.26 7.7,9.54C7.7,10.64 8.09,11.81 10.25,12.35L12.94,13.03C13.75,13.23 13.95,13.68 13.95,14.1C13.95,14.78 13.27,15.45 12.04,15.45C9.63,15.45 9.96,13.6 8.67,13.6C8.09,13.6 7.67,14 7.67,14.57C7.67,15.68 9,17.16 12.04,17.16Z" />
                                             </svg>
                                         </span>
-                                        <span>wataads.com</span>
+                                        <span>viraads.com</span>
                                     </a></li>
                                     <li><a href="mailto:contact@gome.io">
                                         <span class="icon">
@@ -190,7 +190,7 @@
                                                 <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
                                             </svg>
                                         </span>
-                                        <span>contact@wataads.com</span>
+                                        <span>contact@viraads.com</span>
                                     </a></li>
                                 </ul>
                                 <ul class="list-unstyled footer-social-list">

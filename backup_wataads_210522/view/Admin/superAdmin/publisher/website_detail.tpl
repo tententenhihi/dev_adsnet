@@ -40,11 +40,6 @@
     padding: .7rem 0 0 0;
     border-bottom: 1px solid #E6E8EB;
 }
-#sort_table {
-    padding-left: 0.5rem;
-    cursor: pointer;
-    color: #06967f;
-}
 </style>
 <div class="content-body">
 

@@ -17,20 +17,13 @@ class Helper
     
     public function numberFormat($number, $precision = 2, $suffixes = ['', 'K', 'M', 'B'], $n = 1000)
     {
-        
-        try{
-            $number = (int) $number;
-            if ($number < $n) {
-                return $number.$suffixes[0];
-            }
-            $base = log($number, $n);
-    
-            return round(pow($n, $base - floor($base)), $precision).$suffixes[floor($base)];
+        $number = (int) $number;
+        if ($number < $n) {
+            return $number.$suffixes[0];
         }
-        catch(\Exception $e) {
-            file_put_contents('/home/Helper.log',$e.getMessage().PHP_EOL."Number=".$number.PHP_EOL, FILE_APPEND);
-        }
-        
+        $base = log($number, $n);
+
+        return round(pow($n, $base - floor($base)), $precision).$suffixes[floor($base)];
     }
     
     public function randomToken($bytes = 16)

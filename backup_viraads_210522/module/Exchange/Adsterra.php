@@ -5,7 +5,7 @@ namespace Module\Exchange;
 class Adsterra
 {
     protected $baseUrl = 'https://api3.adsterratools.com/publisher/';
-    protected $apiToken = '--token--';
+    protected $apiToken = 'deb97b395d5ccaa35b6e4b2cd5bc63f5';
     protected $timezone = 'UTC';
     protected $lastRevenue = 0;
     protected $client;

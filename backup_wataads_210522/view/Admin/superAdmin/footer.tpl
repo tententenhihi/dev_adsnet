@@ -35,8 +35,8 @@
 
 <script>
     /* global $, __tajs */
-    $(document).ready(function(){
-        __tajs.renderTime();
+    // $(document).ready(function(){
+        // __tajs.renderTime();
 
         var path = location.pathname.replace(/^(\/[^\/]+\/[^\/]+).*$/,'$1');
         console.log(path);
@@ -47,7 +47,9 @@
                 $(this).parent().addClass('active');
             }
         })
-    });
+    // });
+    $('.menu-content li.active').parent().parent().addClass('open')
+
 </script>
 </body>
 <!-- END: Body-->

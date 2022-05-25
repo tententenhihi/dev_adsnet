@@ -61,4 +61,8 @@ class Activity extends Controller
         $this->view = 'Myaccount/activity/index';
         $this->renderView();
     }
+
+    public function updateLanguage(){
+        var_dump('dsadsadsadsa');die();
+    }
 }

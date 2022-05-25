@@ -160,6 +160,7 @@
     </section>
     <!-- Form wizard with number tabs section end -->
 </div>
+<script src="<?=$this->asset2('app-assets/vendors/js/extensions/jquery.steps.min.js')?>"></script>
 <script>
     /* global $, __tajs */
     $(document).ready(function() {
@@ -175,14 +176,13 @@
                 // alert("Form submitted.");
             }
         });
-        $('.actions').find('ul').find($('li:odd')).addClass('disabled');
+        // $('.actions').find('ul').find($('li:even')).addClass('disabled');
         $('.actions').find('ul').find($('li:last')).find('a').attr('id', 'enterAction');
 
 
         $('.adFormat').on('click', function() {
-            $('.actions').find('ul').find($('li:even')).removeClass('disabled');
-            var $this = $(this),
-                collapse = $('.collapse[data-target="step-ad-format"]');
+            // $('.actions').find('ul').find($('li:even')).removeClass('disabled');
+            var $this = $(this), collapse = $('.collapse[data-target="step-ad-format"]');
             if ($this.hasClass('disabled')) return false;
             $('.adFormat').removeClass('is-selected');
             $this.addClass('is-selected');

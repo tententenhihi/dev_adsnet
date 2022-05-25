@@ -69,13 +69,22 @@
 
                 </div>
                 <ul class="nav navbar-nav float-right ">
-                    <!--<li class="dropdown dropdown-language nav-item">
-                            <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdown-flag">
-                                <a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
-				                <a class="dropdown-item" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Tiếng Việt</a>
-                            </div>
-                        </li>-->
+                    <li class="dropdown dropdown-language nav-item">
+                        <a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <?php if($_COOKIE["language"] === 'vn'): ?>
+                            <i class="flag-icon flag-icon-vn"></i>
+                            <span class="selected-language">Tiếng Việt</span>
+                            <?php else: ?>
+                            <i class="flag-icon flag-icon-us"></i>
+                            <span class="selected-language">English</span>
+                            <?php endif; ?>
+
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown-flag">
+                            <a class="dropdown-item language" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a>
+                            <a class="dropdown-item language" href="#" data-language="vn"><i class="flag-icon flag-icon-vn"></i> Tiếng Việt</a>
+                        </div>
+                    </li>
                     <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
 
 
@@ -133,7 +142,7 @@
             <li class=" nav-item">
                 <a href="/dashboard">
                     <i class="feather icon-home"></i>
-                    <span class="menu-title" data-i18n="Dashboard">Dashboard</span>
+                    <span class="menu-title" data-i18n="Dashboard"><?= $langArray['Dashboard'] ?></span>
                 </a>
             </li>
             <li class=" navigation-header"><span>User</span>
@@ -144,8 +153,8 @@
                     </li>
                     <li class=""><a href="/user/api"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Advance">APIs</span></a>
                     </li>
-                    <li class=""><a href="/user/referral"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Statistics">User Referrals</span></a>
-                    </li>
+                    <!--<li class=""><a href="/user/referral"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Statistics">User Referrals</span></a>
+                    </li>-->
                     <li class=""><a href="/user/notification"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">User Notifications</span></a>
                     </li>
                     <li class=""><a href="/user/activity"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Card Actions">User Activities</span></a>

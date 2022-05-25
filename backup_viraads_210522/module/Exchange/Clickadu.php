@@ -5,7 +5,7 @@ namespace Module\Exchange;
 class Clickadu
 {
     protected $baseUrl = 'http://v2.api.clickadu.com/partner/';
-    protected $apiToken = '--token--';
+    protected $apiToken = 'uzof6h-bIxUgsdRaYT2HyMUYtE2T9dNe3H8F_Bo3KlKbuVOjeuI5CYCQEn2T04nLPXzFfQy5GGgsBKoJnPkmQOLRq0K3xEGtDjXaMBO760BxupuJXMEA50Ot0VSp4kOm';
     protected $timezone = 'EST';
     protected $lastRevenue = 0;
     protected $client;

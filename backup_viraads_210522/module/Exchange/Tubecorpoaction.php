@@ -116,7 +116,7 @@ class Tubecorpoaction
     private function call($date1, $date2)
     {
         try {
-            //file_put_contents('/home/Exchange.log',"START CALL DATA TUBE CORP".PHP_EOL, FILE_APPEND);
+            file_put_contents('/home/Exchange.log',"START CALL DATA TUBE CORP".PHP_EOL, FILE_APPEND);
             $res = $this->client->request('GET', 'statistics', [
                 'query' => [
                     'token'             => $this->apiToken,
@@ -131,7 +131,7 @@ class Tubecorpoaction
                     'Content-Type'   => 'application/json'
                 ]
             ]);
-            //file_put_contents('/home/Exchange.log',$res->getBody().PHP_EOL, FILE_APPEND);
+            file_put_contents('/home/Exchange.log',$res->getBody().PHP_EOL, FILE_APPEND);
             $res = json_decode((string) $res->getBody());
             //
             if(!isset($res->response->rows)) return null;

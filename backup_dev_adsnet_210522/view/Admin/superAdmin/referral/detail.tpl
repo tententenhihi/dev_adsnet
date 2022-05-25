@@ -30,7 +30,6 @@
                                 <tr>
                                     <th>Name</th>
                                     <th>Email</th>
-                                    <th>Total Referral</th>
                                     <th>Amount</th>
                                 </tr>
                                 </thead>
@@ -38,13 +37,10 @@
                                 <?php foreach($this->data as $item): ?>
                                 <tr>
                                     <td>
-                                        <a href="/referral/detail?id=<?= $item->id ?>"><?= $item->name ?></a>
+                                        <span><?= $item->name ?></span>
                                     </td>
                                     <td>
                                         <span><?= $item->email ?></span>
-                                    </td>
-                                    <td>
-                                        <span><?= $item->total_referral ?></span>
                                     </td>
                                     <td>
                                         <span><?= $this->helper->currencyFormat($item->amount) ?></span>

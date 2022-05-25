@@ -63,17 +63,13 @@
                                     <td><a class="item-name"><?=$item->description?></a></td>
                                     <td>
                                         <div class="buttons">
-                                            <button class="btn btn-info btn-edit btn-sm" data-id="<?=$item->id?>" data-name="<?=$item->name?>" data-desc="<?=htmlentities($item->description)?>">
-                                                <span class="icon">
-                                                    <svg viewBox="0 0 24 24">
-                                                        <path fill="currentColor" d="M20.71,4.04C21.1,3.65 21.1,3 20.71,2.63L18.37,0.29C18,-0.1 17.35,-0.1 16.96,0.29L15,2.25L18.75,6M17.75,7L14,3.25L4,13.25V17H7.75L17.75,7Z"></path>
-                                                    </svg>
-                                                </span>
+                                            <button class="btn btn-info btn-edit" data-id="<?=$item->id?>" data-name="<?=$item->name?>" data-desc="<?=htmlentities($item->description)?>">
+                                                <i class="feather icon-check"></i>
                                                 <span>Edit</span>
                                             </button>
                                         </div>
                                     </td>
-                                    <td><span class="text-muted is-pulled-right"><?=$item->created_at?></span></td>
+                                    <td><span><?=$item->created_at?></span></td>
                                 </tr>
                                 <?php endforeach; ?>
                                 </tbody>
@@ -103,12 +99,6 @@
         <div class="modal-content">
             <div class="modal-card">
                 <input id="id" type="hidden" value="0">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Edit</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="label">Category Name</label>
@@ -120,9 +110,11 @@
                         <textarea class="textarea form-control" id="description" placeholder="Category Description"></textarea>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary waves-effect waves-light" id="save">Save</button>
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Close</button>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" id="save">
+                        <i class="feather icon-check"></i> Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="feather icon-x"></i> Close</button>
                 </div>
             </div>
         </div>

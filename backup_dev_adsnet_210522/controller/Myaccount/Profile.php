@@ -5,7 +5,7 @@ namespace Controller\Myaccount;
 class Profile extends Controller
 {
     public $chats = ['Telegram', 'Skype', 'Facebook', 'Whatsapp', 'Viber', 'Line', 'Other'];
-    public $languages = ['en' => 'English'];
+    public $languages = ['en' => 'English', 'vn' => 'Viet Nam'];
         
     public function index()
     {
@@ -73,7 +73,9 @@ class Profile extends Controller
         if($data->language != $user->language || $data->name != $user->name) {
             $this->setSession('language', $data->language);
             $this->setSession('name', $data->name);
-            
+            setcookie('language', $data->language, time() + 10 * 365 * 24 * 60 * 60, '/', 'viradev.com');
+
+
             $sessions = $db->listActiveSession($user_id);
             if(count($sessions) > 1) {
                 $redis = new \System\Session;

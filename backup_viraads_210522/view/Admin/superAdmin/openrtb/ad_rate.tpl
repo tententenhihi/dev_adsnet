@@ -12,20 +12,19 @@
     <div class="content-body">
         <div class="row">
             <div class="col-md-12 col-12 col-">
+                <h4 class="card-title">
+                    Ad #<?=$this->data->id?> rate
+                </h4>
                 <div class="card">
-                    <div class="card-header d-flex justify-content-between align-items-end">
-                        <div class="d-flex">
-                            <h4 class="card-title">
-                                Ad #<?=$this->data->id?> rate
-                            </h4>
-                        </div>
-                    </div>
                     <div class="card-content">
                         <div class="card-body card-dashboard">
                             <div class="row">
                                 <div class="col-12">
                                     <div class="ag-grid-btns d-flex justify-content-between flex-wrap mb-1">
                                         <div class="ag-btns d-flex flex-wrap">
+                                            <div style="margin:10px">
+                                                <strong><?=number_format($this->data->total)?></strong> Records
+                                            </div>
                                             <fieldset>
                                                 <div class="input-group">
                                                     <input id="search" type="text" class="form-control"
@@ -40,12 +39,7 @@
                                                 </div>
                                             </fieldset>
                                         </div>
-                                        
-                                        <div class="subtitle is-5">
-                                            <strong><?=number_format($this->data->total)?></strong> Records
-                                        </div>
-                                    </div>
-                                    <div class="ag-grid-btns justify-content-between flex-wrap">
+                                        <div>
                                             <button class="btn btn-info btn-light btn-transparent"
                                                 id="btn-adjust">Adjust:
                                                 <strong><?=$this->data->adjust?></strong></button>
@@ -53,6 +47,7 @@
                                                 id="btn-default">Default Rate:
                                                 <strong><?=$this->data->default*100?>%</strong></button>
                                         </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -60,36 +55,49 @@
                 </div>
             </div>
         </div>
-        <div class="page-title-box">
-            <div class="columns is-mobile">
-                <div class="column is-6">
+        <div class="page-title-box mb-2">
+            <div class="row">
+                <div class="col-6">
                     <h1 class="title is-6">Results</h1>
                 </div>
             </div>
         </div>
-        <div class="flatbox">
-            <div class="buttons are-transparent">
-                <?php foreach($this->data->data as $code => $rate): ?>
-                <button class="button is-success is-light country" data-code="<?=$code?>" data-rate="<?=$rate?>">
-                    <span><?=$code?>: <?=$rate*100?>%</span>
-                </button>
-                <?php endforeach; ?>
+        <div class="card">
+                <div class=" card-flatbox">
+                    <div class="card-content">
+                        <div class="row">
+                         <div class="col-12">
+                            <div class="card-body card-dashboard">
+                                <?php foreach($this->data->data as $code => $rate): ?>
+                                <button class="button is-success is-light country" data-code="<?=$code?>"
+                                    data-rate="<?=$rate?>">
+                                    <span><?=$code?>: <?=$rate*100?>%</span>
+                                </button>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<div class="modal" id="editRateModal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <section class="modal-card-body">
-            <div class="field">
-                <label class="label">Rate for <strong id="name"></strong></label>
-                <div class="control">
-                    <input class="input" id="rate" type="number" placeholder="Ad rate" value="">
+<div class="modal fade text-left" id="editRateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
+    style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <label class="label">Rate for <strong id="name"></strong></label>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="input form-control" id="rate" type="number" placeholder="Ad rate" value="">
+                    </div>
                 </div>
             </div>
-            <div class="buttons is-centered pt-4">
-                <button class="button is-success enterAction" id="submit">
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success waves-effect waves-light enterAction" id="submit">
                     <span class="icon">
                         <svg viewBox="0 0 24 24">
                             <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
@@ -97,7 +105,7 @@
                     </span>
                     <span>Submit</span>
                 </button>
-                <button class="button is-light btn-close">
+                <button type="button" class="btn btn-light waves-effect waves-light" data-dismiss="modal">
                     <span class="icon">
                         <svg viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -107,42 +115,45 @@
                     <span>Close</span>
                 </button>
             </div>
-        </section>
+        </div>
     </div>
-    <button class="modal-close is-large"></button>
 </div>
-<div class="modal" id="editAdjustModal">
-    <div class="modal-background"></div>
-    <div class="modal-card">
-        <section class="modal-card-body">
-            <div class="field">
-                <label class="label">Bid Adjust</label>
-                <div class="control">
-                    <input class="input" id="adjust" type="number" placeholder="Bid adjust" value="">
+</div>
+<div class="modal" id="editAdjustModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel33"
+    style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <label class="label">Bid Adjust</label>
+                </div>
+                <div class="modal-body">
+                    <div class="control">
+                        <input class="input form-control" id="adjust" type="number" placeholder="Bid adjust" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success waves-effect waves-light enterAction" id="submit2">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+                            </svg>
+                        </span>
+                        <span>Submit</span>
+                    </button>
+                    <button type="button" class="btn btn-light waves-effect waves-light" data-dismiss="modal">
+                        <span class="icon">
+                            <svg viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+                            </svg>
+                        </span>
+                        <span>Close</span>
+                    </button>
                 </div>
             </div>
-            <div class="buttons is-centered pt-4">
-                <button class="button is-success enterAction" id="submit2">
-                    <span class="icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
-                        </svg>
-                    </span>
-                    <span>Submit</span>
-                </button>
-                <button class="button is-light btn-close">
-                    <span class="icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-                        </svg>
-                    </span>
-                    <span>Close</span>
-                </button>
-            </div>
-        </section>
+        </div>
     </div>
-    <button class="modal-close is-large"></button>
 </div>
 <script>
 /* global $, __tajs */
@@ -178,17 +189,17 @@ $(document).ready(function() {
     $('#btn-default').on('click', function() {
         $('#rate').val(default_rate);
         $('#name').html('default');
-        $('#editRateModal').toggleClass('is-active');
+        $('#editRateModal').modal("show");
     });
     $('#btn-adjust').on('click', function() {
         $('#adjust').val(parseFloat($(this).find('strong').text()));
-        $('#editAdjustModal').toggleClass('is-active');
+        $('#editAdjustModal').modal("show");
     });
     $('.country').on('click', function() {
         const $this = $(this);
         $('#rate').val($this.attr('data-rate'));
         $('#name').html($this.attr('data-code'));
-        $('#editRateModal').toggleClass('is-active');
+        $('#editRateModal').modal('show');
     });
     $('#submit').on('click', function() {
         const $this = $(this),
@@ -224,7 +235,7 @@ $(document).ready(function() {
                 $item.find('span').html(code + ': ' + parseFloat((rate * 100).toFixed(7)) +
                     '%');
             }
-            $('#editRateModal').toggleClass('is-active');
+            $('#editRateModal').modal('hide');
         });
     });
     $('#submit2').on('click', function() {
@@ -249,7 +260,7 @@ $(document).ready(function() {
                 return false;
             }
             $('#btn-adjust').find('strong').html(adjust);
-            $('#editAdjustModal').toggleClass('is-active');
+            $('#editAdjustModal').modal('hide');
         });
     });
     colorItem();

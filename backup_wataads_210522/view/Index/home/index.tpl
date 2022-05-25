@@ -3,11 +3,11 @@
 <html lang="en">
 
 <head>
-  <title>Home | WataAds - The best Adnetwork</title>
+  <title>Home | ViraAds - The best Adnetwork</title>
   <meta charset="utf-8">
   <title><?=$this->title?></title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="WataAds - An Advertising Network and Social Media Marketing Platform" />
+  <meta name="description" content="ViraAds - An Advertising Network and Social Media Marketing Platform" />
   <meta name="keywords" content="viranet,smm, marketing, advertising, publishers, advertisers, youtube views, instagram follows, facebook fans, twitter views" />
   <link rel="shortcut icon" href="<?=$this->asset('img/favicon.png')?>">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -35,7 +35,7 @@
           <li class="nav-item"><a class="nav-link" href="#whychooseus">Why Choose Us</a></li>
           <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="#contactus">Contact us</a></li>
-          <li class="nav-item"><a class="nav-link" href="https://my.wataads.com" target="_blank">
+          <li class="nav-item"><a class="nav-link" href="https://my.viraads.com" target="_blank">
             <svg style="width:20px;height:20px" viewBox="0 0 24 24">
               <path fill="currentColor" d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z" />
             </svg> My Account</a>
@@ -50,12 +50,12 @@
       <div class="row no-gutters slider-text align-items-center justify-content-between align-items-stretch">
         <div class="col-md-6 col-lg-5 text d-flex align-items-center">
           <div>
-            <h1>Maximize your business with WataAds</h1>
-            <p><strong class="text-warning">WataAds is the Advertising Platform</strong> where you could buy/sell traffic, promote your social network account, visual and contents...</p>
+            <h1>Maximize your business with ViraAds</h1>
+            <p><strong class="text-warning">ViraAds is the Advertising Platform</strong> where you could buy/sell traffic, promote your social network account, visual and contents...</p>
             <p>We offer multi-format such as Native Ads, In-page Push Ads, Pop-under Ads, Video Ad Serving Template (VAST) with pricing model CPC & CPM.</p>
             <div class="d-flex">
-              <a href="https://pub.wataads.com" target="_blank" class="btn btn-primary d-flex align-items-center"><span>MONETIZE</span></a>
-              <a href="https://adv.wataads.com" target="_blank" class="btn btn-secondary"><span>ADVERTISE</span></a>
+              <a href="https://pub.viraads.com" target="_blank" class="btn btn-primary d-flex align-items-center"><span>MONETIZE</span></a>
+              <a href="https://adv.viraads.com" target="_blank" class="btn btn-secondary"><span>ADVERTISE</span></a>
             </div>
             <ul class="ftco-social">
               <li><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -275,7 +275,7 @@
                   <span class="fa fa-quote-left">
                 </div>
                 <div class="text">
-                  <p class="mb-4 msg">" Our company is using services from many ad network, but WataAds.com seem beat all others on price and supporting. "</p>
+                  <p class="mb-4 msg">" Our company is using services from many ad network, but ViraAds.com seem beat all others on price and supporting. "</p>
                   <div class="d-flex align-items-center">
                     <div class="user-img" style="background-image:url(<?=$this->asset('landing/img/talkaboutme/client1.jpg')?>)"></div>
                     <div class="ps-3 tx">
@@ -309,7 +309,7 @@
                   <span class="fa fa-quote-left">
                 </div>
                 <div class="text">
-                  <p class="mb-4 msg">" Thank WataAds team, we get very impressive campaign result, also support is super fast and friendly. Keep good works. "</p>
+                  <p class="mb-4 msg">" Thank ViraAds team, we get very impressive campaign result, also support is super fast and friendly. Keep good works. "</p>
                   <div class="d-flex align-items-center">
                     <div class="user-img" style="background-image:url(<?=$this->asset('landing/img/talkaboutme/client3.jpg')?>)"></div>
                     <div class="ps-3 tx">
@@ -343,7 +343,7 @@
                   <span class="fa fa-quote-left">
                 </div>
                 <div class="text">
-                  <p class="mb-4 msg">" API ready and good price, also they (WataAds.com) can delivery 10m+ daily, which i never see on other providers. "</p>
+                  <p class="mb-4 msg">" API ready and good price, also they (ViraAds.com) can delivery 10m+ daily, which i never see on other providers. "</p>
                   <div class="d-flex align-items-center">
                     <div class="user-img" style="background-image:url(<?=$this->asset('landing/img/talkaboutme/client5.jpg')?>)"></div>
                     <div class="ps-3 tx">
@@ -398,7 +398,7 @@
                 class="flaticon-secret-file"></span></div>
             <div class="text">
               <h2>Integrate Easier & Faster</h2>
-              <p>We support you API for Advertisers and Publishers, help you could integrate WataAds into your systems easily, fast and protected.</p>
+              <p>We support you API for Advertisers and Publishers, help you could integrate ViraAds into your systems easily, fast and protected.</p>
             </div>
           </div>
         </div>
@@ -490,7 +490,7 @@
         <div class="col-md-7 heading-section text-center" data-aos="fade-up" data-aos-duration="1000">
           <span class="subheading">Our Blog</span>
           <h2>Recent Blog</h2>
-          <p>Update information & guideline to approach WataAds system.</p>
+          <p>Update information & guideline to approach ViraAds system.</p>
         </div>
       </div>
       <div class="row" id="latest-post">
@@ -526,7 +526,7 @@
             <h2 class="ftco-heading-2 logo d-flex">
               <a class="navbar-brand" href="/"><img src="<?=$this->asset('img/logo.png')?>" width="180" alt=""></a>
             </h2>
-            <p>Maximize your business with WataAds.</p>
+            <p>Maximize your business with ViraAds.</p>
             <ul class="ftco-footer-social list-unstyled mt-4">
               <li><a href="#"><span class="fa fa-twitter"></span></a></li>
               <li><a href="#"><span class="fa fa-facebook"></span></a></li>
@@ -538,10 +538,10 @@
           <div class="ftco-footer-widget mb-4">
             <h2 class="ftco-heading-2">Quick Links</h2>
             <ul class="list-unstyled">
-              <li><a href="https://adv.wataads.com" target="_blank"><span class="fa fa-caret-right"></span> Advertiser</a></li>
-              <li><a href="https://pub.wataads.com" target="_blank"><span class="fa fa-caret-right"></span> Publisher</a></li>
-              <li><a href="https://api.wataads.com" target="_blank"><span class="fa fa-caret-right"></span> API Documentation</a></li>
-              <li><a href="https://blog.wataads.com" target="_blank"><span class="fa fa-caret-right"></span> Blog</a></li>
+              <li><a href="https://adv.viraads.com" target="_blank"><span class="fa fa-caret-right"></span> Advertiser</a></li>
+              <li><a href="https://pub.viraads.com" target="_blank"><span class="fa fa-caret-right"></span> Publisher</a></li>
+              <li><a href="https://api.viraads.com" target="_blank"><span class="fa fa-caret-right"></span> API Documentation</a></li>
+              <li><a href="https://blog.viraads.com" target="_blank"><span class="fa fa-caret-right"></span> Blog</a></li>
             </ul>
           </div>
         </div>
@@ -557,7 +557,7 @@
               <ul>
                 <li><span class="icon fa fa-map marker"></span><span class="text">TP.HCM</span></li>
                 <li><a href="#"><span class="icon fa fa-phone"></span><span class="text"></span></a></li>
-                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">support@wataads.com</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">support@viraads.com</span></a></li>
               </ul>
             </div>
           </div>
@@ -569,7 +569,7 @@
         <div class="row">
           <div class="col-md-12 text-center">
             <p class="mb-0" style="color: rgba(255,255,255,.5); font-size: 14px;">
-              Copyright &copy; 2021 All rights reserved by <a href="https://wataads.com" target="_blank" >wataads</a>
+              Copyright &copy; 2021 All rights reserved by <a href="https://viraads.com" target="_blank" >viraads</a>
             </p>
           </div>
         </div>
@@ -638,26 +638,26 @@
   </script>
   <script>
     window.onload = async () => {
-        const response = await fetch("https://blog.wataads.com/api/latest-posts")
+        const response = await fetch("https://blog.viraads.com/api/latest-posts")
         const res = await response.json()
         const data = await res.data
         $.each(data, (key, value) => {
             $("#latest-post").append(
                 `<div class="col-md-6 col-lg-4 d-flex">
                   <div class="blog-entry justify-content-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
-                    <a href="https://blog.wataads.com/${value.cate_slug}/${value.slug}" target="_blank" class="block-20 img d-flex align-items-end"><img src="https://blog.wataads.com${value.image}" alt="" width="100%" /></a>
+                    <a href="https://blog.viraads.com/${value.cate_slug}/${value.slug}" target="_blank" class="block-20 img d-flex align-items-end"><img src="https://blog.viraads.com${value.image}" alt="" width="100%" /></a>
                     <div class="text">
-                      <h3 class="heading mb-3"><a href="https://blog.wataads.com/${value.cate_slug}/${value.slug}" target="_blank">${value.title}</a mb-3></h3>
+                      <h3 class="heading mb-3"><a href="https://blog.viraads.com/${value.cate_slug}/${value.slug}" target="_blank">${value.title}</a mb-3></h3>
                       <p class="meta"><span>${new Date(`${value.updated_at}`).toLocaleString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</span><a href="#">by ADMIN</a></p>
                     </div>
                   </div>
                 </div>`
             )
             $("#footer-blog").append(
-              `<div class="block-21 mb-4 d-flex"><a class="img rounded" href="https://blog.wataads.com/${value.cate_slug}/${value.slug}" target="_blank"><img src="https://blog.wataads.com${value.image}" alt="" width="100%" /></a>
+              `<div class="block-21 mb-4 d-flex"><a class="img rounded" href="https://blog.viraads.com/${value.cate_slug}/${value.slug}" target="_blank"><img src="https://blog.viraads.com${value.image}" alt="" width="100%" /></a>
               <div class="text">
                 <div class="meta">
-                  <h3 class="heading"><a href="https://blog.wataads.com/${value.cate_slug}/${value.slug}">${value.title}</a></h3>
+                  <h3 class="heading"><a href="https://blog.viraads.com/${value.cate_slug}/${value.slug}">${value.title}</a></h3>
                 </div>
               </div></div>`  
             )

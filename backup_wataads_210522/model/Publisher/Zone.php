@@ -364,4 +364,41 @@ class Zone extends \System\Db
         
         return $stmt->rowCount();
     }
+    public function listPlatform()
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM system_platform LIMIT 999');
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
+    
+    public function listOs()
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM system_os LIMIT 999');
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
+    
+    public function listBrowser()
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM system_browser LIMIT 999');
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
+    public function listMapPlatformOs()
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM system_os_platform LIMIT 999');
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
+    public function listMapOsBrowser()
+    {
+        $stmt = $this->pdo->prepare('SELECT * FROM system_browser_os LIMIT 999');
+        $stmt->execute();
+        
+        return $stmt->fetchAll();
+    }
 }

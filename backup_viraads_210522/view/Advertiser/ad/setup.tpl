@@ -1,6 +1,6 @@
 <style>
     #creative-preview {overflow: auto}
-    .button.is-selected{background-color:#006ed6;border-color:transparent;color:#fff;}
+    .button.is-selected{background-color:#8b08bb;border-color:transparent;color:#fff;}
     .mode-toggle{
         /*margin-top:0;margin-bottom:-2.1rem!important;margin-right:0.1rem;*/
     }
@@ -53,8 +53,8 @@
         padding-bottom: 1rem;
     }
     .pricing.is-selected, .audience-collect.is-selected, .create-ad.is-selected {
-        border: 2px solid #006ed6;
-        color: #006ed6;
+        border: 2px solid #8b08bb;
+        color: #8b08bb;
     }
     .pricing p {
         text-transform: uppercase;
@@ -76,11 +76,11 @@
         border-bottom-right-radius: 13px !important;
     }
     table td, .table th {
-        border: 1px solid #006ed6 !important;
+        border: 1px solid #8b08bb  !important;
     }
     th.tid, th.tid-title {
         padding:0!important;
-        background-color: #006ed6;
+        background-color: #8b08bb ;
         color: #fff;
     }
     th.tid-title {
@@ -95,7 +95,7 @@
         cursor: pointer;
     }
     td.tid-day {
-        background-color: #006ed6;
+        background-color: #8b08bb;
         color: #fff !important;
         font-weight: bold;
         cursor: pointer;
@@ -106,7 +106,7 @@
         min-width: 30px;
     }
     .tid-select.is-selected, .tid-day.is-selected {
-        background-color: #006ed691 !important;
+        background-color: #8b08bb75 !important;
     }
     .lib-item {
         /*overflow: scroll;*/
@@ -146,7 +146,7 @@
         background-color: #f5f5f5;
     }
     .open-selector {
-        color: #006ed6 !important;
+        color: #8b08bb !important;
         margin-top: 1.5rem;
     }
     .open-selector svg {

@@ -657,21 +657,5 @@ class Billing extends Controller
                 }
             }
         }
-die();
-
-        $today = date('Y-m-d');
-        $create_at = strtotime(date("Y-m-d", strtotime($today)) . " -1 day");
-        $create_at = strftime("%Y-%m-%d", $create_at);
-        $b = $db->getPublisherStatistic($a->ref_user_id, $create_at);
-
-//        $userReferral = $db->getUserReferral($a->ref_user_id);
-        $commission = REFERRAL_PUB_COMMISSION;
-        $source = 'Publisher';
-        $amount = $b->total * $commission;
-//        var_dump($a->ref_user_id, $a->id, $source, $commission, $amount, $b->total); die();
-        $db->createUserReferralPayment($a->ref_user_id, $a->id, $source, $commission, $amount);
-        $db->depositPublisherBalance($a->user_id, $amount);
-
-        var_dump($b->total, $create_at);die();
     }
 }

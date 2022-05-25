@@ -16,11 +16,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta name="csrf-token" content="<?=$this->csrf()?>" />
     <title>Verify your registration - <?=SITE_NAME?></title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <link rel="apple-touch-icon" href="<?=$this->asset2('app-assets/images/ico/apple-icon-120.png')?>">
-    <link rel="shortcut icon" type="image/x-icon" href="<?=$this->asset2('app-assets/images/ico/favicon.ico')?>">
+    <link rel="shortcut icon" type="image/x-icon" href="<?=$this->asset2('app-assets/images/ico/favicon.png')?>">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
@@ -63,8 +64,8 @@
                 <div class="col-xl-8 col-10 d-flex justify-content-center" >
                     <div class="card bg-authentication rounded-0 mb-0" >
                         <div class="row m-0">
-                            <div class="col-lg-6 d-lg-block d-none text-center align-self-center pl-0 pr-3 py-0">
-                                <img src="<?=$this->asset2('app-assets/images/pages/register.jpg')?>" alt="branding logo">
+                            <div class="col-lg-6 d-lg-block text-center align-self-center pl-0 pr-3 py-0">
+                                <img src="<?=$this->asset2('app-assets/images/pages/register.png')?>" alt="branding logo" width="100%">
                             </div>
                             <div class="col-lg-6 col-12 p-0">
                                 <div class="card rounded-0 mb-0 p-2">

@@ -7,8 +7,8 @@ class Propellerads
     protected $baseUrl = 'https://api-publishers.propellerads.com/v5/pub/';
     protected $apiToken = null;
     protected $timezone = 'EST';
-    protected $username = 'info.wataads@gmail.com';
-    protected $password = '13579Pl,mn';
+    protected $username = 'payment@gome.io';
+    protected $password = 'Kiemtien@2020';
     protected $lastRevenue = 0;
     protected $client;
     protected $zone_id;
@@ -137,7 +137,6 @@ class Propellerads
     private function call($date1, $date2)
     {
         try {
-            file_put_contents('/home/Exchange.log',"START CALL DATA PROPELLER".PHP_EOL, FILE_APPEND);
             $res = $this->client->request('GET', 'statistics', [
                 'query' => [
                     'zone_ids[]'     => $this->zone_id,
@@ -151,12 +150,10 @@ class Propellerads
                     'Authorization'  => 'Bearer '.$this->apiToken
                 ]
             ]);
-            file_put_contents('/home/Exchange.log',$res->getBody().PHP_EOL, FILE_APPEND);
             $res = json_decode((string) $res->getBody());
             if(!isset($res->result)) return null;
             return $res->result;
         } catch(\Exception $e) {
-            file_put_contents('/home/Exchange.log', $e.getMessage().PHP_EOL.PHP_EOL.PHP_EOL, FILE_APPEND);
             return null;
         }
     }

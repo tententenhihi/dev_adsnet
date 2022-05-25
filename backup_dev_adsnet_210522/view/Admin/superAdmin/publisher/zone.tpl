@@ -108,8 +108,8 @@
                                     <td><a href="/publisher/website/detail?id=<?=$item->website_id?>"><?=$item->domain?></a></td>
                                     <td><a href="/user?id=<?=$item->user_id?>">#<?=$item->user_id?> - <?=$item->user_name?></a></td>
                                     <td>
-                                         <span class="badge badge-warning btn-tag mb-1" data-id="<?=$item->id?>" data-guide="<?=$this->data->adformats[$item->ad_format]->tag_guide?>">
-                                            <span><?=$this->data->adformats[$item->ad_format]->name  ?></span>
+                                         <span class="badge badge-warning btn-tag mb-1" data-id="<?=$item->id?>" data-guide="<?=$this->data->adformats[$item->ad_format]->tag_guide?>" data-script="<?=htmlentities($this->data->adformats[$item->ad_format]->tag_script)?>">
+                                            <span><?=$item->name_ad_format?></span>
                                         </span>
                                     </td>
                                     <td>

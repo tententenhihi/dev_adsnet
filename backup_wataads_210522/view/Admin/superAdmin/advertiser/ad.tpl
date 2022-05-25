@@ -122,24 +122,12 @@
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
             <?php if($this->data->user): ?>
-            <div class="media mb-2">
-                <div class="media-body" style="background-color: antiquewhite">
-                    <div style="border-left: 4px solid #48c774; padding: 1.25em 1.5em;">
-                        <p>Showing only Ads from user #<?=$this->data->user->id?> - <?=$this->data->user->name?>
-                            (<?=$this->data->user->email?>)</p>
-
-                    </div>
-                </div>
+            <div class="alert alert-info">
+                <p>Showing only Ads from user #<?=$this->data->user->id?> - <?=$this->data->user->name?> (<?=$this->data->user->email?>)</p>
             </div>
             <?php elseif($this->data->campaign): ?>
-            <div class="media mb-2">
-                <div class="media-body" style="background-color: antiquewhite">
-                    <div style="border-left: 4px solid #48c774; padding: 1.25em 1.5em;">
-                        <p>Showing only Ads from campaign #<?=$this->data->campaign->id?> - <?=$this->
-                            data->campaign->name?></p>
-
-                    </div>
-                </div>
+            <div class="alert alert-info">
+                <p>Showing only Ads from campaign #<?=$this->data->campaign->id?> - <?=$this->data->campaign->name?></p>
             </div>
             <?php endif; ?>
             <div class="card">
@@ -201,7 +189,6 @@
                     <div class="card">
                         <div class="card-content">
                             <div class="card-body card-dashboard">
-
                                 <div class="media">
                                     <div class="media-left">
                                         <?php if($item->status=='Active'): ?>
@@ -228,8 +215,7 @@
                                     </div>
                                     <div class="media-content">
                                         <h2 class="title is-5" style="font-size: 1.5rem;">
-                                            <a href="/advertiser/ad/detail/<?=$item->id?>">#<?=$item->id?> - <span
-                                                        class="item-name"><?=$item->name?></span></a>
+                                            <a href="/advertiser/ad/detail/<?=$item->id?>">#<?=$item->id?> - <span class="item-name"><?=$item->name?></span></a>
                                         </h2>
                                         <div class="buttons are-transparent" style="margin-top: 5px">
                                             <button type="button" class="btn btn-default mb-1">
@@ -283,11 +269,9 @@
                                                                 <span>Approve</span>
                                                             </a>
                                                             <?php endif; ?>
-                                                            <?php if($item->
-                                                            status=='Active'||$item->status=='Paused'||$item->status=='Stopped'):
-                                                            ?>
+                                                            <?php if($item->status=='Active'||$item->status=='Paused'||$item->status=='Stopped'): ?>
                                                             <a class="dropdown-item text-info"
-                                                               href="/advertiser/report?start_date=<?=$item->start_date?>&end_date=<?=$item->end_date?>&campaign_id=<?=$item->campaign_id?>&ad_id=<?=$item->id?>&audience_id=&country=&browser=&platform=&os=&group_by=Date&order_by=Date">
+                                                               href="/advertiser/report?start_date=<?=$item->start_date?>&end_date=<?=$item->end_date?>&user_id=<?=$item->user_id?>&campaign_id=<?=$item->campaign_id?>&ad_id=<?=$item->id?>&audience_id=&country=&browser=&platform=&os=&group_by=Date&order_by=Date">
                                                                 <i class="feather icon-bar-chart-2"></i>
                                                                 <span>View Report</span>
                                                             </a>
@@ -304,8 +288,7 @@
                                                                 <span>Resume</span>
                                                             </a>
                                                             <?php endif; ?>
-                                                            <?php if($item->status=='Active'||$item->status=='Paused'):
-                                                            ?>
+                                                            <?php if($item->status=='Active'||$item->status=='Paused'): ?>
                                                             <a class="dropdown-item text-danger btn-stop">
                                                                 <i class="feather icon-stop-circle"></i>
                                                                 <span>Stop</span>
@@ -343,10 +326,7 @@
                                         <?php if($item->pricing_model == 'cpm'): ?>
                                         <button type="button" class="btn btn-danger mb-1">
                                             <i class="feather icon-briefcase"></i>
-                                            <span>CPM <?php if($item->impression): ?><?=$this->
-                                                helper->currencyFormat($item->cost*1000/$item->impression)?><?php else: ?>
-                                                $0.00<?php endif; ?>
-                                                </span>
+                                            <span>CPM <?php if($item->impression): ?><?=$this->helper->currencyFormat($item->cost*1000/$item->impression)?><?php else: ?>$0.00<?php endif; ?></span>
                                         </button>
                                         <?php elseif($item->pricing_model == 'cpc'): ?>
                                         <button type="button" class="btn btn-danger mb-1">
@@ -365,39 +345,27 @@
                                         </button>
 
                                         <?php else: ?>
-                                        <button class="btn btn-danger btn-light mb-1">
-                                                <span class="icon">
-                                                    <svg viewBox="0 0 24 24">
-                                                        <path fill="currentColor"
-                                                              d="M12,13A5,5 0 0,1 7,8H9A3,3 0 0,0 12,11A3,3 0 0,0 15,8H17A5,5 0 0,1 12,13M12,3A3,3 0 0,1 15,6H9A3,3 0 0,1 12,3M19,6H17A5,5 0 0,0 12,1A5,5 0 0,0 7,6H5C3.89,6 3,6.89 3,8V20A2,2 0 0,0 5,22H19A2,2 0 0,0 21,20V8C21,6.89 20.1,6 19,6Z"></path>
-                                                    </svg>
-                                                </span>
-                                            <span>eCPM <?php if($item->impression): ?><?=$this->
-                                                helper->currencyFormat($item->cost*1000/$item->impression)?><?php else: ?>
-                                                $0.00<?php endif; ?>
-                                                </span>
+                                        <button class="btn btn-danger mb-1">
+                                            <i class="feather icon-briefcase"></i>
+                                            <span>eCPM <?php if($item->impression): ?><?=$this->helper->currencyFormat($item->cost*1000/$item->impression)?><?php else: ?>$0.00<?php endif; ?></span>
                                         </button>
-                                        <button class="btn btn-success btn-light mb-1">
+                                        <button class="btn btn-success mb-1">
                                                 <span class="icon">
                                                     <svg viewBox="0 0 24 24">
                                                         <path fill="currentColor"
                                                               d="M17,18A2,2 0 0,1 19,20A2,2 0 0,1 17,22C15.89,22 15,21.1 15,20C15,18.89 15.89,18 17,18M1,2H4.27L5.21,4H20A1,1 0 0,1 21,5C21,5.17 20.95,5.34 20.88,5.5L17.3,11.97C16.96,12.58 16.3,13 15.55,13H8.1L7.2,14.63L7.17,14.75A0.25,0.25 0 0,0 7.42,15H19V17H7C5.89,17 5,16.1 5,15C5,14.65 5.09,14.32 5.24,14.04L6.6,11.59L3,4H1V2M7,18A2,2 0 0,1 9,20A2,2 0 0,1 7,22C5.89,22 5,21.1 5,20C5,18.89 5.89,18 7,18M16,11L18.78,6H6.14L8.5,11H16Z"></path>
                                                     </svg>
                                                 </span>
-                                            <span>CR <?php if($item->impression): ?><?=round($item->
-                                                conversion/$item->impression,4)*100?>%<?php else: ?>
-                                                0.00%<?php endif; ?></span>
+                                            <span>CR <?php if($item->impression): ?><?=round($item->conversion/$item->impression,4)*100?>%<?php else: ?>0.00%<?php endif; ?></span>
                                         </button>
-                                        <button class="btn btn-success btn-light mb-1">
+                                        <button class="btn btn-success mb-1">
                                                 <span class="icon">
                                                     <svg viewBox="0 0 24 24">
                                                         <path fill="currentColor"
                                                               d="M20,18H4V6H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M11,17H13V16H14A1,1 0 0,0 15,15V12A1,1 0 0,0 14,11H11V10H15V8H13V7H11V8H10A1,1 0 0,0 9,9V12A1,1 0 0,0 10,13H13V14H9V16H11V17Z"></path>
                                                     </svg>
                                                 </span>
-                                            <span>CPA <?php if($item->conversion): ?><?=$this->
-                                                helper->currencyFormat($item->cost/$item->conversion)?><?php else: ?>
-                                                $0.00<?php endif; ?></span>
+                                            <span>CPA <?php if($item->conversion): ?><?=$this->helper->currencyFormat($item->cost/$item->conversion)?><?php else: ?>$0.00<?php endif; ?></span>
                                         </button>
                                         <?php endif; ?>
                                     </div>
@@ -483,7 +451,7 @@
                     <div class="flatbox">
                         <div class="hero">
                             <div class="hero-body">
-                                <div class="has-text-centered">
+                                <div class="text-center">
                                     <p class="text-muted">No results</p>
                                 </div>
                             </div>
@@ -502,12 +470,6 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-card">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel33">Rename</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
                 <div class="modal-body">
                     <input id="id" type="hidden" value="">
                     <div class="form-group">
@@ -650,26 +612,27 @@
                 $('#createAdTypeModal').toggleClass('is-active');
             });
         });
-        $('#submit').on('click', function () {
+        $('#submit').on('click', function() {
             var $this = $(this), id = $('#id').val(), name = $.trim($('#name').val());
-            if (name.length < 3) {
+            if(name.length < 3) {
                 __tajs.showAlert('Ad name is required');
                 return false;
             }
             $this.addClass('is-loading');
             $this.prop('disabled', true);
-            $.post('/advertiser/ad/rename/' + id, {csrf_token: __tajs.csrf, name: name}, function (res) {
+            $.post('/advertiser/ad/rename/'+id, {csrf_token: __tajs.csrf, name: name}, function(res) {
                 $this.removeClass('is-loading');
                 $this.prop('disabled', false);
                 if (!res.success) {
                     __tajs.showAlert(res.data);
                     return false;
                 }
-                var $item = $('.dropdown-menu[id="dropdown-item-' + id + '"]');
+                var $item = $('.dropdown-menu[id="dropdown-item-'+id+'"]');
                 $item.closest('.media').find('.item-name').html(name);
-                $('#editModal').toggleClass('is-active');
+                $('#editModal').modal('hide');
             });
         });
+
         $('.btn-edit').on('click', function (e) {
             e.preventDefault();
             var id = $(this).closest('.dropdown-menu').attr('id').replace('dropdown-item-', ''),

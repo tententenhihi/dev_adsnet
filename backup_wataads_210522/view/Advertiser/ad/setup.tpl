@@ -76,11 +76,11 @@
         border-bottom-right-radius: 13px !important;
     }
     table td, .table th {
-        border: 1px solid #006ed6 !important;
+        border: 1px solid #006ed6  !important;
     }
     th.tid, th.tid-title {
         padding:0!important;
-        background-color: #006ed6;
+        background-color: #006ed6 ;
         color: #fff;
     }
     th.tid-title {
@@ -106,7 +106,7 @@
         min-width: 30px;
     }
     .tid-select.is-selected, .tid-day.is-selected {
-        background-color: #006ed691 !important;
+        background-color: #007bffa6 !important;
     }
     .lib-item {
         /*overflow: scroll;*/

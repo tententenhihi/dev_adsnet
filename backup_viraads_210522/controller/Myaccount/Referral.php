@@ -72,17 +72,17 @@ class Referral extends Controller
         $referral_id = (int) $this->uri[1];
         $user_id = $this->getSession('id');
         $db = new \Model\Myaccount\Referral;
-        
+
         $this->data->total = $db->countReferralPayment($user_id, $referral_id);
         if(!$this->data->total) $this->redirectTo('/referral');
-        
+
         $pagination = new \Module\Pagination();
         $pagination->setLimit(20);
         $pagination->setTotal($this->data->total);
         $this->data->pagination = $pagination->setup();
         $this->data->data = $db->listReferralPayment($user_id, $referral_id, $pagination->getInit(), $pagination->getLimit());
         $this->data->referred_user = $db->getUserFromReferral($referral_id);
-        
+
         $this->helper = new \Module\Helper;
         $this->title = 'My Referrals - '.SITE_NAME;
         $this->view = 'Myaccount/referral/payment';

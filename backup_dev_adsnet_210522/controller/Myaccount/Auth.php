@@ -45,7 +45,7 @@ class Auth extends Controller
         $this->data->countries = $db->listCountries();
         $this->data->chats = ['Telegram', 'Skype', 'Facebook', 'Whatsapp', 'Viber', 'Line', 'Other'];
         $this->data->timezones = timezone_identifiers_list();
-        $this->data->languages = ['en' => 'English'];
+        $this->data->languages = ['en' => 'English', 'vn' => 'Viet Nam'];
         $this->view = 'Myaccount/auth/verify';
         $this->renderView();
     }
@@ -279,6 +279,10 @@ class Auth extends Controller
         $user->permission = $db->getAdminPermission($user->id);
         $this->setAuthenticated($user);
 
+        $language = (new \Model\Myaccount\Language)->getLanguage($user->id);
+        if($language){
+            setcookie('language', $language, time() + 10 * 365 * 24 * 60 * 60, '/', 'viradev.com');
+        }
         $this->data->success = true;
         $this->renderView();
     }

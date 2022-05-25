@@ -287,11 +287,20 @@ class Billing extends Controller
             $this->data->success = true;
             $this->renderView();
         }
-        
+
         $db->increaseUserDeposit($deposit->user_id, $data->amount);
         $db->depositAdvertiserBalance($deposit->user_id, $data->amount);
         $db->createBalanceHistory($deposit->user_id, 'Advertiser', $data->amount, 'Deposit invoice #'.$deposit->id);
-        
+
+        $userReferral = $db->getUserReferral($deposit->user_id);
+        if($userReferral->count === 1){
+            $commission = REFERRAL_COMMISSION;
+            $source = 'Advertiser';
+            $amount = $data->amount * $commission;
+            $db->createUserReferralPayment($userReferral->user_id, $userReferral->id, $source, $commission, $amount);
+            $db->depositAdvertiserBalance($userReferral->user_id, $amount);
+        }
+
         $this->data->success = true;
         $this->renderView();
     }
@@ -579,7 +588,7 @@ class Billing extends Controller
             $this->data->data = 'Bad request!!!';
             $this->renderView();
         }
-        
+
         $db = new \Model\Admin\superAdmin\Billing;
         if($data->id) {
             if(!$db->updateReceipt($data->user_id, $data->id, $data->description, $data->amount, $data->campaign_id, $data->ad_id)) {
@@ -619,5 +628,50 @@ class Billing extends Controller
         
         $this->data->success = true;
         $this->renderView();
+    }
+
+    public function depositPub(){
+        $db = new \Model\Admin\superAdmin\Billing;
+        $get_all_referral_user = $db->getAllReferralUser();
+
+        foreach($get_all_referral_user as $referral_user) {
+            $check_publisher_statistic = $db->checkPublisherStatistic($referral_user->ref_user_id);
+            foreach($check_publisher_statistic as $check){
+                if($check === 0){
+                    echo $referral_user->ref_user_id . 'User nay khong co tien';
+                }else{
+                    $today = date('Y-m-d');
+                    $create_at = strtotime(date("Y-m-d", strtotime($today)) . " -1 day");
+                    $create_at = strftime("%Y-%m-%d", $create_at);
+
+                    $total_revenue = $db->getPublisherStatistic($referral_user->ref_user_id, $create_at);
+
+                    $commission = REFERRAL_PUB_COMMISSION;
+                    $source = 'Publisher';
+                    $amount = $total_revenue->total * $commission;
+
+                    if($total_revenue->total !== null){
+                        $db->createUserReferralPayment($referral_user->user_id, $referral_user->id, $source, $commission, $amount);
+                        $db->depositPublisherBalance($referral_user->user_id, $amount);
+                    }
+                }
+            }
+        }
+die();
+
+        $today = date('Y-m-d');
+        $create_at = strtotime(date("Y-m-d", strtotime($today)) . " -1 day");
+        $create_at = strftime("%Y-%m-%d", $create_at);
+        $b = $db->getPublisherStatistic($a->ref_user_id, $create_at);
+
+//        $userReferral = $db->getUserReferral($a->ref_user_id);
+        $commission = REFERRAL_PUB_COMMISSION;
+        $source = 'Publisher';
+        $amount = $b->total * $commission;
+//        var_dump($a->ref_user_id, $a->id, $source, $commission, $amount, $b->total); die();
+        $db->createUserReferralPayment($a->ref_user_id, $a->id, $source, $commission, $amount);
+        $db->depositPublisherBalance($a->user_id, $amount);
+
+        var_dump($b->total, $create_at);die();
     }
 }

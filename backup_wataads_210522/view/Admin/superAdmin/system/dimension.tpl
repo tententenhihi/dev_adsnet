@@ -1,68 +1,68 @@
 <style>
-.tag.is-default {
-    color: #8094ae;
-}
-.is-picked .tag {
-    background-color: #009dff;
-    /*color: #fff;*/
-    color: white !important;
-}
-a.tag:hover {
-    text-decoration: none !important;
-}
-.tags {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
+    .tag.is-default {
+        color: #8094ae;
+    }
+    .is-picked .tag {
+        background-color: #007bff;
+        /*color: #fff;*/
+        color: white !important;
+    }
+    a.tag:hover {
+        text-decoration: none !important;
+    }
+    .tags {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
-.field.is-grouped.is-grouped-multiline {
-    flex-wrap: wrap;
-}
-.field.is-grouped {
-    display: flex;
-    justify-content: flex-start;
-}
-.field.is-grouped>.control:not(:last-child) {
-    margin-bottom: 0;
-    margin-right: 0.75rem;
-}
-.tags.has-addons .tag:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
+    .field.is-grouped.is-grouped-multiline {
+        flex-wrap: wrap;
+    }
+    .field.is-grouped {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .field.is-grouped>.control:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 0.75rem;
+    }
+    .tags.has-addons .tag:not(:last-child) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
 
-.tags.has-addons .tag {
-    margin-right: 0;
-}
+    .tags.has-addons .tag {
+        margin-right: 0;
+    }
 
-.tag:not(body).is-large {
-    font-size: 1.25rem;
-}
-.tag.is-default {
-    color: #8094ae;
-}
-.tags .tag {
-    margin-bottom: 0.5rem;
-}
-.text-muted, .navbar-item, .breadcrumb a, .flatbox a, .table tbody td, .table thead th {
-    color: #6c757d;
-}
-.tag:not(body) {
-    align-items: center;
-    background-color: #f5f5f5;
-    border-radius: 4px;
-    color: #4a4a4a;
-    display: inline-flex;
-    font-size: .75rem;
-    height: 2em;
-    justify-content: center;
-    line-height: 1.5;
-    padding-left: 0.75em;
-    padding-right: 0.75em;
-    white-space: nowrap;
-}
+    .tag:not(body).is-large {
+        font-size: 1.25rem;
+    }
+    .tag.is-default {
+        color: #8094ae;
+    }
+    .tags .tag {
+        margin-bottom: 0.5rem;
+    }
+    .text-muted, .navbar-item, .breadcrumb a, .flatbox a, .table tbody td, .table thead th {
+        color: #6c757d;
+    }
+    .tag:not(body) {
+        align-items: center;
+        background-color: #f5f5f5;
+        border-radius: 4px;
+        color: #4a4a4a;
+        display: inline-flex;
+        font-size: .75rem;
+        height: 2em;
+        justify-content: center;
+        line-height: 1.5;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        white-space: nowrap;
+    }
 </style>
 <div class="content-body">
     <div class="row">

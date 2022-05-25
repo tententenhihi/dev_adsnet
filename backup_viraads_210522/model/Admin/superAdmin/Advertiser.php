@@ -1178,14 +1178,4 @@ class Advertiser extends \System\Db
         
         return $this->pdo->lastInsertId();
     }
-
-    public function updateAdName($id, $name)
-    {
-        $stmt = $this->pdo->prepare('UPDATE advertiser_ad SET name = :name WHERE id = :id');
-        $stmt->bindValue(':id', (int) $id, \PDO::PARAM_INT);
-        $stmt->bindValue(':name', $name);
-        $stmt->execute();
-
-        return $stmt->rowCount();
-    }
 }

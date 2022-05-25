@@ -166,6 +166,11 @@ class Zone extends Controller
         if($this->data->status != 'Active') $this->redirectTo('/website/detail/'.$website_id);
         
         $this->data->adFormat = $db->listAdFormat();
+        $this->data->platforms = $db->listPlatform();
+        $this->data->oses = $db->listOs();
+        $this->data->browsers = $db->listBrowser();
+        $this->data->mapPlatformOs = $db->listMapPlatformOs();
+        $this->data->mapOsBrowser = $db->listMapOsBrowser();
         
         $this->title = 'New zone for '.$this->data->domain.' - '.SITE_NAME;
         $this->view = 'Publisher/zone/create';
@@ -181,7 +186,12 @@ class Zone extends Controller
         if(!($this->data = $db->getZoneSetting($user_id, $id))) $this->redirectTo('/zone');
 
         $this->data->adType = $db->listAdType();
-        
+        $this->data->platforms = $db->listPlatform();
+        $this->data->oses = $db->listOs();
+        $this->data->browsers = $db->listBrowser();
+        $this->data->mapPlatformOs = $db->listMapPlatformOs();
+        $this->data->mapOsBrowser = $db->listMapOsBrowser();
+
         $this->title = $this->data->name.' - '.SITE_NAME;
         $this->view = 'Publisher/zone/setup';
         $this->renderView();

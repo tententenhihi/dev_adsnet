@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="columns is-mobile">
                     <div class="column is-6">
-                        <img src="<?=$this->asset2('app-assets/images/logo/logo_vertical_2.png')?>" width="40%">
+                        <img src="<?=$this->asset2('app-assets/images/logo/logo-vertical.png')?>">
                     </div>
                     <div class="column is-6">
                         <div class="buttons is-right">

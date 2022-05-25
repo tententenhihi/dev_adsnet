@@ -6,7 +6,7 @@ class Tracking extends Controller
 {
     public function index()
     {
-        $this->title = 'Tracking Test Banner - WataAds';
+        $this->title = 'Tracking Test Banner - ViraAds';
         $this->view = 'Index/home/tracking';
         $this->renderView();
     }
